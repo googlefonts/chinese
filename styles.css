@@ -1,3 +1,76 @@
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('fonts/genjyuugothic/GenJyuuGothic-ExtraLight.ttf'); /* IE9 Compat Modes */
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Light.ttf'); /* IE9 Compat Modes */
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Normal.ttf'); /* IE9 Compat Modes */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Medium.ttf'); /* IE9 Compat Modes */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Bold.ttf'); /* IE9 Compat Modes */
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GenJyuuGothic';
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Heavy.ttf'); /* IE9 Compat Modes */
+  font-weight: 700;
+  font-style: normal;
+}
+.font-GenJyuuGothic {
+  font-family: 'GenJyuuGothic';
+}
+
+.weight-100 {
+  font-weight: 100;
+}
+.weight-300 {
+  font-weight: 300;
+}
+.weight-400 {
+  font-weight: 700;
+}
+.weight-500 {
+  font-weight: 500;
+}
+.weight-600 {
+  font-weight: 600;
+}
+.weight-700 {
+  font-weight: 700;
+}
+.text-outline {
+  -webkit-text-stroke: 4px black;
+  -webkit-text-fill-color: transparent;
+}
+
+.hline-4 {
+  height: 4px;
+  background: #222;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto
+}
+
 body {
   font-size: 15px;
   line-height: 26px;
@@ -76,4 +149,37 @@ body {
   height: 42px;
   background-repeat: no-repeat;
   opacity: .5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.square {
+  position: absolute;
+  left: 8%;
+  top: 8%;
+  right: 8%;
+  bottom: 8%;
+}
+
+.xl {
+  font-size: 10em;
+  line-height: 1em;
+}
+.x {
+  font-size: 8em;
+  line-height: 1em;
+}
+.m {
+  font-size: 5em;
+  line-height: 1em;
+}
+.s {
+  font-size: 2em;
+  line-height: 1em;
+}
+.xs {
+  font-size: 1em;
+  line-height: 1em;
 }

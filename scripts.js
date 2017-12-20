@@ -1,7 +1,8 @@
-var fontsByLang = {
+var fontByLang = {
   'tw': {
     'NotoSans': '思源黑體',
     'NotoSerif': '思源宋體',
+    'SetoFont': '瀨戶字體',
     'HanaMin': '花園明朝',
     'GenJyuu': '思源柔黑體'
   },
@@ -12,9 +13,17 @@ var fontsByLang = {
   },
 };
 
+var designerByFont = {
+  'NotoSans': 'Google & Adobe',
+  'NotoSerif': 'Google & Adobe',
+  'HanaMin': '上地宏一',
+  'SetoFont': '瀬戸のぞみ',
+  'GenJyuu': '自家製フォント工房'
+};
+
 var fontListByLang = {
-  'tw': Object.keys( fontsByLang['tw'] ),
-  'cn': Object.keys( fontsByLang['cn'] ),
+  'tw': Object.keys( fontByLang['tw'] ),
+  'cn': Object.keys( fontByLang['cn'] ),
 };
 
 var CONFIG = {
@@ -33,7 +42,7 @@ function init() {
   }
 
   if(hash.length>1) {
-    if(fontsByLang[CONFIG.lang][hash[1]]) {
+    if(fontByLang[CONFIG.lang][hash[1]]) {
       CONFIG.font = hash[1];
     }
   }
@@ -41,6 +50,13 @@ function init() {
   console.log('CONFIG',CONFIG);
   createPages();
   return;
+}
+
+function updateDesignerInfo(index) {
+  CONFIG.font = fontListByLang[CONFIG.lang][index-1];
+  console.log('afterLoad',index,CONFIG.font );
+  var designer = designerByFont[CONFIG.font];
+  $('#designer-info').text(designer);
 }
 
 function createPages() {
@@ -63,18 +79,24 @@ function createPages() {
       'textColor': '#000',
       'bulletsColor': '#000',
       'position': 'bottomleft',
-      'tooltips': Object.values( fontsByLang[CONFIG.lang] )
+      'tooltips': Object.values( fontByLang[CONFIG.lang] )
     },
     onLeave: function(index, nextIndex, direction){
       console.log('onLeave');
     },
 		afterLoad: function(anchorLink, index){
       console.log('afterLoad');
+      updateDesignerInfo(index);
     },
 		afterRender: function(){
-      console.log('afterRender');
+      var idx = fontListByLang[CONFIG.lang].indexOf( CONFIG.font )+1;
+      $.fn.pagepiling.moveTo(idx);
+      updateDesignerInfo( idx );
+      console.log( 'afterRender scroll to font', idx );
     },
   });
+
+
 }
 
 $( document ).ready(function() {

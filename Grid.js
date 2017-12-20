@@ -19,7 +19,7 @@
 
     var body = document.getElementsByTagName("body")[0];
     var grid = document.createElement("div");
-    grid.setAttribute("style","display: block; position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; pointer-events: none;");
+    grid.setAttribute("style","display: none; position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; pointer-events: none;");
     body.appendChild(grid);
 
     document.onkeyup = function(event){
