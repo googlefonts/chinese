@@ -1,3 +1,48 @@
+/* Noto Serif TC */
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.otf'); /* IE9 Compat Modes */
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Light.otf'); /* IE9 Compat Modes */
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Regular.otf'); /* IE9 Compat Modes */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Medium.otf'); /* IE9 Compat Modes */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-SemiBold.otf'); /* IE9 Compat Modes */
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Bold.otf'); /* IE9 Compat Modes */
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.otf'); /* IE9 Compat Modes */
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
   src: url('fonts/genjyuugothic/GenJyuuGothic-ExtraLight.ttf'); /* IE9 Compat Modes */
@@ -74,7 +119,7 @@
 body {
   font-size: 15px;
   line-height: 26px;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Serif TC', sans-serif;
   color: #222;
 }
 
@@ -99,6 +144,7 @@ body {
   margin-top: -120px;
   z-index: 10000;
   writing-mode: tb-rl;
+  letter-spacing: 2px;
 }
 
 #headerbar {
@@ -125,8 +171,15 @@ body {
 .lang {
   opacity: .5;
 }
-.lang.selected {
+.lang.selected,
+.lang:hover {
   opacity: 1;
+}
+
+#pp-nav,
+#headerbar,
+#designer-info {
+  font-weight: 700;
 }
 
 .bordered-button {

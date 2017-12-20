@@ -4,18 +4,20 @@ var fontByLang = {
     'NotoSerif': '思源宋體',
     'SetoFont': '瀨戶字體',
     'HanaMin': '花園明朝',
-    'GenJyuu': '思源柔黑體'
+    'GenJyuu': '思源柔黑體',
+    'About': '網站介绍',
   },
   'cn': {
     'NotoSans': '思源黑体',
     'NotoSerif': '思源宋体',
     'HanaMin': '花园明朝',
+    'About': '网站介绍',
   },
 };
 
 var designerByFont = {
-  'NotoSans': 'Google & Adobe',
-  'NotoSerif': 'Google & Adobe',
+  'NotoSans': '谷歌、奧多比',
+  'NotoSerif': '谷歌、奧多比',
   'HanaMin': '上地宏一',
   'SetoFont': '瀬戸のぞみ',
   'GenJyuu': '自家製フォント工房'
@@ -76,16 +78,19 @@ function createPages() {
   pages.appendTo('body');
   pages.find('> div').addClass('section');
 
+  var titles = Object.values( fontByLang[CONFIG.lang] );
+  titles.push('網站介紹');
+
   pages.pagepiling({
     direction: 'vertical',
     verticalCentered: false,
-    sectionsColor: ['#ddd','#bbb','#999','#ccc'],
+    sectionsColor: ['#BAFFF0','#999','#ccc','#FFFBC2','#FFD1C5'],
     scrollingSpeed: 100,
     navigation: {
       'textColor': '#000',
       'bulletsColor': '#000',
       'position': 'bottomleft',
-      'tooltips': Object.values( fontByLang[CONFIG.lang] )
+      'tooltips': titles
     },
     onLeave: function(index, nextIndex, direction){
       console.log('onLeave');
