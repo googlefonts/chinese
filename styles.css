@@ -1,17 +1,79 @@
 body {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 26px;
   font-family: 'Noto Sans', sans-serif;
+  color: #222;
 }
 
 #project-title {
   position: fixed;
-  top: 20px;
+  top: 19px;
   left: 24px;
   z-index: 10000;
-  width: 160px;
-  height: 48px;
+  width: 164px;
+  height: 54px;
   background-image: url(project-title.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+#designer-info {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  text-align: center;
+  height: 240px;
+  margin-top: -120px;
+  z-index: 10000;
+  writing-mode: tb-rl;
+}
+
+#headerbar {
+  position: fixed;
+  right: 24px;
+  top: 20px;
+  z-index: 10000;
+}
+
+#headerbar > div {
+  display: inline-block;
+  margin-left: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+.templates {
+  display: none;
+}
+
+.lang {
+  opacity: .5;
+}
+.lang.selected {
+  opacity: 1;
+}
+
+.bordered-button {
+  border: 1px solid rgba(0,0,0,.3);
+  padding: 4px 11px;
+  border-radius: 0px;
+}
+
+#button-use {
+  margin-right: 8px;
+}
+
+#badge {
+  position: fixed;
+  right: 24px;
+  bottom: 14px;
+  z-index: 10000;
+  background-image: url(badge.svg);
+  width: 136px;
+  height: 42px;
+  background-repeat: no-repeat;
+  opacity: .5;
 }
