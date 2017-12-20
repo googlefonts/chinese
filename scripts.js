@@ -47,16 +47,22 @@ function init() {
     }
   }
 
-  console.log('CONFIG',CONFIG);
   createPages();
   return;
 }
 
-function updateDesignerInfo(index) {
+function updateDesignerInfoAndHash(index) {
   CONFIG.font = fontListByLang[CONFIG.lang][index-1];
-  console.log('afterLoad',index,CONFIG.font );
   var designer = designerByFont[CONFIG.font];
   $('#designer-info').text(designer);
+
+  var hash = '#'+CONFIG.lang+'-'+CONFIG.font;
+  if(history.pushState) {
+    history.pushState(null, null, hash);
+  }
+  else {
+    location.hash = hash;
+  }
 }
 
 function createPages() {
@@ -86,13 +92,14 @@ function createPages() {
     },
 		afterLoad: function(anchorLink, index){
       console.log('afterLoad');
-      updateDesignerInfo(index);
+      updateDesignerInfoAndHash(index);
     },
 		afterRender: function(){
+      console.log( 'afterRender');
       var idx = fontListByLang[CONFIG.lang].indexOf( CONFIG.font )+1;
       $.fn.pagepiling.moveTo(idx);
-      updateDesignerInfo( idx );
-      console.log( 'afterRender scroll to font', idx );
+      updateDesignerInfoAndHash( idx );
+
     },
   });
 
