@@ -236,3 +236,26 @@ body {
   font-size: 1em;
   line-height: 1em;
 }
+
+/* about text */
+#about-text {
+  margin-top: 100px;
+  max-width: 480px;
+  font-size: 20px;
+  line-height: 1.6em;
+}
+#author-text {
+  color: rgba(0,0,0,.4);
+  position: relative;
+  padding-top: 16px;
+  margin-top: 40px;
+}
+#author-text:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: rgba(0,0,0,.4);
+  content: "";
+}

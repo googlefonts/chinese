@@ -78,19 +78,18 @@ function createPages() {
   pages.appendTo('body');
   pages.find('> div').addClass('section');
 
-  var titles = Object.values( fontByLang[CONFIG.lang] );
-  titles.push('網站介紹');
+console.log(Object.values( fontByLang[CONFIG.lang] ));
 
   pages.pagepiling({
     direction: 'vertical',
     verticalCentered: false,
-    sectionsColor: ['#BAFFF0','#999','#ccc','#FFFBC2','#FFD1C5'],
+    sectionsColor: ['#BAFFF0','#999','#ccc','#FFFBC2','#FFD1C5','#999'],
     scrollingSpeed: 100,
     navigation: {
       'textColor': '#000',
       'bulletsColor': '#000',
       'position': 'bottomleft',
-      'tooltips': titles
+      'tooltips': Object.values( fontByLang[CONFIG.lang] )
     },
     onLeave: function(index, nextIndex, direction){
       console.log('onLeave');
@@ -104,7 +103,6 @@ function createPages() {
       var idx = fontListByLang[CONFIG.lang].indexOf( CONFIG.font )+1;
       $.fn.pagepiling.moveTo(idx);
       updateDesignerInfoAndHash( idx );
-
     },
   });
 
