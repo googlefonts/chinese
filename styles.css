@@ -106,6 +106,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+a {
+  color: #444;
+  text-decoration: none;
+}
+
 .hline-4 {
   height: 4px;
   background: #222;
@@ -130,7 +135,8 @@ body {
   z-index: 10000;
   width: 164px;
   height: 54px;
-  background-image: url(project-title.svg);
+  /* background-image: url(images/logo2.svg); */
+  background-image: url(images/project-title.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -239,11 +245,42 @@ body {
 
 /* about text */
 #about-text {
-  margin-top: 100px;
-  max-width: 480px;
-  font-size: 20px;
+  /* margin-top: 100px; */
+  max-width: 600px;
+  font-size: 30px;
   line-height: 1.6em;
+
+  /* border: 1px solid #444; */
+  /* padding: 8px 32px; */
 }
+.chinese-text {
+  line-height: 1.8em;
+  writing-mode: tb-rl;
+  font-size: 1.5vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 148px 20px;
+  height: 320px;
+}
+.eng-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 148px 24px;
+  font-size: 1.2vw;
+  width: 30%;
+  line-height: 1.8em;
+}
+
+#about-bg {
+  background-image: url(images/chinese.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-size: 90% 90%;
+}
+
 #author-text {
   color: rgba(0,0,0,.4);
   position: relative;
@@ -258,4 +295,38 @@ body {
   height: 2px;
   background: rgba(0,0,0,.4);
   content: "";
+}
+
+
+/* cldr */
+.clndr {
+  font-size: 12px;
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  width: 220px;
+  height: 240px;
+  font-weight: 500;
+}
+.header-day {
+  width: 13%;
+  /* display: inline-block; */
+  float: left;
+  opacity: .25;
+
+}
+.days .day.today {
+  background: #ff5252;
+  /* color: transparent; */
+  border-radius: 100%;
+  /* border: 2px solid red; */
+  /* border-radius: 30px; */
+}
+.day.adjacent-month {
+  opacity: 0;
+}
+.days .day {
+  /* display: inline-block; */
+  float: left;
+  width: 13%;
 }

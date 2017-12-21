@@ -20,7 +20,8 @@ var designerByFont = {
   'NotoSerif': '谷歌、奧多比',
   'HanaMin': '上地宏一',
   'SetoFont': '瀬戸のぞみ',
-  'GenJyuu': '自家製フォント工房'
+  'GenJyuu': '自家製フォント工房',
+  'About': '',
 };
 
 var fontListByLang = {
@@ -33,24 +34,66 @@ var CONFIG = {
   'font': fontListByLang['tw'][0],
 };
 
+var NUMBERS = ['一','＝','三','四','五','六','七','八','九','十','十一','十二'];
+var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var WEEKDAY_TW = ['星期','禮拜'];
+var WEEKDAY_CN = ['星期','礼拜'];
+
+var BG = {
+  'tw': ['#DDAD09','#518515','#AFE2E4','#E60000','#FFF58A','#FAFAFA'],
+  'cn': ['#DDAD09','#518515','#AFE2E4','#FAFAFA']
+}
+
+var calendars = {};
+
 function init() {
   var hash = window.location.hash;
-
   var hash = hash.replace('#','').split('-');
-
   if(hash[0]=='cn') {
     CONFIG.lang = 'cn';
     CONFIG.font = fontListByLang['cn'][0];
   }
-
   if(hash.length>1) {
     if(fontByLang[CONFIG.lang][hash[1]]) {
       CONFIG.font = hash[1];
     }
   }
-
+  getDateInfo();
   createPages();
   return;
+}
+
+function getDateInfo() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
+
+  if(dd<10) {
+    dd = '0'+dd;
+  }
+
+  if(mm<10) {
+    mm = '0'+mm;
+  }
+
+  today = mm + '/' + dd + '/' + yyyy;
+  console.log(today);
+
+
+  // Here's some magic to make sure the dates are happening this month.
+    var thisMonth = moment().format('YYYY-MM');
+
+    calendars.clndr1 = $('.cal1').clndr({
+      // events: eventArray,
+      multiDayEvents: {
+        singleDay: 'date',
+        endDate: 'endDate',
+        startDate: 'startDate'
+      },
+      template: $('#clndr-template').html(),
+    });
+
 }
 
 function updateDesignerInfoAndHash(index) {
@@ -78,12 +121,10 @@ function createPages() {
   pages.appendTo('body');
   pages.find('> div').addClass('section');
 
-console.log(Object.values( fontByLang[CONFIG.lang] ));
-
   pages.pagepiling({
     direction: 'vertical',
     verticalCentered: false,
-    sectionsColor: ['#BAFFF0','#999','#ccc','#FFFBC2','#FFD1C5','#999'],
+    sectionsColor: BG[CONFIG.lang],
     scrollingSpeed: 100,
     navigation: {
       'textColor': '#000',
@@ -105,8 +146,6 @@ console.log(Object.values( fontByLang[CONFIG.lang] ));
       updateDesignerInfoAndHash( idx );
     },
   });
-
-
 }
 
 $( document ).ready(function() {
