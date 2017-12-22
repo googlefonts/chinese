@@ -208,7 +208,7 @@ body {
   width: 136px;
   height: 42px;
   background-repeat: no-repeat;
-  opacity: .5;
+  opacity: .8;
 }
 
 .text-center {
@@ -250,32 +250,33 @@ body {
   font-size: 28px;
   /* margin: 0 auto; */
   /* position: absolute; */
-  text-align: center;
+  /* text-align: center; */
   /* margin: 0 240px; */
   letter-spacing: .125em;
   position: relative;
-  top: 50%;
+  top: 80px;
   left: 50%;
-  transform: translateY(-50%);
-  margin: 0;
+  /* top: 50%; */
    /* translateX(-50%); */
+  /* transform: translateY(-50%); */
+  margin: 0;
+
 }
 .chinese-text > span {
   text-decoration: underline;
   text-decoration-color: #222;
   background: lightgoldenrodyellow;
   padding: 8px 4px;
-
 }
 .eng-text {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 80px;
   font-size: 18px;
   text-align: right;
   line-height: 34px;
-  /* margin: 0; */
-  transform: translateX( calc( -100% - 10px) ) translateY(-50%);
+  margin: 0;
+  transform: translateX( calc( -100% - 10px) ) translateY(0%);
   width: 400px;
 }
 .eng-text > span {
@@ -287,11 +288,11 @@ body {
 }
 
 .about-bg {
-  background-image: url(images/chinese_horz_outline.svg);
+  background-image: url(images/chinese_horz_80.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
-  background-size: 120%;
+  background-size: 110%;
 }
 
 @media (max-width: 720px) {
@@ -304,18 +305,18 @@ body {
 
 #author-text {
   color: rgba(0,0,0,.4);
-  position: absolute;
-  bottom: 12px;
-  left: 0;
-  right: 0;
+  /* position: absolute; */
+  /* bottom: 12px; */
+  /* left: 0; */
+  /* right: 0; */
   /* margin: 0 auto; */
   /* left: 50%; */
-  text-align: center;
+  /* text-align: center; */
   /* position: relative; */
   text-decoration: none;
   font-size: 13px;
-  margin-top: 24px;
-  /* display: inline-block; */
+  display: inline-block;
+  margin-top: 12px;
   padding: 2px 0;
 }
 #author-text a {
