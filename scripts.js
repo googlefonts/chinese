@@ -1,27 +1,27 @@
 var fontByLang = {
   'tw': {
+    'About': '網站介绍',
     'NotoSans': '思源黑體',
     'NotoSerif': '思源宋體',
     'SetoFont': '瀨戶字體',
     'HanaMin': '花園明朝',
     'GenJyuu': '思源柔黑體',
-    'About': '網站介绍',
   },
   'cn': {
+    'About': '网站介绍',
     'NotoSans': '思源黑体',
     'NotoSerif': '思源宋体',
     'HanaMin': '花园明朝',
-    'About': '网站介绍',
   },
 };
 
 var designerByFont = {
+  'About': '',
   'NotoSans': '谷歌、奧多比',
   'NotoSerif': '谷歌、奧多比',
   'HanaMin': '上地宏一',
   'SetoFont': '瀬戸のぞみ',
   'GenJyuu': '自家製フォント工房',
-  'About': '',
 };
 
 var fontListByLang = {
@@ -40,8 +40,8 @@ var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
 var BG = {
-  'tw': ['#DDAD09','#518515','#AFE2E4','#E60000','#FFF58A','#FAFAFA'],
-  'cn': ['#DDAD09','#518515','#AFE2E4','#FAFAFA']
+  'tw': ['#FFF','#DDAD09','#518515','#AFE2E4','#E60000','#FFF58A'],
+  'cn': ['#FFF','#DDAD09','#518515','#AFE2E4']
 }
 
 var calendars = {};

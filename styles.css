@@ -192,6 +192,7 @@ body {
   border: 1px solid rgba(0,0,0,.3);
   padding: 4px 11px;
   border-radius: 0px;
+  /* background: white; */
 }
 
 #button-use {
@@ -243,58 +244,91 @@ body {
   line-height: 1em;
 }
 
-/* about text */
-#about-text {
-  /* margin-top: 100px; */
-  max-width: 600px;
-  font-size: 30px;
-  line-height: 1.6em;
-
-  /* border: 1px solid #444; */
-  /* padding: 8px 32px; */
-}
 .chinese-text {
-  line-height: 1.8em;
+  line-height: 1.72em;
   writing-mode: tb-rl;
-  font-size: 1.5vw;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 148px 20px;
-  height: 320px;
+  font-size: 28px;
+  /* margin: 0 auto; */
+  /* position: absolute; */
+  text-align: center;
+  /* margin: 0 240px; */
+  letter-spacing: .125em;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+   /* translateX(-50%); */
+}
+.chinese-text > span {
+  text-decoration: underline;
+  text-decoration-color: #222;
+  background: lightgoldenrodyellow;
+  padding: 8px 4px;
+
 }
 .eng-text {
   position: absolute;
-  left: 0;
-  top: 0;
-  margin: 148px 24px;
-  font-size: 1.2vw;
-  width: 30%;
-  line-height: 1.8em;
+  left: 50%;
+  top: 50%;
+  font-size: 18px;
+  text-align: right;
+  line-height: 34px;
+  /* margin: 0; */
+  transform: translateX( calc( -100% - 10px) ) translateY(-50%);
+  width: 400px;
+}
+.eng-text > span {
+  text-decoration: underline;
+  text-decoration-color: #222;
+  background: lightgoldenrodyellow;
+  padding: 4px 0px;
+  box-shadow: 10px 0 0 lightgoldenrodyellow, -10px 0 0 lightgoldenrodyellow;
 }
 
-#about-bg {
-  background-image: url(images/chinese.svg);
+.about-bg {
+  background-image: url(images/chinese_horz_outline.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
-  background-size: 90% 90%;
+  background-size: 120%;
+}
+
+@media (max-width: 720px) {
+  #about-bg {
+    background-image: url(images/chinese.svg);
+    /* background-position: 50% 50%; */
+    background-size: 80%;
+  }
 }
 
 #author-text {
   color: rgba(0,0,0,.4);
-  position: relative;
-  padding-top: 16px;
-  margin-top: 40px;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  /* margin: 0 auto; */
+  /* left: 50%; */
+  text-align: center;
+  /* position: relative; */
+  text-decoration: none;
+  font-size: 13px;
+  margin-top: 24px;
+  /* display: inline-block; */
+  padding: 2px 0;
+}
+#author-text a {
+  text-decoration: underline;
 }
 #author-text:before {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   width: 32px;
   height: 2px;
-  background: rgba(0,0,0,.4);
-  content: "";
+  background: #222;
+  content: ""; */
 }
 
 
