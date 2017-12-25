@@ -90,7 +90,7 @@
   font-weight: 300;
 }
 .weight-400 {
-  font-weight: 700;
+  font-weight: 400;
 }
 .weight-500 {
   font-weight: 500;
@@ -295,13 +295,13 @@ body.use-font #headerbar > div {
 }
 
 .chinese-text {
-  line-height: 1.7em;
+  line-height: 1.6em;
   writing-mode: tb-rl;
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: .125em;
   margin: 0;
   position: relative;
-  top: 80px;
+  /* top: 80px; */
   left: 50%;
   text-align: center;
   /* margin: 0 auto; */
@@ -310,44 +310,55 @@ body.use-font #headerbar > div {
   /* margin: 0 240px; */
   /* top: 50%; */
    /* translateX(-50%); */
-  /* transform: translateY(-50%); */
+  top: 50%;
+  transform: translateY(-50%);
 }
 .chinese-text > span {
   text-decoration: underline;
   text-decoration-color: #222;
-  background: lightgoldenrodyellow;
-  padding: 8px 4px;
+  /* background: lightgoldenrodyellow; */
+  padding: 12px 4px;
 
-  background: #222;
-  color: white;
-  text-decoration-color: #fff;
+  /* background: #222; */
+  /* color: white; */
+  /* text-decoration-color: #fff; */
 }
 .eng-text {
   position: absolute;
   left: 50%;
   top: 50%;
-  font-size: 16px;
+  font-size: 15px;
   text-align: right;
-  line-height: 30px;
+  line-height: 1.8em;
   margin: 0;
   transform: translateX( calc( -100% - 10px) ) translateY(-50%);
-  width: 390px;
+  width: 400px;
+}
+.eng-text > .large {
+  display: inline-block;
+  font-size: 21px;
+  line-height: 1.5em;
 }
 .eng-text > span {
   padding: 4px 0px;
-  text-decoration: underline;
-  text-decoration-color: #222;
-  background: lightgoldenrodyellow;
-  box-shadow: 10px 0 0 lightgoldenrodyellow, -10px 0 0 lightgoldenrodyellow;
+  /* text-decoration: underline; */
+  /* text-decoration-color: #222; */
+  /* background: lightgoldenrodyellow; */
+  /* box-shadow: 10px 0 0 lightgoldenrodyellow, -10px 0 0 lightgoldenrodyellow; */
 
-  background: #222;
-  color: white;
-  text-decoration-color: #fff;
-  box-shadow: 10px 0 0 #222, -10px 0 0 #222;
+  /* background: #222; */
+  /* color: white; */
+  /* text-decoration-color: #fff; */
+  /* box-shadow: 10px 0 0 #222, -10px 0 0 #222; */
+}
+
+.eng-text a {
+  text-decoration: underline;
+  /* color: #fff; */
 }
 
 .about-bg {
-  background-image: url(images/chinese_horz_outline.svg);
+  background-image: url(images/chinese_horz_yellow.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -371,25 +382,22 @@ body.use-font #headerbar > div {
   /* margin: 0 auto; */
   /* left: 50%; */
   /* text-align: center; */
-  /* position: relative; */
+  position: relative;
   text-decoration: none;
   font-size: 13px;
   display: inline-block;
   margin-top: 12px;
-  padding: 2px 0;
+  padding: 24px 0 0 0;
 }
-#author-text a {
-  text-decoration: underline;
-  color: #ccc;
-}
+
 #author-text:before {
-  /* position: absolute;
+  position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 32px;
   height: 2px;
   background: #222;
-  content: ""; */
+  content: "";
 }
 
 
