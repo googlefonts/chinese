@@ -298,15 +298,16 @@ body.use-font #headerbar > div {
   line-height: 1.7em;
   writing-mode: tb-rl;
   font-size: 26px;
-  /* margin: 0 auto; */
-  /* position: absolute; */
-  /* text-align: center; */
-  /* margin: 0 240px; */
   letter-spacing: .125em;
   margin: 0;
   position: relative;
   top: 80px;
   left: 50%;
+  text-align: center;
+  /* margin: 0 auto; */
+  /* position: absolute; */
+  /* text-align: center; */
+  /* margin: 0 240px; */
   /* top: 50%; */
    /* translateX(-50%); */
   /* transform: translateY(-50%); */
@@ -316,32 +317,41 @@ body.use-font #headerbar > div {
   text-decoration-color: #222;
   background: lightgoldenrodyellow;
   padding: 8px 4px;
+
+  background: #222;
+  color: white;
+  text-decoration-color: #fff;
 }
 .eng-text {
   position: absolute;
   left: 50%;
-  top: 80px;
-  font-size: 18px;
+  top: 50%;
+  font-size: 16px;
   text-align: right;
-  line-height: 34px;
+  line-height: 30px;
   margin: 0;
-  transform: translateX( calc( -100% - 10px) ) translateY(0%);
-  width: 400px;
+  transform: translateX( calc( -100% - 10px) ) translateY(-50%);
+  width: 390px;
 }
 .eng-text > span {
+  padding: 4px 0px;
   text-decoration: underline;
   text-decoration-color: #222;
   background: lightgoldenrodyellow;
-  padding: 4px 0px;
   box-shadow: 10px 0 0 lightgoldenrodyellow, -10px 0 0 lightgoldenrodyellow;
+
+  background: #222;
+  color: white;
+  text-decoration-color: #fff;
+  box-shadow: 10px 0 0 #222, -10px 0 0 #222;
 }
 
 .about-bg {
-  background-image: url(images/chinese_horz_80.svg);
+  background-image: url(images/chinese_horz_outline.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
-  background-size: 110%;
+  background-size: 128%;
 }
 
 @media (max-width: 720px) {
@@ -353,7 +363,7 @@ body.use-font #headerbar > div {
 }
 
 #author-text {
-  color: rgba(0,0,0,.4);
+  /* color: rgba(0,0,0,.4); */
   /* position: absolute; */
   /* bottom: 12px; */
   /* left: 0; */
@@ -370,6 +380,7 @@ body.use-font #headerbar > div {
 }
 #author-text a {
   text-decoration: underline;
+  color: #ccc;
 }
 #author-text:before {
   /* position: absolute;

@@ -40,7 +40,7 @@ var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
 var BG = {
-  'tw': ['#FFF','blanchedalmond','beige','lemonchiffon','honeydew','seashell',],
+  'tw': ['#FFF','lightgoldenrodyellow','beige','lemonchiffon','honeydew','mistyrose',],
   'cn': ['#FFF','blanchedalmond','beige','lemonchiffon']
 }
 
