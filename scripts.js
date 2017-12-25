@@ -34,14 +34,15 @@ var CONFIG = {
   'font': fontListByLang['tw'][0],
 };
 
-var NUMBERS = ['一','＝','三','四','五','六','七','八','九','十','十一','十二'];
+var WEEKDAYS_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var NUMBERS_CN = ['日','一','＝','三','四','五','六','七','八','九','十','十一','十二'];
 var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
 var BG = {
-  'tw': ['#FFF','lightgoldenrodyellow','beige','lemonchiffon','honeydew','mistyrose',],
-  'cn': ['#FFF','blanchedalmond','beige','lemonchiffon']
+  'tw': ['#FFF','#FFFD00','beige','lemonchiffon','honeydew','mistyrose',],
+  'cn': ['#FFF','#FFFD00','beige','lemonchiffon']
 }
 
 var calendars = {};
@@ -59,6 +60,7 @@ function init() {
     }
   }
   getDateInfo();
+
   createPages();
   return;
 }
@@ -66,21 +68,24 @@ function init() {
 function getDateInfo() {
   var today = new Date();
   var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
+  var mm = today.getMonth();
   var yyyy = today.getFullYear();
 
-  if(dd<10) {
-    dd = '0'+dd;
-  }
+  console.log(dd,mm,yyyy);
 
-  if(mm<10) {
-    mm = '0'+mm;
-  }
-
-  today = mm + '/' + dd + '/' + yyyy;
-  console.log(today);
-
-
+  // today = mm + '/' + dd + '/' + yyyy;
+  // console.log(today, today);
+  var weekday_en = WEEKDAYS_EN[ today.getDay() ];
+  var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ today.getDay() ];
+  var month_en = MONTHS_EN[mm];
+  var month_cn = NUMBERS_CN[mm+1] + '月';
+  console.log('MONTHS_EN', month_en);
+  $('.weekday-cn').text( weekday_cn );
+  $('.weekday-en').text( weekday_en );
+  $('.number-date').text( dd );
+  $('.month-en').text( month_en );
+  $('.month-cn').text( month_cn );
+  $('.number-year').text( yyyy );
   // Here's some magic to make sure the dates are happening this month.
     var thisMonth = moment().format('YYYY-MM');
 

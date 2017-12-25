@@ -79,9 +79,87 @@
   font-weight: 700;
   font-style: normal;
 }
-.font-GenJyuuGothic {
+
+.section-genjyuugothic {
   font-family: 'GenJyuuGothic';
 }
+.section-notosans {
+  font-family: 'Noto Sans TC';
+}
+.section-notoserif {
+  font-family: 'Noto Serif TC';
+}
+.section-hanamin {
+  font-family: 'Hana Min';
+}
+
+.section-genjyuugothic img {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.section-genjyuugothic .wrapper {
+  position: absolute;
+  max-width: 480px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 80px;
+  top: 80px;
+  width: 20%;
+}
+
+.section-genjyuugothic .weekday-cn {
+  font-size: 6.5vw;
+  line-height: 1.25em;
+}
+.section-genjyuugothic .weekday-en {
+  font-size: 4.7vw;
+  line-height: 1em;
+}
+.section-genjyuugothic .arrows {
+  font-size: 2.5vw;
+  letter-spacing: -.2em;
+  margin: 6px 0;
+}
+.section-genjyuugothic .number-date {
+  font-size: 19vw;
+  line-height: .86em;
+}
+.section-genjyuugothic .label-year {
+  font-size: 8.6em;
+  line-height: .86em;
+  margin-bottom: 16px;
+}
+.section-genjyuugothic .label-month {
+  font-size: 2vw;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.hline {
+  width: 100%;
+  border-top-style: solid;
+  border-top-color: #222;
+  margin: 4px 0;
+}
+.hline.two-px {
+  border-top-width: 2px;
+}
+.hline.four-px {
+  border-top-width: 4px;
+}
+.hline.eight-px {
+  border-top-width: 8px;
+}
+.hline.dash {
+  border-top-style: dashed;
+}
+
 
 .weight-100 {
   font-weight: 100;
@@ -374,14 +452,6 @@ body.use-font #headerbar > div {
 }
 
 #author-text {
-  /* color: rgba(0,0,0,.4); */
-  /* position: absolute; */
-  /* bottom: 12px; */
-  /* left: 0; */
-  /* right: 0; */
-  /* margin: 0 auto; */
-  /* left: 50%; */
-  /* text-align: center; */
   position: relative;
   text-decoration: none;
   font-size: 13px;
