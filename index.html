@@ -8,38 +8,40 @@
   <meta name="description" content="Typographic Calendar">
   <meta name="author" content="Yuin Chien">
 
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
   <script type="text/javascript" src="jquery.pagepiling.js"></script>
   <script type="text/javascript" src="Grid.js"></script>
 
 </head>
 
-<body>
+<body class="loading">
 
   <div id="project-title"></div>
-  <div id="headerbar">
-    <!-- <div class="bordered-button" id="button-join">合作</div> -->
+  <div id="headerbar" class="load-font">
     <div class="bordered-button" id="button-use">使用字體</div>
     <div class="lang" content="tw">繁</div>
     <div class="lang" content="cn">简</div>
+    <a class="overlay-only button-close"><div></div></a>
   </div>
   <a id="badge" href="https://fonts.google.com/" target="_blank"></a>
-  <div id="designer-info"></div>
+  <!-- <div id="designer-info"></div> -->
+
+  <div id="overlay">
+  </div>
 
   <div id="pages-tw" class="templates">
 
     <div class="section-about weight-700 about-bg">
-      <p class="chinese-text"><span>谷歌字庫擁有超過八百多個開源字體，</span><br><span>提供一百三十五種以上的語言給全球使用者。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載龐大的檔案。</span><br><span>在推動技術研發的同時，</span><br><span>我們邀清設計人與工程師共襄盛舉，</span><br><span>來試用預先發布的中文字體。</span></p>
-      <div class="eng-text">
-        <span>Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the huge character set to the web infrastructure required to serve the font files. As standards and technology continue to develop, we invite designers & developers to play with the Chinese fonts on Early Access.<br></span>
+      <p class="chinese-text load-font"><span>谷歌字庫擁有超過八百多個開源字體，</span><br><span>提供一百三十五種以上的語言給全球使用者。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載龐大的檔案。</span><br><span>此作品以開源的網路字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發布的中文字體。</span></p>
+      <div class="eng-text load-font">
+        <span>Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the huge character set to the web infrastructure required to serve the font files. Typographic Calendar is designed and created with open source web fonts. We hope to invite designers & developers to play with the Chinese fonts on Early Access as the standards and technology continue to develop.<br></span>
         <span id="author-text">Project made by <a href="http://www.yuinchien.com/" target="_blank">Yuin Chien</a>.</span>
       </div>
-
     </div>
 
   	<div class="font-NotoSans">1</div>
@@ -82,8 +84,8 @@
 
   <div id="pages-cn" class="templates">
     <div class="section-about weight-700 about-bg">
-      <p class="chinese-text"><span>谷歌字库拥有超过八百多个开源字体，</span><br><span>提供一百三十五种以上的语言给全球使用者。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载庞大的档案。</span><br><span>在推动技术研发的同时，</span><br><span>我们邀清设计人与工程师共襄盛举，</span><br><span>来试用预先发布的中文字体。</span></p>
-      <div class="eng-text">
+      <p class="chinese-text load-font"><span>谷歌字库拥有超过八百多个开源字体，</span><br><span>提供一百三十五种以上的语言给全球使用者。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载庞大的档案。</span><br><span>在推动技术研发的同时，</span><br><span>我们邀清设计人与工程师共襄盛举，</span><br><span>来试用预先发布的中文字体。</span></p>
+      <div class="eng-text load-font">
         <span>Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the huge character set to the web infrastructure required to serve the font files. As standards and technology continue to develop, we invite designers & developers to play with the Chinese fonts on Early Access.</span>
         <span id="author-text">Project made by <a href="http://www.yuinchien.com/" target="_blank">Yuin Chien</a>.</span>
       </div>

@@ -40,8 +40,8 @@ var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
 var BG = {
-  'tw': ['#FFF','#DDAD09','#518515','#AFE2E4','#E60000','#FFF58A'],
-  'cn': ['#FFF','#DDAD09','#518515','#AFE2E4']
+  'tw': ['#FFF','blanchedalmond','beige','lemonchiffon','honeydew','seashell',],
+  'cn': ['#FFF','blanchedalmond','beige','lemonchiffon']
 }
 
 var calendars = {};
@@ -150,6 +150,34 @@ function createPages() {
 
 $( document ).ready(function() {
 
+  // font loader
+  WebFontConfig = {
+    custom: {
+      families: ['Noto Serif TC:n7'],
+      urls: ['styles.css'],
+    },
+    loading: function() {
+      console.log('loading');
+    },
+    active: function() {
+      console.log('active');
+      $('body').removeClass('loading');
+    },
+    // inactive: function() {
+    //   console.log('inactive');
+    // },
+    // fontloading: function(familyName, fvd) {
+    //   console.log('fontloading');
+    // },
+    // fontactive: function(familyName, fvd) {
+    //   console.log('fontactive');
+    // },
+    // fontinactive: function(familyName, fvd) {
+    //   console.log('fontinactive');
+    // }
+  };
+  WebFont.load(WebFontConfig);
+
   // init
   init();
 
@@ -162,5 +190,8 @@ $( document ).ready(function() {
     createPages();
   });
 
+  $('#button-use, #headerbar a').click(function(){
+    $('body').toggleClass('use-font');
+  });
 
 });

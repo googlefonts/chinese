@@ -128,6 +128,55 @@ body {
   color: #222;
 }
 
+body > *,
+.load-font,
+#pp-nav {
+  -webkit-transition: .5s opacity;
+}
+
+body.loading > * {
+  /* display: none; */
+  opacity: 0.5;
+}
+body.loading .load-font,
+body.loading #pp-nav {
+  display: none;
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.9);
+  opacity: 0;
+  pointer-events: none;
+}
+body.use-font #overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.use-font #headerbar .button-close {
+  display: inline-block;
+}
+body.use-font #headerbar > div {
+  display: none;
+}
+
+#headerbar .button-close {
+  display: none;
+  padding: 6px;
+}
+.button-close > div {
+  background-image: url(images/ic_close_black_24px.svg);
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  color: #222;
+}
+
 #project-title {
   position: fixed;
   top: 19px;
@@ -160,7 +209,8 @@ body {
   z-index: 10000;
 }
 
-#headerbar > div {
+#headerbar > * {
+  vertical-align: middle;
   display: inline-block;
   margin-left: 12px;
   cursor: pointer;
@@ -245,22 +295,21 @@ body {
 }
 
 .chinese-text {
-  line-height: 1.72em;
+  line-height: 1.7em;
   writing-mode: tb-rl;
-  font-size: 28px;
+  font-size: 26px;
   /* margin: 0 auto; */
   /* position: absolute; */
   /* text-align: center; */
   /* margin: 0 240px; */
   letter-spacing: .125em;
+  margin: 0;
   position: relative;
   top: 80px;
   left: 50%;
   /* top: 50%; */
    /* translateX(-50%); */
   /* transform: translateY(-50%); */
-  margin: 0;
-
 }
 .chinese-text > span {
   text-decoration: underline;
