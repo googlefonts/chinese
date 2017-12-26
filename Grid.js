@@ -1,7 +1,7 @@
 (function(){
 
   var MARGIN_LEFT = 24;
-  var MARGIN_TOP = 20;
+  var MARGIN_TOP = 24;
   var GUTTER = 20;
   var COLOR = '#FF5252';
 

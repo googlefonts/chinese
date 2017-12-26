@@ -33,17 +33,24 @@ var CONFIG = {
   'lang': 'tw',
   'font': fontListByLang['tw'][0],
 };
-
+// '〇'
 var WEEKDAYS_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-var NUMBERS_CN = ['日','一','＝','三','四','五','六','七','八','九','十','十一','十二'];
+var NUMBERS_CN = ['日','一','二','三','四','五','六','七','八','九','十','十一','十二'];
+var NUMBERS_YEAR_CN = ['零','一','二','三','四','五','六','七','八','九','十'];
 var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
+
 var BG = {
-  'tw': ['#FFF','#FFFD00','beige','lemonchiffon','honeydew','mistyrose',],
-  'cn': ['#FFF','#FFFD00','beige','lemonchiffon']
-}
+  'tw': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
+  'cn': ['#FFF','powderblue','beige','lemonchiffon']
+};
+
+var DARK_THEMES = {
+  'midnightblue':true,
+};
+
 
 var calendars = {};
 
@@ -65,6 +72,16 @@ function init() {
   return;
 }
 
+
+function getChineseYearText(y) {
+  y = y.toString();
+  var year = '';
+  for(var i=0; i<y.length; i++) {
+    year += NUMBERS_YEAR_CN[ y[i] ];
+  }
+  return year;
+}
+
 function getDateInfo() {
   var today = new Date();
   var dd = today.getDate();
@@ -80,24 +97,64 @@ function getDateInfo() {
   var month_en = MONTHS_EN[mm];
   var month_cn = NUMBERS_CN[mm+1] + '月';
   console.log('MONTHS_EN', month_en);
+
+  var converter = window.index.NumberToChineseWords;
+
   $('.weekday-cn').text( weekday_cn );
   $('.weekday-en').text( weekday_en );
   $('.number-date').text( dd );
+  $('.number-date-cn').text( converter.toWords(dd) +'日' );
   $('.month-en').text( month_en );
   $('.month-cn').text( month_cn );
   $('.number-year').text( yyyy );
-  // Here's some magic to make sure the dates are happening this month.
-    var thisMonth = moment().format('YYYY-MM');
+  $('.number-month').text( mm );
 
-    calendars.clndr1 = $('.cal1').clndr({
-      // events: eventArray,
-      multiDayEvents: {
-        singleDay: 'date',
-        endDate: 'endDate',
-        startDate: 'startDate'
-      },
-      template: $('#clndr-template').html(),
-    });
+  for(var i=0; i<month_cn.length; i++) {
+    $('.section-notosans .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
+  }
+  var date_cn = '二十五';
+  for(var i=0; i<date_cn.length; i++) {
+    $('.section-notosans .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
+  }
+
+  var lunar = window.LunarCalendar.solarToLunar(yyyy,mm,dd);
+  var festival = lunar.solarFestival ? lunar.solarFestival : lunar.lunarFestival;
+  $('.ganzhi-day').text( lunar.GanZhiDay );
+  $('.ganzhi-month').text( lunar.GanZhiMonth );
+  $('.ganzhi-year').text( lunar.GanZhiYear );
+  $('.lunar-day').text( lunar.lunarDay );
+  if(lunar.lunarDayName.indexOf('初') !== -1) {
+    $('.lunar-dayname').text( lunar.lunarDayName );
+  } else {
+    $('.lunar-dayname').text( lunar.lunarDayName + '日');
+  }
+
+  $('.lunar-month').text( lunar.lunarMonth );
+  $('.lunar-monthname').text( lunar.lunarMonthName );
+  $('.lunar-year').text( getChineseYearText( lunar.lunarYear ) );
+  $('.zodiac').text( lunar.zodiac );
+  $('.term').text( lunar.term );
+  $('.festival').text( festival ? festival : ''  );
+  console.log( lunar );
+
+  // for(var i=0; i<weekday_cn.length; i++) {
+  //   $('.section-notosans .blocks').append('<div class="grid-18">'+weekday_cn[i]+'</div>');
+  // }
+
+
+
+  // // Here's some magic to make sure the dates are happening this month.
+  //   var thisMonth = moment().format('YYYY-MM');
+  //
+  //   calendars.clndr1 = $('.cal1').clndr({
+  //     // events: eventArray,
+  //     multiDayEvents: {
+  //       singleDay: 'date',
+  //       endDate: 'endDate',
+  //       startDate: 'startDate'
+  //     },
+  //     template: $('#clndr-template').html(),
+  //   });
 
 }
 
@@ -132,8 +189,8 @@ function createPages() {
     sectionsColor: BG[CONFIG.lang],
     scrollingSpeed: 100,
     navigation: {
-      'textColor': '#000',
-      'bulletsColor': '#000',
+      // 'textColor': '#000',
+      // 'bulletsColor': '#000',
       'position': 'bottomleft',
       'tooltips': Object.values( fontByLang[CONFIG.lang] )
     },
@@ -143,6 +200,12 @@ function createPages() {
 		afterLoad: function(anchorLink, index){
       console.log('afterLoad');
       updateDesignerInfoAndHash(index);
+      // var bg = BG[CONFIG.lang][index-1];
+      // if( DARK_THEMES[bg] ) {
+      //   $('body').addClass('dark-theme');
+      // } else {
+      //   $('body').removeClass('dark-theme');
+      // }
     },
 		afterRender: function(){
       console.log( 'afterRender');
@@ -158,7 +221,7 @@ $( document ).ready(function() {
   // font loader
   WebFontConfig = {
     custom: {
-      families: ['Noto Serif TC:n7'],
+      families: ['Noto Serif TC:n7','GenJyuuGothic:n1,n3,n4,n5,n6,n7'],
       urls: ['styles.css'],
     },
     loading: function() {

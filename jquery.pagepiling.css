@@ -47,7 +47,7 @@ html, body {
 #pp-nav.bottomleft {
     top: auto;
     left: 24px;
-    bottom: 12px;
+    bottom: 16px;
 }
 .pp-section.pp-table{
     display: table;
@@ -89,7 +89,7 @@ html, body {
 }
 #pp-nav li a,
 .pp-slidesNav li a {
-    color: black;
+    /* color: black; */
     display: block;
     position: relative;
     z-index: 1;

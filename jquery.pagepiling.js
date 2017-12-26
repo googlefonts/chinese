@@ -859,7 +859,7 @@
             $('body').append('<div id="pp-nav"><ul></ul></div>');
             var nav = $('#pp-nav');
 
-            nav.css('color', options.navigation.textColor);
+            // nav.css('color', options.navigation.textColor);
 
             nav.addClass(options.navigation.position);
 
