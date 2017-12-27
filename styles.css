@@ -126,6 +126,10 @@ body[lang='cn'] .traditional {
   transform: translateY(-50%) translateX(-50%);
 }
 
+.festival {
+  display: none;
+}
+
 #section-setofont {
   font-family: 'Seto Font', sans-serif;
   font-size: 20px;
@@ -220,12 +224,14 @@ body[lang='cn'] .traditional {
     line-height: 2em;
     font-size: 2.15vh;
     letter-spacing: .4em;
+    font-weight: 500;
   }
   #section-notosans .ganzhi-year,
   #section-notosans .ganzhi-month,
   #section-notosans .ganzhi-day {
     line-height: 1em;
     font-size: 5.6vh;
+    font-weight: 300;
   }
   #section-notosans .label-zodiac {
     font-size: 18vh;
