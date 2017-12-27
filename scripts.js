@@ -143,9 +143,7 @@ function getDateInfo() {
   pages.find('.number-year').text( CONFIG.y );
   pages.find('.number-month').text( CONFIG.m );
 
-  var lunar = CONFIG.lang=='tw'
-    ? window.LunarCalendarTraditional.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d)
-    : window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d);
+  var lunar = window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d,CONFIG.lang);
 
   var festival = lunar.solarFestival ? lunar.solarFestival : lunar.lunarFestival;
   pages.find('.ganzhi-day').text( lunar.GanZhiDay );
@@ -165,7 +163,14 @@ function getDateInfo() {
   pages.find('.zodiac').text( lunar.zodiac );
 
   pages.find('.term').text( lunar.term );
-  pages.find('.festival').text( festival ? festival : ''  );
+  // if(festival.length==0)
+  console.log('festival', festival);
+  if(festival) {
+    pages.find('.festival').text( festival );
+  } else {
+    pages.find('.festival').remove();
+  }
+
 
     // for(var i=0; i<month_cn.length; i++) {
     //   $('.section-notosans .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
