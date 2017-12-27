@@ -105,7 +105,6 @@ function init() {
   }
 
   console.log('CONFIG', CONFIG);
-  getDateInfo();
 
   createPages();
   return;
@@ -128,7 +127,6 @@ function getDateInfo() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-
   var converter = window.index.NumberToChineseWords;
 
   $('.weekday-cn').text( weekday_cn );
@@ -143,13 +141,13 @@ function getDateInfo() {
   $('.number-year').text( CONFIG.y );
   $('.number-month').text( CONFIG.m );
 
-  for(var i=0; i<month_cn.length; i++) {
-    $('.section-notosans .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
-  }
-  var date_cn = '二十五';
-  for(var i=0; i<date_cn.length; i++) {
-    $('.section-notosans .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
-  }
+  // for(var i=0; i<month_cn.length; i++) {
+  //   $('.section-notosans .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
+  // }
+  // var date_cn = '二十五';
+  // for(var i=0; i<date_cn.length; i++) {
+  //   $('.section-notosans .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
+  // }
 
   var lunar = window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d);
   var festival = lunar.solarFestival ? lunar.solarFestival : lunar.lunarFestival;
@@ -167,6 +165,7 @@ function getDateInfo() {
   $('.lunar-monthname').text( lunar.lunarMonthName );
   $('.lunar-year').text( getChineseYearText( lunar.lunarYear ) );
 
+  console.log('123', CONFIG.lang);
   if(CONFIG.lang=='tw') {
     $('.zodiac').text( ZADIAC_TW[lunar.zodiac] );
   } else {
@@ -185,8 +184,6 @@ function updateDesignerInfoAndHash(index) {
   $('#designer-info').text(designer);
   var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
 
-  console.log('updateDesignerInfoAndHash', CONFIG, hash);
-
   if(history.pushState) {
     history.pushState(null, null, hash);
   }
@@ -196,10 +193,13 @@ function updateDesignerInfoAndHash(index) {
 }
 
 function createPages() {
+
   $('#headerbar .lang').removeClass('selected');
   $('#headerbar .lang[content="'+CONFIG.lang+'"]').addClass('selected');
   $('#pages').remove();
   $('#pp-nav').remove();
+
+  getDateInfo();
 
   var pages = $('#pages-'+CONFIG.lang).clone();
   var pages = pages.attr('id','pages').attr('class','');
@@ -263,7 +263,6 @@ $( document ).ready(function() {
   };
   WebFont.load(WebFontConfig);
 
-  // init
   init();
 
   // init headerbar
