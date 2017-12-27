@@ -96,6 +96,11 @@
   font-style: normal;
 }
 
+body[lang='tw'] .simplified,
+body[lang='cn'] .traditional {
+  display: none;
+}
+
 .allcaps {
   text-transform: uppercase;
 }
@@ -186,10 +191,10 @@
     font-size: 48px;
     line-height: 1em;
   }
-  .section-hanamin .number-date-cn {
-    font-size: 160px;
+  .section-hanamin .h1 {
+    font-size: 90px;
     line-height: 1em;
-    letter-spacing: .05em;
+    letter-spacing: .12em;
   }
   .section-hanamin .month-en {
     font-size: 40px;

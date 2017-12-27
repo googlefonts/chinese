@@ -17,11 +17,12 @@
   <script type="text/javascript" src="jquery.pagepiling.js"></script>
   <script type="text/javascript" src="Grid.js"></script>
   <script type="text/javascript" src="LunarCalendar.js"></script>
+  <script type="text/javascript" src="LunarCalendar.Traditional.js"></script>
   <script type="text/javascript" src="number-to-chinese-words.min.js"></script>
 
 </head>
 
-<body class="loading">
+<body class="loading" lang="tw">
 
   <div id="project-title"></div>
   <div id="headerbar" class="load-font">
@@ -68,26 +69,28 @@
   </a>
   <!-- <div id="designer-info" class="text-vert"></div> -->
 
-  <div id="overlay">
-  </div>
+  <div id="overlay"></div>
 
-  <div id="text-grid" class="">
-  </div>
+  <div id="templates-about" class="templates section-about weight-600">
 
-  <div id="pages-tw" class="templates">
-
-    <div class="section-about weight-600">
       <div class="about-bg">
         <svg class="about-bg-svg" width="1179px" height="611px" viewBox="0 0 1179 611" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Page-about-bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="chinese_horz_80" fill="#ffff99" fill-rule="nonzero">
-                    <path d="M319.955485,335.74638 L442.162022,335.74638 L442.162022,162.727651 L319.955485,162.727651 L319.955485,335.74638 Z M99.340527,335.74638 L220.260679,335.74638 L220.260679,162.727651 L99.340527,162.727651 L99.340527,335.74638 Z M478.823983,97.765229 L566.941328,164.657228 C563.082174,169.802767 555.363866,176.23469 541.856828,178.807459 L541.856828,385.915379 C541.213636,391.060917 491.687829,407.783917 459.528214,407.783917 L442.162022,407.783917 L442.162022,353.755764 L319.955485,353.755764 L319.955485,576.300299 C319.955485,585.948184 276.861601,610.389491 238.913256,610.389491 L220.260679,610.389491 L220.260679,353.755764 L99.340527,353.755764 L99.340527,387.201763 C99.340527,396.849648 55.6034506,418.718186 15.0823358,418.718186 L0.9321053,418.718186 L0.9321053,104.840345 L106.415642,144.718267 L220.260679,144.718267 L220.260679,0 L343.7536,11.577461 C342.467216,20.582154 337.964869,27.657269 319.955485,30.230038 L319.955485,144.718267 L436.373291,144.718267 L478.823983,97.765229 Z M791.932105,4.215961 L795.791258,1 C1020.90856,11.291076 944.368681,187.525766 853.678565,125.779305 C845.960258,81.399037 820.232566,34.445999 791.932105,4.215961 Z M959.199639,167 L719.932105,167 C748.232566,268.624383 802.903912,341.948305 873.655064,395.976458 C922.537679,328.441266 948.908559,251.258191 959.199639,167 Z M1150.95072,166.760538 L1071.83806,166.760538 C1052.54229,272.887267 1012.02118,364.863765 940.626826,438.83088 C1012.02118,477.422417 1093.7066,502.506917 1178.60798,519.229917 L1176.67841,526.948224 C1129.72537,534.02334 1096.92256,563.610185 1080.19956,610.563223 C1000.44372,582.905954 930.978946,546.887186 873.734831,495.431802 C798.481333,548.816763 698.786526,587.4083 569.504874,609.276839 L566.932105,602.844916 C681.420334,564.253378 766.96491,512.154802 828.711371,449.121956 C772.110448,380.30038 730.946141,289.610266 709.077603,166.760538 L578.509567,166.760538 L573.364028,148.751153 L1025.52822,148.751153 L1077.62679,78 C1077.62679,78 1136.15729,124.953038 1169.60329,156.469461 C1167.67372,163.544576 1160.5986,166.760538 1150.95072,166.760538 Z" id="中文"></path>
-                </g>
+          <g id="Page-about-bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="chinese_horz_80" fill="#ffff99" fill-rule="nonzero">
+              <path d="M319.955485,335.74638 L442.162022,335.74638 L442.162022,162.727651 L319.955485,162.727651 L319.955485,335.74638 Z M99.340527,335.74638 L220.260679,335.74638 L220.260679,162.727651 L99.340527,162.727651 L99.340527,335.74638 Z M478.823983,97.765229 L566.941328,164.657228 C563.082174,169.802767 555.363866,176.23469 541.856828,178.807459 L541.856828,385.915379 C541.213636,391.060917 491.687829,407.783917 459.528214,407.783917 L442.162022,407.783917 L442.162022,353.755764 L319.955485,353.755764 L319.955485,576.300299 C319.955485,585.948184 276.861601,610.389491 238.913256,610.389491 L220.260679,610.389491 L220.260679,353.755764 L99.340527,353.755764 L99.340527,387.201763 C99.340527,396.849648 55.6034506,418.718186 15.0823358,418.718186 L0.9321053,418.718186 L0.9321053,104.840345 L106.415642,144.718267 L220.260679,144.718267 L220.260679,0 L343.7536,11.577461 C342.467216,20.582154 337.964869,27.657269 319.955485,30.230038 L319.955485,144.718267 L436.373291,144.718267 L478.823983,97.765229 Z M791.932105,4.215961 L795.791258,1 C1020.90856,11.291076 944.368681,187.525766 853.678565,125.779305 C845.960258,81.399037 820.232566,34.445999 791.932105,4.215961 Z M959.199639,167 L719.932105,167 C748.232566,268.624383 802.903912,341.948305 873.655064,395.976458 C922.537679,328.441266 948.908559,251.258191 959.199639,167 Z M1150.95072,166.760538 L1071.83806,166.760538 C1052.54229,272.887267 1012.02118,364.863765 940.626826,438.83088 C1012.02118,477.422417 1093.7066,502.506917 1178.60798,519.229917 L1176.67841,526.948224 C1129.72537,534.02334 1096.92256,563.610185 1080.19956,610.563223 C1000.44372,582.905954 930.978946,546.887186 873.734831,495.431802 C798.481333,548.816763 698.786526,587.4083 569.504874,609.276839 L566.932105,602.844916 C681.420334,564.253378 766.96491,512.154802 828.711371,449.121956 C772.110448,380.30038 730.946141,289.610266 709.077603,166.760538 L578.509567,166.760538 L573.364028,148.751153 L1025.52822,148.751153 L1077.62679,78 C1077.62679,78 1136.15729,124.953038 1169.60329,156.469461 C1167.67372,163.544576 1160.5986,166.760538 1150.95072,166.760538 Z" id="中文"></path>
             </g>
+          </g>
         </svg>
       </div>
 
-      <p class="chinese-text text-vert load-font centered-v"><span>谷歌字庫擁有超過八百多個開源字體，</span><br><span>提供一百三十五種以上的語言給全球使用者。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載龐大的檔案。</span><br><span>此作品以開源的網頁字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發布的中文字體。</span></p>
+      <div class="traditional chinese-text text-vert load-font centered-v">
+        <span>谷歌字庫擁有超過八百多個開源字體，</span><br><span>提供一百三十五種以上的語言給全球使用者。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載龐大的檔案。</span><br><span>此作品以開源的網頁字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發布的中文字體。</span>
+      </div>
+
+      <div class="simplified chinese-text text-vert load-font centered-v">
+        <span>谷歌字库拥有超过八百多个开源字体，</span><br><span>提供一百三十五种以上的语言给全球使用者。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载庞大的档案。</span><br><span>此作品以开源的网页字体来创作日历，</span><br><span>希望在推动技术研发的同时，</span><br><span>也邀清设计人与工程师共襄盛举，</span><br><span>一起试用预先发布的中文字体。</span>
+      </div>
+
       <div class="eng-text load-font weight-600">
         <span class="large">Google Fonts<br>is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the time needed to create the huge character set to the web infrastructure required to serve the massive font files.<br></span>
         <span> Typographic Calendar<br>is designed and created with libre web fonts. We hope to invite designers and developers to experiment with the Chinese fonts on Early Access as the standards and technology continue to develop.<br></span>
@@ -95,30 +98,29 @@
       </div>
     </div>
 
-  	<div class="section-notosans">
-      <div class="centered-hv"></div>
-    </div>
-  	<div class="section-notoserif">2</div>
+  <div id="templates-notosans" class="templates section-notosans"></div>
 
-    <div class="section-setofont">
+  <div id="templates-notoserif" class="templates section-notoserif"></div>
+
+  <div id="templates-setofont" class="templates section-setofont traditional">
       <div class="centered-hv flexbox row wrapper">
 
         <div class="flex flexbox column" style="justify-content: center;">
           <div class="flexbox row">
             <div class="flex">
               <div class="text-vert h3 ganzhi-day" style="margin: 20px 0 20px 40px;"></div>
-              <div class="label">干支紀日</div>
+              <div class="label">干支<span class="ganzhi-label"></span>日</div>
             </div>
             <div class="vline two-px"></div>
             <div class="flex text-vert text-vert flexbox column" style="align-items: flex-end;">
               <div class="h3 ganzhi-month"></div>
-              <div class="label" style="margin-right: 12px;">干支紀月</div>
+              <div class="label" style="margin-right: 12px;">干支<span class="ganzhi-label"></span>月</div>
             </div>
           </div>
           <div class="hline two-px"></div>
           <div class="flexbox row" style="align-items: flex-end; margin-bottom:32px;">
             <div class="h3 ganzhi-year"></div>
-            <div class="label" style="margin:0 auto;">干支<br>紀年</div>
+            <div class="label" style="margin:0 auto;">干支<br><span class="ganzhi-label"></span>年</div>
           </div>
         </div>
 
@@ -161,7 +163,7 @@
       </div>
     </div>
 
-    <div class="section-hanamin">
+  <div id="templates-hanamin" class="templates section-hanamin">
 
       <div class="wrapper flexbox row centered-hv">
         <div class="flex flexbox column" style="justify-content: space-evenly; padding: 32px 32px 32px 0;">
@@ -182,27 +184,25 @@
         </div>
         <div class="vline"></div>
 
-        <div>
-          <div class="h5 text-center">
-            <span class="month-cn h4"></span>
-          </div>
-          <div class="flex text-center text-vert number-date-cn" style="padding: 16px 32px;"></div>
+        <div class="text-center " style="padding: 20px 40px;">
+          <div class="h1 text-vert"><span class="month-cn"></span><span class="number-date-cn" style=""></span></div>
+          <div class="term"></div>
+          <div class="festival"></div>
         </div>
 
         <div class="vline"></div>
         <div class="flexbox column h5" style="justify-content: space-evenly; padding: 32px 0 32px 32px;">
-            <div class="text-vert text-indent-4">干支紀年<br><span class="h3 ganzhi-year"></span></div>
-            <div class="hline"></div>
-            <div class="text-vert text-indent-4">干支紀日<br><span class="h3 ganzhi-day"></span></div>
-            <div class="hline"></div>
-            <div class="text-vert text-indent-4">干支紀月<br><span class="h3 ganzhi-month"></span></div>
-            <div class="term"></div>
-            <div class="festival"></div>
+          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="h3 ganzhi-year"></span></div>
+          <div class="hline"></div>
+          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="h3 ganzhi-day"></span></div>
+          <div class="hline"></div>
+          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="h3 ganzhi-month"></span></div>
         </div>
       </div>
 
     </div>
-  	<div class="section-genjyuugothic">
+
+  <div id="templates-genjyuugothic" class="templates section-genjyuugothic traditional">
       <div class="wrapper centered-h load-font">
         <div class="hline eight-px"></div>
         <div class="weekday-cn weight-600"></div>
@@ -216,76 +216,7 @@
       </div>
     </div>
 
-  </div>
-
-  <div id="pages-cn" class="templates">
-    <div class="section-about weight-600">
-
-      <div class="about-bg">
-        <svg class="about-bg-svg" width="1179px" height="611px" viewBox="0 0 1179 611" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Page-about-bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="chinese_horz_80" fill="#ffff99" fill-rule="nonzero">
-                    <path d="M319.955485,335.74638 L442.162022,335.74638 L442.162022,162.727651 L319.955485,162.727651 L319.955485,335.74638 Z M99.340527,335.74638 L220.260679,335.74638 L220.260679,162.727651 L99.340527,162.727651 L99.340527,335.74638 Z M478.823983,97.765229 L566.941328,164.657228 C563.082174,169.802767 555.363866,176.23469 541.856828,178.807459 L541.856828,385.915379 C541.213636,391.060917 491.687829,407.783917 459.528214,407.783917 L442.162022,407.783917 L442.162022,353.755764 L319.955485,353.755764 L319.955485,576.300299 C319.955485,585.948184 276.861601,610.389491 238.913256,610.389491 L220.260679,610.389491 L220.260679,353.755764 L99.340527,353.755764 L99.340527,387.201763 C99.340527,396.849648 55.6034506,418.718186 15.0823358,418.718186 L0.9321053,418.718186 L0.9321053,104.840345 L106.415642,144.718267 L220.260679,144.718267 L220.260679,0 L343.7536,11.577461 C342.467216,20.582154 337.964869,27.657269 319.955485,30.230038 L319.955485,144.718267 L436.373291,144.718267 L478.823983,97.765229 Z M791.932105,4.215961 L795.791258,1 C1020.90856,11.291076 944.368681,187.525766 853.678565,125.779305 C845.960258,81.399037 820.232566,34.445999 791.932105,4.215961 Z M959.199639,167 L719.932105,167 C748.232566,268.624383 802.903912,341.948305 873.655064,395.976458 C922.537679,328.441266 948.908559,251.258191 959.199639,167 Z M1150.95072,166.760538 L1071.83806,166.760538 C1052.54229,272.887267 1012.02118,364.863765 940.626826,438.83088 C1012.02118,477.422417 1093.7066,502.506917 1178.60798,519.229917 L1176.67841,526.948224 C1129.72537,534.02334 1096.92256,563.610185 1080.19956,610.563223 C1000.44372,582.905954 930.978946,546.887186 873.734831,495.431802 C798.481333,548.816763 698.786526,587.4083 569.504874,609.276839 L566.932105,602.844916 C681.420334,564.253378 766.96491,512.154802 828.711371,449.121956 C772.110448,380.30038 730.946141,289.610266 709.077603,166.760538 L578.509567,166.760538 L573.364028,148.751153 L1025.52822,148.751153 L1077.62679,78 C1077.62679,78 1136.15729,124.953038 1169.60329,156.469461 C1167.67372,163.544576 1160.5986,166.760538 1150.95072,166.760538 Z" id="中文"></path>
-                </g>
-            </g>
-        </svg>
-      </div>
-
-      <p class="chinese-text text-vert load-font centered-v"><span>谷歌字库拥有超过八百多个开源字体，</span><br><span>提供一百三十五种以上的语言给全球使用者。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载庞大的档案。</span><br><span>此作品以开源的网页字体来创作日历，</span><br><span>希望在推动技术研发的同时，</span><br><span>也邀清设计人与工程师共襄盛举，</span><br><span>一起试用预先发布的中文字体。</span></p>
-      <div class="eng-text load-font weight-600">
-        <span class="large">Google Fonts<br>is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the time needed to create the huge character set to the web infrastructure required to serve the massive font files.<br></span>
-        <span> Typographic Calendar<br>is designed and created with libre web fonts. We hope to invite designers and developers to experiment with the Chinese fonts on Early Access as the standards and technology continue to develop.<br></span>
-        <div id="author-text">Project made by <a href="http://www.yuinchien.com/" target="_blank">Yuin Chien</a>.</div>
-      </div>
-    </div>
-    <div></div>
-    <div></div>
-    <div class="section-hanamin">
-
-      <div class="wrapper flexbox row centered-hv">
-        <div class="flex flexbox column" style="justify-content: space-evenly; padding: 32px 32px 32px 0;">
-
-          <div class="text-center">
-            <div class="h5">生肖</div>
-            <div class="hline" style="margin:12px 0 16px 0;"></div>
-            <div class="h3 zodiac"></div>
-          </div>
-          <div>
-            <div class="text-vert h4" style="margin: 12px auto;">農曆</div>
-            <div class="hline"></div>
-            <div class="text-vert h5" style="letter-spacing: 8px; margin: 24px auto 0 auto;">
-              <div class="lunar-year"></div>
-              <div><span class="lunar-monthname"></span><span class="lunar-dayname"></span></div>
-            </div>
-          </div>
-        </div>
-        <div class="vline"></div>
-
-        <div>
-          <div class="h5 text-center">
-            <!-- <div class="number-year"></div> -->
-
-            <span class="month-cn h4"></span>
-            <!-- <div class="hline" style="margin:12px 0;"></div> -->
-          </div>
-          <div class="flex text-center text-vert number-date-cn" style="padding: 16px 32px;"></div>
-        </div>
-
-        <div class="vline"></div>
-        <div class="flex flexbox column h5" style="justify-content: space-evenly; padding: 32px 0 32px 32px;">
-            <div class="text-vert text-indent-4">干支纪年<br><span class="h3 ganzhi-year"></span></div>
-            <div class="hline"></div>
-            <div class="text-vert text-indent-4">干支纪日<br><span class="h3 ganzhi-day"></span></div>
-            <div class="hline"></div>
-            <div class="text-vert text-indent-4">干支纪月<br><span class="h3 ganzhi-month"></span></div>
-            <!-- <div class="term"></div>
-            <div class="festival"></div> -->
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <script type="text/javascript" src="scripts.js"></script>
+
 </body>
 </html>
