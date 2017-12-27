@@ -192,7 +192,12 @@ body[lang='cn'] .traditional {
     line-height: 1em;
   }
   .section-hanamin .h1 {
-    font-size: 90px;
+    font-size: 120px;
+    line-height: 1em;
+    letter-spacing: .12em;
+  }
+  .section-hanamin .h2 {
+    font-size: 80px;
     line-height: 1em;
     letter-spacing: .12em;
   }

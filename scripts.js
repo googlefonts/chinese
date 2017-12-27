@@ -4,8 +4,8 @@ var fontByLang = {
     'NotoSans': '思源黑體',
     'NotoSerif': '思源宋體',
     'SetoFont': '瀨戶字體',
-    'HanaMin': '花園明朝',
     'GenJyuuGothic': '思源柔黑體',
+    'HanaMin': '花園明朝',
   },
   'cn': {
     'About': '网站介绍',
@@ -117,12 +117,14 @@ function getDateInfo() {
 
   pages.find('.ganzhi-label').text( GANZHI_LABEL[CONFIG.lang] );
 
+  var converter = window.index.NumberToChineseWords;
   var today = CONFIG.today;
   var weekday_en = WEEKDAYS_EN[ CONFIG.weekday ];
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var converter = window.index.NumberToChineseWords;
+  var date_cn = converter.toWords(CONFIG.d) +'日';
+
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
@@ -130,6 +132,11 @@ function getDateInfo() {
   pages.find('.number-date').text( CONFIG.d );
 
   pages.find('.number-date-cn').text( converter.toWords(CONFIG.d) +'日' );
+
+  if( ( date_cn.length + month_cn.length) > 5 ) {
+    pages.find('.month-date-cn').removeClass('h1').addClass('h2');
+  }
+  pages.find('.month-date-cn').text( month_cn + date_cn );
 
   pages.find('.month-en').text( month_en );
   pages.find('.month-cn').text( month_cn );
