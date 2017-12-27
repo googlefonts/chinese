@@ -164,9 +164,7 @@ body[lang='cn'] .traditional {
 #section-genjyuugothic {
   font-family: 'GenJyuuGothic';
 }
-#section-notosans {
-  font-family: 'Noto Sans SC Sliced', sans-serif;
-}
+
 #section-notoserif {
   font-family: 'Noto Serif TC';
 }
@@ -211,46 +209,55 @@ body[lang='cn'] .traditional {
     line-height: 1.8em;
   }
 
-#section-genjyuugothic img {
-  max-width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+#section-notosans {
+  font-family: 'Noto Sans SC Sliced', sans-serif;
 }
-#section-genjyuugothic .wrapper {
-  position: absolute;
-  max-width: 480px;
-  bottom: 80px;
-  top: 80px;
-  width: 20%;
-}
-#section-genjyuugothic .weekday-cn {
-  font-size: 6.5vw;
-  line-height: 1.1em;
-}
-#section-genjyuugothic .weekday-en {
-  font-size: 4.7vw;
-  line-height: 1em;
-}
-#section-genjyuugothic .arrows {
-  font-size: 2.5vw;
-  letter-spacing: -.2em;
-  margin: 8px 0;
-}
-#section-genjyuugothic .number-date {
-  font-size: 19vw;
-  line-height: .82em;
-}
-#section-genjyuugothic .label-year {
-  font-size: 8.6em;
-  line-height: .86em;
-  margin-bottom: 16px;
-}
-#section-genjyuugothic .label-month {
-  font-size: 2vw;
-  line-height: 2em;
-  text-transform: uppercase;
-}
+  #section-notosans .wrapper {
+    max-width: 480px;
+  }
+  #section-notosans .group-ganzhi {
+    margin: 24px 0 16px 0;
+    line-height: 2em;
+    font-size: 2.15vh;
+    letter-spacing: .4em;
+  }
+  #section-notosans .ganzhi-year,
+  #section-notosans .ganzhi-month,
+  #section-notosans .ganzhi-day {
+    line-height: 1em;
+    font-size: 5.6vh;
+  }
+  #section-notosans .label-zodiac {
+    font-size: 18vh;
+    line-height: 1em;
+  }
+  #section-notosans .label-lunardate {
+    font-size: 4.1vh;
+    line-height: 1em;
+  }
+  #section-notosans .weekday-cn {
+    font-size: 10.5vh;
+    line-height: 1.1em;
+  }
+  #section-notosans .arrows {
+    font-size: 2.5vw;
+    letter-spacing: -.2em;
+    margin: 8px 0;
+  }
+  #section-notosans .number-date {
+    font-size: 28vh;
+    line-height: .82em;
+  }
+  #section-notosans .label-year {
+    font-size: 8.6em;
+    line-height: .86em;
+    margin-bottom: 16px;
+  }
+  #section-notosans .label-month {
+    font-size: 3.3vh;
+    line-height: 2em;
+    text-transform: uppercase;
+  }
 
 
 #section-hanamin .blocks {
