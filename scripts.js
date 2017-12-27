@@ -29,12 +29,33 @@ var fontListByLang = {
   'cn': Object.keys( fontByLang['cn'] ),
 };
 
+var ZADIAC_TW = {
+  '鼠':'鼠',
+  '牛':'牛',
+  '虎':'虎',
+  '兔':'兔',
+  '龙':'龍',
+  '蛇':'蛇',
+  '马':'馬',
+  '羊':'羊',
+  '猴':'猴',
+  '鸡':'雞',
+  '狗':'狗',
+  '猪':'豬',
+};
+
 var CONFIG = {
   'lang': 'tw',
   'font': fontListByLang['tw'][0],
+  'y': null,
+  'm': null,
+  'd': null,
+  'weekday': null,
+  'today': null,
 };
 // '〇'
 var WEEKDAYS_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
 var NUMBERS_CN = ['日','一','二','三','四','五','六','七','八','九','十','十一','十二'];
 var NUMBERS_YEAR_CN = ['零','一','二','三','四','五','六','七','八','九','十'];
 var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -66,6 +87,24 @@ function init() {
       CONFIG.font = hash[1];
     }
   }
+
+  try {
+    CONFIG.y = parseInt( hash[2].slice(0, 4) );
+    CONFIG.m = parseInt( hash[2].slice(4, 6) );
+    CONFIG.d = parseInt( hash[2].slice(6, 8) );
+    CONFIG.today = new Date(Date.UTC(CONFIG.y, CONFIG.m-1, CONFIG.d, 14, 0, 0));
+    CONFIG.weekday = CONFIG.today.getDay();
+  } catch(e) {
+    console.log('error',e);
+
+    CONFIG.today = new Date();
+    CONFIG.d = CONFIG.today.getDate();
+    CONFIG.m = CONFIG.today.getMonth() + 1;
+    CONFIG.y = CONFIG.today.getFullYear();
+    CONFIG.weekday = CONFIG.today.getDay();
+  }
+
+  console.log('CONFIG', CONFIG);
   getDateInfo();
 
   createPages();
@@ -83,31 +122,26 @@ function getChineseYearText(y) {
 }
 
 function getDateInfo() {
-  var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth();
-  var yyyy = today.getFullYear();
 
-  console.log(dd,mm,yyyy);
-
-  // today = mm + '/' + dd + '/' + yyyy;
-  // console.log(today, today);
-  var weekday_en = WEEKDAYS_EN[ today.getDay() ];
-  var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ today.getDay() ];
-  var month_en = MONTHS_EN[mm];
-  var month_cn = NUMBERS_CN[mm+1] + '月';
-  console.log('MONTHS_EN', month_en);
+  var today = CONFIG.today;
+  var weekday_en = WEEKDAYS_EN[ CONFIG.weekday ];
+  var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
+  var month_en = MONTHS_EN[CONFIG.m-1];
+  var month_cn = NUMBERS_CN[CONFIG.m] + '月';
 
   var converter = window.index.NumberToChineseWords;
 
   $('.weekday-cn').text( weekday_cn );
   $('.weekday-en').text( weekday_en );
-  $('.number-date').text( dd );
-  $('.number-date-cn').text( converter.toWords(dd) +'日' );
+  $('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
+  $('.number-date').text( CONFIG.d );
+
+  $('.number-date-cn').text( converter.toWords(CONFIG.d) +'日' );
+
   $('.month-en').text( month_en );
   $('.month-cn').text( month_cn );
-  $('.number-year').text( yyyy );
-  $('.number-month').text( mm );
+  $('.number-year').text( CONFIG.y );
+  $('.number-month').text( CONFIG.m );
 
   for(var i=0; i<month_cn.length; i++) {
     $('.section-notosans .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
@@ -117,7 +151,7 @@ function getDateInfo() {
     $('.section-notosans .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
   }
 
-  var lunar = window.LunarCalendar.solarToLunar(yyyy,mm,dd);
+  var lunar = window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d);
   var festival = lunar.solarFestival ? lunar.solarFestival : lunar.lunarFestival;
   $('.ganzhi-day').text( lunar.GanZhiDay );
   $('.ganzhi-month').text( lunar.GanZhiMonth );
@@ -132,38 +166,27 @@ function getDateInfo() {
   $('.lunar-month').text( lunar.lunarMonth );
   $('.lunar-monthname').text( lunar.lunarMonthName );
   $('.lunar-year').text( getChineseYearText( lunar.lunarYear ) );
-  $('.zodiac').text( lunar.zodiac );
+
+  if(CONFIG.lang=='tw') {
+    $('.zodiac').text( ZADIAC_TW[lunar.zodiac] );
+  } else {
+    $('.zodiac').text( lunar.zodiac );
+  }
+
   $('.term').text( lunar.term );
   $('.festival').text( festival ? festival : ''  );
+
   console.log( lunar );
-
-  // for(var i=0; i<weekday_cn.length; i++) {
-  //   $('.section-notosans .blocks').append('<div class="grid-18">'+weekday_cn[i]+'</div>');
-  // }
-
-
-
-  // // Here's some magic to make sure the dates are happening this month.
-  //   var thisMonth = moment().format('YYYY-MM');
-  //
-  //   calendars.clndr1 = $('.cal1').clndr({
-  //     // events: eventArray,
-  //     multiDayEvents: {
-  //       singleDay: 'date',
-  //       endDate: 'endDate',
-  //       startDate: 'startDate'
-  //     },
-  //     template: $('#clndr-template').html(),
-  //   });
-
 }
 
 function updateDesignerInfoAndHash(index) {
   CONFIG.font = fontListByLang[CONFIG.lang][index-1];
   var designer = designerByFont[CONFIG.font];
   $('#designer-info').text(designer);
+  var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
 
-  var hash = '#'+CONFIG.lang+'-'+CONFIG.font;
+  console.log('updateDesignerInfoAndHash', CONFIG, hash);
+
   if(history.pushState) {
     history.pushState(null, null, hash);
   }
@@ -189,8 +212,8 @@ function createPages() {
     sectionsColor: BG[CONFIG.lang],
     scrollingSpeed: 100,
     navigation: {
-      // 'textColor': '#000',
-      // 'bulletsColor': '#000',
+      'textColor': '#000',
+      'bulletsColor': '#000',
       'position': 'bottomleft',
       'tooltips': Object.values( fontByLang[CONFIG.lang] )
     },
@@ -200,12 +223,6 @@ function createPages() {
 		afterLoad: function(anchorLink, index){
       console.log('afterLoad');
       updateDesignerInfoAndHash(index);
-      // var bg = BG[CONFIG.lang][index-1];
-      // if( DARK_THEMES[bg] ) {
-      //   $('body').addClass('dark-theme');
-      // } else {
-      //   $('body').removeClass('dark-theme');
-      // }
     },
 		afterRender: function(){
       console.log( 'afterRender');

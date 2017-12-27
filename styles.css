@@ -44,6 +44,14 @@
   font-style: normal;
 }
 
+/* Seto Font */
+@font-face {
+  font-family: 'Seto Font';
+  src: url('fonts/setofont.ttf'); /* IE9 Compat Modes */
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
@@ -88,6 +96,13 @@
   font-style: normal;
 }
 
+.allcaps {
+  text-transform: uppercase;
+}
+
+.relative {
+  position: relative;
+}
 
 .centered-h {
   position: absolute;
@@ -106,11 +121,45 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
+.section-setofont {
+  font-family: 'Seto Font', sans-serif;
+  font-size: 20px;
+}
+  .section-setofont .vline {
+    margin: 0 16px;
+  }
+  .section-setofont .hline {
+    margin: 16px 0;
+  }
+  .section-setofont .number-date {
+    margin-bottom: 8px;
+  }
+  .section-setofont .wrapper {
+    flex: 1.5;
+    width: 90%;
+    max-width: 880px;
+  }
+  .section-setofont .h1 {
+    font-size: 280px;
+    line-height: 1em;
+  }
+  .section-setofont .h3 {
+    font-size: 64px;
+    line-height: 1em;
+  }
+  .section-setofont .h4 {
+    font-size: 40px;
+  }
+  .section-setofont .h5 {
+    font-size: 30px;
+    line-height: 1.25em;
+  }
+
+
 .section-genjyuugothic {
   font-family: 'GenJyuuGothic';
 }
 .section-notosans {
-  /* font-family: 'Noto Sans TC'; */
   font-family: 'Noto Sans SC Sliced', sans-serif;
 }
 .section-notoserif {
@@ -119,6 +168,9 @@
 .section-hanamin {
   font-family: 'Hana Min';
 }
+  .section-hanamin .wrapper {
+    width: 36%;
+  }
   .section-hanamin .h5 {
     font-size: 18px;
   }
@@ -135,7 +187,7 @@
     line-height: 1em;
   }
   .section-hanamin .number-date-cn {
-    font-size: 136px;
+    font-size: 160px;
     line-height: 1em;
     letter-spacing: .05em;
   }
@@ -200,6 +252,9 @@
   margin: 0 8px;
   border-left-width: 1px;
 }
+  .vline.two-px {
+    border-left-width: 2px;
+  }
 .hline {
   width: 100%;
   border-top-style: solid;
@@ -207,9 +262,7 @@
   margin: 8px 0;
   border-top-width: 1px;
 }
-  body.dark-theme .hline {
-    border-top-color: #fff;
-  }
+
 .hline.two-px {
   border-top-width: 2px;
 }
@@ -305,9 +358,6 @@
 a {
   color: #444;
   text-decoration: none;
-}
-body.dark-theme a {
-  color: #fff;
 }
 
 .hline-4 {
@@ -524,7 +574,7 @@ body.use-font #headerbar > div {
   line-height: 1.6em;
   font-size: 28px;
   letter-spacing: .125em;
-  margin: 0;
+  margin-left: 8px;
   position: relative;
   left: 50%;
   text-align: center;
@@ -542,8 +592,8 @@ body.use-font #headerbar > div {
   text-align: right;
   line-height: 1.8em;
   margin: 0;
-  transform: translateX( calc( -100% - 10px) ) translateY(-50%);
-  width: 400px;
+  transform: translateX( calc( -100% - 14px) ) translateY(-50%);
+  width: 360px;
 }
 .eng-text > .large {
   display: inline-block;
@@ -589,17 +639,6 @@ body.use-font #headerbar > div {
   margin: -5%;
 }
 
-
-body.dark-theme {
-  color: white;
-}
-#badge #Page-1 {
-  fill: black;
-  -webkit-transition: .2s fill;
-}
-body.dark-theme #badge #Page-1 {
-  fill: white;
-}
 
 @media (max-width: 720px) {
   #about-bg {
