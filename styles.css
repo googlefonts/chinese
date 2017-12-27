@@ -126,129 +126,134 @@ body[lang='cn'] .traditional {
   transform: translateY(-50%) translateX(-50%);
 }
 
-.section-setofont {
+#section-setofont {
   font-family: 'Seto Font', sans-serif;
   font-size: 20px;
 }
-  .section-setofont .vline {
+  #section-setofont .vline {
     margin: 0 16px;
   }
-  .section-setofont .hline {
+  #section-setofont .hline {
     margin: 16px 0;
   }
-  .section-setofont .number-date {
+  #section-setofont .number-date {
     margin-bottom: 8px;
   }
-  .section-setofont .wrapper {
+  #section-setofont .wrapper {
     flex: 1.5;
     width: 90%;
     max-width: 880px;
   }
-  .section-setofont .h1 {
+  #section-setofont .h1 {
     font-size: 280px;
     line-height: 1em;
   }
-  .section-setofont .h3 {
+  #section-setofont .h3 {
     font-size: 64px;
     line-height: 1em;
   }
-  .section-setofont .h4 {
+  #section-setofont .h4 {
     font-size: 40px;
   }
-  .section-setofont .h5 {
+  #section-setofont .h5 {
     font-size: 30px;
     line-height: 1.25em;
   }
 
 
-.section-genjyuugothic {
+#section-genjyuugothic {
   font-family: 'GenJyuuGothic';
 }
-.section-notosans {
+#section-notosans {
   font-family: 'Noto Sans SC Sliced', sans-serif;
 }
-.section-notoserif {
+#section-notoserif {
   font-family: 'Noto Serif TC';
 }
-.section-hanamin {
+#section-hanamin {
   font-family: 'Hana Min';
 }
-  .section-hanamin .wrapper {
+  #section-hanamin .wrapper {
     width: 36%;
   }
-  .section-hanamin .h5 {
+  #section-hanamin .h5 {
     font-size: 18px;
   }
-  .section-hanamin .text-vert {
+  #section-hanamin .text-vert {
     letter-spacing: 8px;
   }
 
-  .section-hanamin .h4 {
+  #section-hanamin .h4 {
     font-size: 24px;
     /* letter-spacing: .5em; */
   }
-  .section-hanamin .h3 {
+  #section-hanamin .h3 {
     font-size: 48px;
     line-height: 1em;
   }
-  .section-hanamin .h1 {
+  #section-hanamin .h1 {
     font-size: 120px;
     line-height: 1em;
     letter-spacing: .12em;
   }
-  .section-hanamin .h2 {
+  #section-hanamin .h2 {
     font-size: 80px;
     line-height: 1em;
     letter-spacing: .12em;
   }
-  .section-hanamin .month-en {
+  #section-hanamin .month-en {
     font-size: 40px;
     line-height: 1em;
   }
+  #section-hanamin .ganzhi-year,
+  #section-hanamin .ganzhi-month,
+  #section-hanamin .ganzhi-day {
+    line-height: 1.8em;
+  }
 
-.section-genjyuugothic img {
+#section-genjyuugothic img {
   max-width: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-.section-genjyuugothic .wrapper {
+#section-genjyuugothic .wrapper {
   position: absolute;
   max-width: 480px;
   bottom: 80px;
   top: 80px;
   width: 20%;
 }
-.section-genjyuugothic .weekday-cn {
+#section-genjyuugothic .weekday-cn {
   font-size: 6.5vw;
   line-height: 1.1em;
 }
-.section-genjyuugothic .weekday-en {
+#section-genjyuugothic .weekday-en {
   font-size: 4.7vw;
   line-height: 1em;
 }
-.section-genjyuugothic .arrows {
+#section-genjyuugothic .arrows {
   font-size: 2.5vw;
   letter-spacing: -.2em;
   margin: 8px 0;
 }
-.section-genjyuugothic .number-date {
+#section-genjyuugothic .number-date {
   font-size: 19vw;
   line-height: .82em;
 }
-.section-genjyuugothic .label-year {
+#section-genjyuugothic .label-year {
   font-size: 8.6em;
   line-height: .86em;
   margin-bottom: 16px;
 }
-.section-genjyuugothic .label-month {
+#section-genjyuugothic .label-month {
   font-size: 2vw;
   line-height: 2em;
   text-transform: uppercase;
 }
 
 
-.section-hanamin .blocks {
+#section-hanamin .blocks {
   width: 90%;
 }
 
@@ -297,6 +302,12 @@ body[lang='cn'] .traditional {
 }
 .flexbox .flex {
   flex: 1;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
 }
 
 .text-indent-4 {

@@ -246,7 +246,7 @@ $( document ).ready(function() {
   // font loader
   WebFontConfig = {
     custom: {
-      families: ['Noto Serif TC:n7','GenJyuuGothic:n1,n3,n4,n5,n6,n7'],
+      families: ['Noto Serif TC:n7','GenJyuuGothic:n1,n3,n4,n5,n6,n7','Seto Font'],
       urls: ['styles.css'],
     },
     loading: function() {
