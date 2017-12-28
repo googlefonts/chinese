@@ -243,14 +243,14 @@ body[lang='cn'] .traditional {
   #section-notoserif .month-cn {
     background: #222;
     border-radius: 10vh;
-    padding: 14px 0 16px 0;
+    padding: 16px;
     color: powderblue;
   }
   #section-notoserif .label-month-cn {
     border-radius: 8vh;
     padding: .8vh;
     font-size: 4vh;
-    border: 1px solid #222;
+    border: 1px dotted #222;
   }
   #section-notoserif .label-lunar-month-date-name {
     background: #222;
@@ -258,9 +258,9 @@ body[lang='cn'] .traditional {
     outline: 2px solid #222;
     outline-offset: 8px;
     color: powderblue;
-    padding: 0 16px;
+    padding: 16px;
     font-size: 9vh;
-    letter-spacing: .15em;
+    letter-spacing: .2em;
   }
   #section-notoserif .label-lunar-calendar {
     font-size: 5.4vh;
@@ -287,13 +287,14 @@ body[lang='cn'] .traditional {
     font-size: 5vh;
     letter-spacing: .2em;
     margin: 0 auto;
-    border: 2px solid #222;
-    /* color: powderblue; */
+    background: #222;
+    color: powderblue;
     padding: .8vh .8vh 0 .8vh;
     margin-bottom: 1vh;
+    border-radius: 8px;
   }
   #section-notoserif .ganzhi-group {
-    margin-right: 2vh;
+    margin-right: 2.4vh;
   }
   #section-notoserif .ganzhi-group .label {
     text-align: center;

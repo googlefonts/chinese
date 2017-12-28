@@ -128,16 +128,12 @@ function updateContent() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var date_cn = converter.toWords(CONFIG.d);
+  var date_cn = converter.toWords(CONFIG.d) + '日';
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
-
-  // if(date_cn.length<2) {
-    date_cn += '日';
-  // }
   pages.find('.date-cn').text( date_cn );
 
   if( ( date_cn.length + month_cn.length) > 5 ) {
@@ -216,6 +212,8 @@ function createPages() {
   $('#headerbar .lang[content="'+CONFIG.lang+'"]').addClass('selected');
   $('#pages').remove();
   $('#pp-nav').remove();
+
+  var languages = ['tw', 'cn'];
 
   var pages = $('<div id="pages"></div>');
   $('body').append(pages);
