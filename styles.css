@@ -233,13 +233,12 @@ body[lang='cn'] .traditional {
   #section-notoserif .date-cn {
     font-size: 16vh;
     letter-spacing: .08em;
-
     padding: 0 3vh;
-    border: 4px solid #222;
-
+    border: 8px solid #222;
     /* color: powderblue; */
     margin: 0 20px;
-    border-radius: 4px;
+    border-radius: 24px;
+    box-sizing: border-box;
   }
   #section-notoserif .month-cn {
     background: #222;
@@ -254,16 +253,22 @@ body[lang='cn'] .traditional {
     border: 1px solid #222;
   }
   #section-notoserif .label-lunar-month-date-name {
+    background: #222;
+    margin: 8px;
+    outline: 2px solid #222;
+    outline-offset: 8px;
+    color: powderblue;
+    padding: 0 16px;
     font-size: 9vh;
     letter-spacing: .15em;
-    margin-top: -5vh;
   }
   #section-notoserif .label-lunar-calendar {
-    font-size: 6vh;
+    font-size: 5.4vh;
     margin-bottom: 24px;
-    border: 3px solid #222;
+    outline: 6px dotted #222;
     padding: 14px 0 16px 0;
     border-radius: 6px;
+    outline-offset: -6px;
   }
   #section-notoserif .weekday-cn {
     font-size: 8vh;
@@ -279,11 +284,11 @@ body[lang='cn'] .traditional {
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
   #section-notoserif .ganzhi-day {
-    font-size: 5.4vh;
+    font-size: 5vh;
     letter-spacing: .2em;
     margin: 0 auto;
-    background: #222;
-    color: powderblue;
+    border: 2px solid #222;
+    /* color: powderblue; */
     padding: .8vh .8vh 0 .8vh;
     margin-bottom: 1vh;
   }
@@ -297,24 +302,29 @@ body[lang='cn'] .traditional {
   }
   #section-notoserif .weekday-en-shorten {
     font-size: 9vh;
-    /* margin: 16px 0; */
   }
   #section-notoserif .number-date {
-    font-size: 13vh;
-    /* padding-bottom: 12px; */
+    font-size: 11vh;
+    margin-top: -.5vh;
+  }
+  #section-notoserif .label-number-date {
+    border: 4px dotted #222;
+    border-radius: 20vh;
+    width: 100%;
+    padding-bottom: calc(100% - 8px);
+    position: relative;
+    box-sizing: border-box;
   }
   #section-notoserif .label-zodiac {
-    /* font-size: 16vh; */
-    /* border-radius: 9vh; */
     width: 100%;
     padding-bottom: 116%;
     font-size: 10vh;
     position: relative;
     background-image: url(images/hexagon.svg);
-    background-size: contain;
+    background-size: 94%;
     background-repeat: no-repeat;
-    /* background: #222; */
     color: powderblue;
+    background-position: 50% 50%;
   }
   #section-notoserif .zodiac {
     margin-top: -.05em;
@@ -364,6 +374,10 @@ body[lang='cn'] .traditional {
 
 #section-hanamin .blocks {
   width: 90%;
+}
+
+body {
+  background: #ecf0f1;
 }
 
 .uppercase {
