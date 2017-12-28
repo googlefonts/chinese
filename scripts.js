@@ -28,6 +28,10 @@ var GANZHI_LABEL = {
   'tw':'紀',
   'cn':'纪'
 };
+var LUNAR_CALENDAR_LABEL = {
+  'tw':'農曆',
+  'cn':'农历'
+};
 
 var fontListByLang = {
   'tw': Object.keys( fontByLang['tw'] ),
@@ -111,11 +115,12 @@ function getChineseYearText(y) {
   return year;
 }
 
-function getDateInfo() {
+function updateContent() {
 
   var pages = $('#pages');
 
   pages.find('.ganzhi-label').text( GANZHI_LABEL[CONFIG.lang] );
+  pages.find('.lunar-calendar-cn').text( LUNAR_CALENDAR_LABEL[CONFIG.lang] );
 
   var converter = window.index.NumberToChineseWords;
   var today = CONFIG.today;
@@ -123,15 +128,17 @@ function getDateInfo() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var date_cn = converter.toWords(CONFIG.d) +'日';
-
+  var date_cn = converter.toWords(CONFIG.d);
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
 
-  pages.find('.number-date-cn').text( converter.toWords(CONFIG.d) +'日' );
+  if(date_cn.length<2) {
+    date_cn += '日';
+  }
+  pages.find('.date-cn').text( converter.toWords(CONFIG.d) );
 
   if( ( date_cn.length + month_cn.length) > 5 ) {
     pages.find('.month-date-cn').removeClass('h1').addClass('h2');
@@ -152,6 +159,8 @@ function getDateInfo() {
   pages.find('.lunar-day').text( lunar.lunarDay );
 
   var labeLunarMonthDateName = lunar.lunarMonthName + lunar.lunarDayName;
+
+  pages.find('.year-cn').text( getChineseYearText(CONFIG.y) );
 
   if(lunar.lunarDayName.indexOf('初') !== -1) {
     pages.find('.lunar-dayname').text( lunar.lunarDayName );
@@ -178,14 +187,13 @@ function getDateInfo() {
     pages.find('.festival').remove();
   }
 
-
-    for(var i=0; i<month_cn.length; i++) {
-      $('#section-notoserif .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
-    }
-    var date_cn = '二十五';
-    for(var i=0; i<date_cn.length; i++) {
-      $('#section-notoserif .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
-    }
+    // for(var i=0; i<month_cn.length; i++) {
+    //   $('#section-notoserif .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
+    // }
+    // var date_cn = '二十五';
+    // for(var i=0; i<date_cn.length; i++) {
+    //   $('#section-notoserif .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
+    // }
 }
 
 function updateDesignerInfoAndHash(index) {
@@ -219,7 +227,7 @@ function createPages() {
     pages.append(section);
   }
 
-  getDateInfo(); // TODO: MOVE TO BOTTOM
+  updateContent(); // TODO: MOVE TO BOTTOM
 
   pages.pagepiling({
     direction: 'vertical',

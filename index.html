@@ -98,34 +98,72 @@
     </div>
 
   <div id="templates-notosans" class="templates">
-    <div class="wrapper centered-h load-font centered-hv">
-      <!-- <div class="hline eight-px"></div> -->
-      <div class="weekday-cn weight-400 text-center" style="margin-bottom:8px;"></div>
+    <div class="wrapper centered-h load-font centered-hv weight-500">
       <!-- <div class="weekday-en weight-500 uppercase"></div> -->
       <!-- <div class="arrows">❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯</div> -->
-      <div class="number-date weight-700 text-center"></div>
+      <div class="weekday-cn text-center"></div>
+      <div class="number-date text-center"></div>
 
-      <div class="label-month weight-700 text-center" style="margin:16px 0 0 0;">
+      <div class="label-month text-center">
         <span class="month-en"></span>˙<span class="month-cn"></span>
       </div>
 
-      <div class="label-zodiac text-center">「<span class="zodiac weight-500"></span>」</div>
+      <div class="label-zodiac text-center">「<span class="zodiac"></span>」</div>
+      <!-- <div class="label-zodiac text-center"><span class="zodiac"></span></div> -->
 
-      <div class="flex flexbox row justify-center group-ganzhi">
+      <div class="justify-center flexbox row ganzhi-group">
         <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="ganzhi-year"></span></div>
-        <div style="width:12px"></div>
+        <div style="width:2vh;"></div>
         <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="ganzhi-month"></span></div>
-        <div style="width:12px"></div>
+        <div style="width:2vh;"></div>
         <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="ganzhi-day"></span></div>
       </div>
 
-      <div class="weight-500 text-center label-lunardate">[農曆] <span class="lunar-month-date-name"></span></div>
+      <div class="text-center label-lunardate">[<span class="lunar-calendar-cn"></span>] <span class="lunar-month-date-name"></span></div>
     </div>
   </div>
 
   <div id="templates-notoserif" class="templates">
-    <div class="centered-hv flexbox row wrapper load-font">
-      <div class="blocks"></div>
+    <div class="weight-700 centered-hv flexbox row wrapper load-font justify-center">
+      <div class="">
+        <div class="text-center label-lunar-calendar">[<span class="lunar-calendar-cn"></span>]</div>
+        <div class="flexbox row">
+          <div class="ganzhi-group">
+            <div class="flex">
+              <div class="text-vert ganzhi-day"></div>
+              <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
+            </div>
+            <div style="height:24px;"></div>
+            <div class="flex">
+              <div class="text-vert ganzhi-day"></div>
+              <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
+            </div>
+            <div style="height:24px;"></div>
+            <div class="flex">
+              <div class="text-vert ganzhi-day"></div>
+              <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
+            </div>
+          </div>
+          <div style="width:20px"></div>
+          <div class="text-vert lunar-month-date-name"></div>
+        </div>
+      </div>
+      <div style="width:20px"></div>
+      <div class="flexbox justify-space-between column">
+        <div class="month-cn text-center"></div>
+        <div class="date-cn text-vert"></div>
+      </div>
+      <div style="width:20px"></div>
+      <div class="column flexbox text-center justify-space-between">
+        <div class="text-vert flexbox column">
+          <div class="year-cn"></div>
+          <div style="width:8px"></div>
+          <div class="weekday-cn"></div>
+        </div>
+        <div class="zodiac"></div>
+        <div class="weekday-en-shorten lowercase"></div>
+        <div class="number-date"></div>
+      </div>
     </div>
   </div>
 
@@ -169,7 +207,7 @@
             </div>
             <div class="hline two-px"></div>
             <div class="flex"  style="margin-top:16px;">
-              <div class="text-center">農曆</div>
+              <div class="text-center"><span class="lunar-calendar-cn"></span></div>
               <div class="flexbox column text-vert h5 justify-center" style="margin:16px auto;">
                 <div class="lunar-monthname"></div>
                 <div class="lunar-dayname"></div>

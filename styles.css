@@ -104,6 +104,9 @@ body[lang='cn'] .traditional {
 .allcaps {
   text-transform: uppercase;
 }
+.lowercase {
+  text-transform: lowercase;
+}
 
 .relative {
   position: relative;
@@ -169,9 +172,112 @@ body[lang='cn'] .traditional {
   font-family: 'GenJyuuGothic';
 }
 
+#section-notosans {
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+}
+  #section-notosans * {
+    line-height: 1em;
+  }
+  #section-notosans .wrapper {
+    max-width: 480px;
+  }
+  #section-notosans .ganzhi-group {
+    margin: 1vh 0;
+    font-size: 2.5vh;
+    letter-spacing: .6em;
+  }
+  #section-notosans .ganzhi-year,
+  #section-notosans .ganzhi-month,
+  #section-notosans .ganzhi-day {
+    font-size: 7vh;
+    letter-spacing: .2em;
+  }
+  #section-notosans .label-zodiac {
+    font-size: 18vh;
+    margin: 1.5vh 0 3vh 0;
+  }
+  #section-notosans .label-lunardate {
+    font-size: 4vh;
+    margin-top: 1vh;
+  }
+    #section-notosans .label-lunardate.longtext {
+      font-size: 3.5vh;
+    }
+
+  #section-notosans .weekday-cn {
+    font-size: 10.5vh;
+  }
+  #section-notosans .number-date {
+    font-size: 28vh;
+    margin-top: -1.5vh;
+  }
+  #section-notosans .label-year {
+    font-size: 8.6em;
+    margin-bottom: 16px;
+  }
+  #section-notosans .label-month {
+    font-size: 3.3vh;
+    text-transform: uppercase;
+  }
+
+
 #section-notoserif {
   font-family: 'Noto Serif TC';
 }
+  #section-notoserif * {
+    line-height: 1em;
+  }
+  #section-notoserif .wrapper {
+    /* width: 50%; */
+  }
+  #section-notoserif .date-cn {
+    font-size: 23vh;
+    letter-spacing: .1em;
+  }
+  #section-notoserif .month-cn {
+    font-size: 8vh;
+    margin-bottom: 16px;
+  }
+  #section-notoserif .lunar-month-date-name {
+    font-size: 10.85vh;
+    letter-spacing: .2em;
+  }
+  #section-notoserif .label-lunar-calendar {
+    font-size: 7vh;
+    margin-bottom: 24px;
+  }
+  #section-notoserif .weekday-cn {
+    font-size: 10vh;
+    letter-spacing: .25em;
+  }
+  #section-notoserif .year-cn {
+    font-size: 7.2vh;
+    letter-spacing: .25em;
+  }
+  #section-notoserif .ganzhi-year,
+  #section-notoserif .ganzhi-month,
+  #section-notoserif .ganzhi-day {
+    font-size: 7.2vh;
+    letter-spacing: .2em;
+    margin: 0 auto;
+  }
+  #section-notoserif .ganzhi-group .label {
+    text-align: center;
+    font-size: 3vh;
+  }
+  #section-notoserif .weekday-en-shorten {
+    font-size: 11vh;
+    margin: 16px 0;
+  }
+  #section-notoserif .number-date {
+    font-size: 15.4vh;
+    padding-bottom: 12px;
+  }
+  #section-notoserif .zodiac {
+    font-size: 18vh;
+  }
+
+
 #section-hanamin {
   font-family: 'Hana Min';
 }
@@ -211,61 +317,6 @@ body[lang='cn'] .traditional {
   #section-hanamin .ganzhi-month,
   #section-hanamin .ganzhi-day {
     line-height: 1.8em;
-  }
-
-#section-notosans {
-  font-family: 'Noto Sans SC Sliced', sans-serif;
-}
-  #section-notosans .wrapper {
-    max-width: 480px;
-  }
-  #section-notosans .group-ganzhi {
-    margin: 24px 0 16px 0;
-    line-height: 2em;
-    font-size: 2.15vh;
-    letter-spacing: .4em;
-    font-weight: 500;
-  }
-  #section-notosans .ganzhi-year,
-  #section-notosans .ganzhi-month,
-  #section-notosans .ganzhi-day {
-    line-height: 1em;
-    font-size: 5.6vh;
-    font-weight: 300;
-  }
-  #section-notosans .label-zodiac {
-    font-size: 18vh;
-    line-height: 1em;
-  }
-  #section-notosans .label-lunardate {
-    font-size: 4vh;
-    line-height: 1em;
-  }
-    #section-notosans .label-lunardate.longtext {
-      font-size: 3.5vh;
-    }
-  #section-notosans .weekday-cn {
-    font-size: 10.5vh;
-    line-height: 1.1em;
-  }
-  #section-notosans .arrows {
-    font-size: 2.5vw;
-    letter-spacing: -.2em;
-    margin: 8px 0;
-  }
-  #section-notosans .number-date {
-    font-size: 28vh;
-    line-height: .82em;
-  }
-  #section-notosans .label-year {
-    font-size: 8.6em;
-    line-height: .86em;
-    margin-bottom: 16px;
-  }
-  #section-notosans .label-month {
-    font-size: 3.3vh;
-    line-height: 2em;
-    text-transform: uppercase;
   }
 
 
@@ -324,6 +375,9 @@ body[lang='cn'] .traditional {
 }
 .justify-space-evenly {
   justify-content: space-evenly;
+}
+.justify-space-between {
+  justify-content: space-between;
 }
 
 .text-indent-4 {
