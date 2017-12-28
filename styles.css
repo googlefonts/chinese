@@ -253,10 +253,11 @@ body[lang='cn'] .traditional {
     letter-spacing: .15em;
   }
   #section-notoserif .label-lunar-calendar {
-    font-size: 7vh;
+    font-size: 6vh;
     margin-bottom: 24px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 12px;
+    border: 3px solid #222;
+    padding: 14px 0 16px 0;
+    border-radius: 6px;
   }
   #section-notoserif .weekday-cn {
     font-size: 8vh;
@@ -269,16 +270,20 @@ body[lang='cn'] .traditional {
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
   #section-notoserif .ganzhi-day {
-    font-size: 6.5vh;
+    font-size: 5.4vh;
     letter-spacing: .2em;
     margin: 0 auto;
+    background: #222;
+    color: powderblue;
+    padding: .8vh .8vh 0 .8vh;
+    margin-bottom: 1vh;
   }
   #section-notoserif .ganzhi-group {
     margin-right: 2vh;
   }
   #section-notoserif .ganzhi-group .label {
     text-align: center;
-    font-size: 3.0vh;
+    font-size: 3.2vh;
     line-height: 1.25em;
   }
   #section-notoserif .weekday-en-shorten {
