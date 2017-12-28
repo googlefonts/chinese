@@ -238,9 +238,12 @@ body[lang='cn'] .traditional {
     line-height: 1em;
   }
   #section-notosans .label-lunardate {
-    font-size: 4.1vh;
+    font-size: 4vh;
     line-height: 1em;
   }
+    #section-notosans .label-lunardate.longtext {
+      font-size: 3.5vh;
+    }
   #section-notosans .weekday-cn {
     font-size: 10.5vh;
     line-height: 1.1em;
@@ -614,9 +617,13 @@ body.use-font #headerbar > div {
   text-align: center;
 }
 .chinese-text > span {
-  text-decoration: underline;
+  /* text-decoration: underline;
   text-decoration-color: #222;
-  padding: 12px 4px;
+  padding: 12px 4px; */
+  border-left: 1px solid #222;
+/* line-height: 1.8em; */
+  padding: 0;
+  padding: 0 1px;
 }
 .eng-text {
   position: absolute;
@@ -635,16 +642,7 @@ body.use-font #headerbar > div {
   line-height: 1.5em;
 }
 .eng-text > span {
-  padding: 4px 0px;
-  /* text-decoration: underline; */
-  /* text-decoration-color: #222; */
-  /* background: lightgoldenrodyellow; */
-  /* box-shadow: 10px 0 0 lightgoldenrodyellow, -10px 0 0 lightgoldenrodyellow; */
-
-  /* background: #222; */
-  /* color: white; */
-  /* text-decoration-color: #fff; */
-  /* box-shadow: 10px 0 0 #222, -10px 0 0 #222; */
+  margin-bottom: 4px;
 }
 
 .eng-text a {
@@ -688,12 +686,12 @@ body.use-font #headerbar > div {
   font-size: 13px;
   display: inline-block;
   margin-top: 12px;
-  padding: 24px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 #author-text:before {
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 0;
   width: 32px;
   height: 2px;
@@ -734,3 +732,9 @@ body.use-font #headerbar > div {
   float: left;
   width: 13%;
 }
+
+/* @media screen and (max-width: 640px) {
+  #section-hanamin .wrapper {
+    width: 80%;
+  }
+} */

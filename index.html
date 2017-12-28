@@ -119,11 +119,15 @@
         <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="ganzhi-day"></span></div>
       </div>
 
-      <div class="weight-500 text-center label-lunardate">[農曆] <span class="lunar-monthname"></span><span class="lunar-dayname"></span></div>
+      <div class="weight-500 text-center label-lunardate">[農曆] <span class="lunar-month-date-name"></span></div>
     </div>
   </div>
 
-  <div id="templates-notoserif" class="templates"></div>
+  <div id="templates-notoserif" class="templates">
+    <div class="centered-hv flexbox row wrapper load-font">
+      <div class="blocks"></div>
+    </div>
+  </div>
 
   <div id="templates-setofont" class="templates">
       <div class="centered-hv flexbox row wrapper load-font">
@@ -188,7 +192,7 @@
   <div id="templates-hanamin" class="templates">
 
       <div class="wrapper flexbox row centered-hv load-font">
-        <div class="flex flexbox column justify-space-evenly" style="padding: 32px 32px 32px 0;">
+        <div class="flex flexbox column justify-space-evenly" style="padding: 20px;">
 
           <div class="text-center">
             <div class="text-vert h5" style="margin:0 auto;letter-spacing: 8px;">生肖</div>
@@ -198,7 +202,7 @@
           <div>
             <div class="text-center h5" style="margin: 12px auto;">農曆</div>
             <div class="hline"></div>
-            <div class="text-vert h4" style="line-height:1.25em; letter-spacing: 8px; margin: 24px auto 0 auto;">
+            <div class="text-vert h4" style="line-height:1.25em; letter-spacing: 8px; margin: 20px auto 0 auto;">
               <div class="lunar-year"></div>
               <div><span class="lunar-monthname"></span><span class="lunar-dayname"></span></div>
             </div>
@@ -206,14 +210,14 @@
         </div>
         <div class="vline"></div>
 
-        <div class="flex flexbox text-center justify-center" style="padding: 20px 40px;">
+        <div class="flex flexbox text-center justify-center" style="padding: 20px;">
           <div class="h1 text-vert month-date-cn"></div>
           <div class="term"></div>
           <div class="festival h4" style="margin-top:20px;"></div>
         </div>
 
         <div class="vline"></div>
-        <div class="flex flexbox column h5 justify-space-evenly" style="padding: 32px 0 32px 32px;">
+        <div class="flex flexbox column h5 justify-space-evenly" style="padding: 20px;">
           <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="h3 ganzhi-year"></span></div>
           <div class="hline"></div>
           <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="h3 ganzhi-month"></span></div>

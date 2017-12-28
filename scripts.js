@@ -150,13 +150,20 @@ function getDateInfo() {
   pages.find('.ganzhi-month').text( lunar.GanZhiMonth );
   pages.find('.ganzhi-year').text( lunar.GanZhiYear );
   pages.find('.lunar-day').text( lunar.lunarDay );
+
+  var labeLunarMonthDateName = lunar.lunarMonthName + lunar.lunarDayName;
+
   if(lunar.lunarDayName.indexOf('初') !== -1) {
     pages.find('.lunar-dayname').text( lunar.lunarDayName );
   } else {
     pages.find('.lunar-dayname').text( lunar.lunarDayName + '日');
+    labeLunarMonthDateName += '日';
   }
+  if(labeLunarMonthDateName.length>5) {
+    pages.find('.label-lunardate').addClass('longtext');
+  }
+  pages.find('.lunar-month-date-name').text( labeLunarMonthDateName );
 
-  pages.find('.lunar-month').text( lunar.lunarMonth );
   pages.find('.lunar-monthname').text( lunar.lunarMonthName );
   pages.find('.lunar-year').text( getChineseYearText( lunar.lunarYear ) );
 
@@ -172,13 +179,13 @@ function getDateInfo() {
   }
 
 
-    // for(var i=0; i<month_cn.length; i++) {
-    //   $('.section-notosans .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
-    // }
-    // var date_cn = '二十五';
-    // for(var i=0; i<date_cn.length; i++) {
-    //   $('.section-notosans .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
-    // }
+    for(var i=0; i<month_cn.length; i++) {
+      $('#section-notoserif .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
+    }
+    var date_cn = '二十五';
+    for(var i=0; i<date_cn.length; i++) {
+      $('#section-notoserif .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
+    }
 }
 
 function updateDesignerInfoAndHash(index) {
