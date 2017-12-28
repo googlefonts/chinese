@@ -175,6 +175,9 @@ body[lang='cn'] .traditional {
 #section-notosans {
   font-family: 'Noto Sans SC Sliced', sans-serif;
 }
+  #section-notosans .hline {
+    width: 30.5vh;
+  }
   #section-notosans * {
     line-height: 1em;
   }
