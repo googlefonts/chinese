@@ -1,16 +1,16 @@
 var fontByLang = {
   'tw': {
     'About': '網站介绍',
-    'NotoSans': '思源黑體',
     'NotoSerif': '思源宋體',
+    'NotoSans': '思源黑體',
     'SetoFont': '瀨戶字體',
     'GenJyuuGothic': '思源柔黑體',
     'HanaMin': '花園明朝',
   },
   'cn': {
     'About': '网站介绍',
-    'NotoSans': '思源黑体',
     'NotoSerif': '思源宋体',
+    'NotoSans': '思源黑体',
     'HanaMin': '花园明朝',
   },
 };
@@ -135,10 +135,10 @@ function updateContent() {
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
 
-  if(date_cn.length<2) {
+  // if(date_cn.length<2) {
     date_cn += '日';
-  }
-  pages.find('.date-cn').text( converter.toWords(CONFIG.d) );
+  // }
+  pages.find('.date-cn').text( date_cn );
 
   if( ( date_cn.length + month_cn.length) > 5 ) {
     pages.find('.month-date-cn').removeClass('h1').addClass('h2');

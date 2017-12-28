@@ -121,49 +121,46 @@
       </div>
 
       <div class="text-center label-lunardate">[<span class="lunar-calendar-cn"></span>] <span class="lunar-month-date-name"></span></div>
-      <div class="hline two-px" style="margin: 2.4vh auto 0 auto;"></div>
+      <div class="hline four-px" style="margin: 2.4vh auto 0 auto;"></div>
     </div>
   </div>
 
   <div id="templates-notoserif" class="templates">
     <div class="weight-700 centered-hv flexbox row wrapper load-font justify-center">
-      <div class="">
-        <div class="text-center label-lunar-calendar">[<span class="lunar-calendar-cn"></span>]</div>
-        <div class="flexbox row">
-          <div class="ganzhi-group">
-            <div class="flex">
+      <div class="flexbox column">
+        <div class="text-center label-lunar-calendar"><span class="lunar-calendar-cn"></span></div>
+        <div class="flexbox row flex">
+          <div class="ganzhi-group flexbox column justify-space-between">
+            <div>
               <div class="text-vert ganzhi-day"></div>
               <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
             </div>
-            <div style="height:24px;"></div>
-            <div class="flex">
+            <div>
               <div class="text-vert ganzhi-day"></div>
               <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
             </div>
-            <div style="height:24px;"></div>
-            <div class="flex">
+            <div>
               <div class="text-vert ganzhi-day"></div>
               <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
             </div>
           </div>
-          <div style="width:20px"></div>
-          <div class="text-vert lunar-month-date-name"></div>
+          <div class="text-vert flexbox justify-center lunar-month-date-name"></div>
         </div>
       </div>
-      <div style="width:20px"></div>
-      <div class="flexbox justify-space-between column">
-        <div class="month-cn text-center"></div>
-        <div class="date-cn text-vert"></div>
-      </div>
-      <div style="width:20px"></div>
+      <!-- <div class="vline two-px" style="margin: 0 2vh 0 2vh;"></div> -->
+
+      <div class="flexbox justify-center date-cn text-vert"></div>
+
+      <!-- <div class="vline two-px" style="margin: 0 2vh 0 2vh;"></div> -->
       <div class="column flexbox text-center justify-space-between">
-        <div class="text-vert flexbox column">
+        <div class="month-cn text-center"></div>
+        <div class="text-vert flexbox column justify-center">
           <div class="year-cn"></div>
           <div style="width:8px"></div>
           <div class="weekday-cn"></div>
         </div>
-        <div class="zodiac"></div>
-        <div class="weekday-en-shorten lowercase"></div>
+        <div class="label-zodiac"><span class="centered-hv zodiac"></span></div>
+        <div class="weekday-en-shorten"></div>
         <div class="number-date"></div>
       </div>
     </div>

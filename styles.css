@@ -230,56 +230,81 @@ body[lang='cn'] .traditional {
   #section-notoserif * {
     line-height: 1em;
   }
-  #section-notoserif .wrapper {
-    /* width: 50%; */
-  }
   #section-notoserif .date-cn {
-    font-size: 23vh;
-    letter-spacing: .1em;
+    font-size: 16vh;
+    letter-spacing: .08em;
+
+    padding: 0 3vh;
+    border: 4px solid #222;
+
+    /* color: powderblue; */
+    margin: 0 20px;
+    border-radius: 4px;
   }
   #section-notoserif .month-cn {
-    font-size: 8vh;
-    margin-bottom: 16px;
+    font-size: 4.5vh;
+    /* margin-bottom: 16px; */
+    border: 2px solid #222;
+    border-radius: 10vh;
+    padding: 14px 0 16px 0;
   }
   #section-notoserif .lunar-month-date-name {
-    font-size: 10.85vh;
-    letter-spacing: .2em;
+    font-size: 11vh;
+    letter-spacing: .15em;
   }
   #section-notoserif .label-lunar-calendar {
     font-size: 7vh;
     margin-bottom: 24px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 12px;
   }
   #section-notoserif .weekday-cn {
-    font-size: 10vh;
-    letter-spacing: .25em;
+    font-size: 8vh;
+    letter-spacing: .2em;
   }
   #section-notoserif .year-cn {
-    font-size: 7.2vh;
-    letter-spacing: .25em;
+    font-size: 6.4vh;
+    letter-spacing: .15em;
   }
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
   #section-notoserif .ganzhi-day {
-    font-size: 7.2vh;
+    font-size: 6.5vh;
     letter-spacing: .2em;
     margin: 0 auto;
   }
+  #section-notoserif .ganzhi-group {
+    margin-right: 2vh;
+  }
   #section-notoserif .ganzhi-group .label {
     text-align: center;
-    font-size: 3vh;
+    font-size: 3.0vh;
+    line-height: 1.25em;
   }
   #section-notoserif .weekday-en-shorten {
-    font-size: 11vh;
-    margin: 16px 0;
+    font-size: 9vh;
+    /* margin: 16px 0; */
   }
   #section-notoserif .number-date {
-    font-size: 15.4vh;
-    padding-bottom: 12px;
+    font-size: 13vh;
+    /* padding-bottom: 12px; */
+  }
+  #section-notoserif .label-zodiac {
+    /* font-size: 16vh; */
+    /* border-radius: 9vh; */
+    width: 100%;
+    padding-bottom: 116%;
+    font-size: 10vh;
+    position: relative;
+    background-image: url(images/hexagon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background: #222; */
+    color: powderblue;
   }
   #section-notoserif .zodiac {
-    font-size: 18vh;
+    margin-top: -.05em;
   }
-
 
 #section-hanamin {
   font-family: 'Hana Min';
