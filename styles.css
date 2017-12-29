@@ -186,13 +186,16 @@ body[lang='cn'] .traditional {
   }
   #section-notosans .ganzhi-group {
     margin: 1vh 0;
-    font-size: 2.5vh;
+    font-size: 2.1vh;
     letter-spacing: .6em;
+  }
+  #section-notosans .ganzhi-group > * {
+    line-height: 1.5em;
   }
   #section-notosans .ganzhi-year,
   #section-notosans .ganzhi-month,
   #section-notosans .ganzhi-day {
-    font-size: 7vh;
+    font-size: 6vh;
     letter-spacing: .2em;
   }
   #section-notosans .label-zodiac {
@@ -254,11 +257,11 @@ body[lang='cn'] .traditional {
   }
   #section-notoserif .label-lunar-month-date-name {
     background: #222;
-    margin: 8px;
+    margin: 14px;
     outline: 2px solid #222;
-    outline-offset: 8px;
+    outline-offset: 12px;
     color: powderblue;
-    padding: 16px;
+    padding: 12px;
     font-size: 9vh;
     letter-spacing: .2em;
   }
@@ -345,7 +348,7 @@ body[lang='cn'] .traditional {
   }
 
   #section-hanamin .h4 {
-    font-size: 24px;
+    font-size: 2.8vh;
     /* letter-spacing: .5em; */
   }
   #section-hanamin .h3 {
