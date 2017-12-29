@@ -273,16 +273,21 @@ body[lang='cn'] .traditional {
     border-radius: 6px;
     outline-offset: -6px;
   }
+  #section-notoserif .group-year-weekday {
+    outline: 4px solid #222;
+    outline-offset: -4px;
+    margin: 2vh 0 0 0;
+    padding: 2vh 0;
+  }
   #section-notoserif .weekday-cn {
-    font-size: 8vh;
+    font-size: 6vh;
     letter-spacing: .2em;
+    padding: .5vh;
   }
   #section-notoserif .year-cn {
-    outline: 4px solid #222;
-    font-size: 5vh;
-    padding: 1vh;
-    border-radius: 8px;
-    outline-offset: -5px;
+    font-size: 4.4vh;
+    /* padding: .vh; */
+    letter-spacing: .2em;
   }
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
@@ -333,6 +338,7 @@ body[lang='cn'] .traditional {
   #section-notoserif .zodiac {
     margin-top: -.05em;
   }
+
 
 #section-hanamin {
   font-family: 'Hana Min';
