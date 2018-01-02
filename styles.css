@@ -149,7 +149,7 @@ body[lang='cn'] .traditional {
     background-repeat: no-repeat;
     color: khaki;
     background-position: 50% 50%;
-    margin: 0 4.2vh 0vh 0;
+    margin: 0 3.2vh 0vh 0;
   }
   #section-setofont .label-month-date {
     border: 4px solid #222;
@@ -187,7 +187,7 @@ body[lang='cn'] .traditional {
     background: #222;
     padding: 8px;
     position: relative;
-    margin: -4vh 5vh 0vh 0;
+    margin: -4vh 4vh 0vh 0;
   }
   #section-setofont .label-ganzhiyear {
     margin: 1.6vh 0 0.4vh 0;
@@ -390,9 +390,9 @@ body[lang='cn'] .traditional {
     line-height: 1em;
   }
   #section-notoserif .date-cn {
-    font-size: 16vh;
+    font-size: 18vh;
     letter-spacing: .08em;
-    padding: 0 3vh;
+    padding: 0 2.4vh;
     border: 8px solid #222;
     /* color: powderblue; */
     margin: 0 20px;
@@ -420,6 +420,7 @@ body[lang='cn'] .traditional {
     padding: 12px;
     font-size: 9vh;
     letter-spacing: .2em;
+    border-radius: 12px;
   }
   #section-notoserif .label-lunar-calendar {
     font-size: 5.4vh;
@@ -523,9 +524,10 @@ body[lang='cn'] .traditional {
     letter-spacing: .12em;
   }
   #section-hanamin .h2 {
-    font-size: 10.6vh;
+    font-size: 9vh;
     line-height: 1em;
     letter-spacing: .2em;
+    text-indent: .2em;
   }
   #section-hanamin .month-en {
     font-size: 40px;

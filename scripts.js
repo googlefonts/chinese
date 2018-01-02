@@ -130,7 +130,7 @@ function updateContent() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var date_cn = converter.toWords(CONFIG.d).length>2 ? converter.toWords(CONFIG.d) : + converter.toWords(CONFIG.d)+'日';
+  var date_cn = converter.toWords(CONFIG.d)+'日';//converter.toWords(CONFIG.d).length>2 ? converter.toWords(CONFIG.d) : + converter.toWords(CONFIG.d)+'日';
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
