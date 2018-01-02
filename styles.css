@@ -55,40 +55,12 @@
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-ExtraLight.ttf'); /* IE9 Compat Modes */
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GenJyuuGothic';
   src: url('fonts/genjyuugothic/GenJyuuGothic-Light.ttf'); /* IE9 Compat Modes */
   font-weight: 300;
   font-style: normal;
 }
-@font-face {
-  font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Normal.ttf'); /* IE9 Compat Modes */
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Medium.ttf'); /* IE9 Compat Modes */
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Bold.ttf'); /* IE9 Compat Modes */
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Heavy.ttf'); /* IE9 Compat Modes */
-  font-weight: 700;
-  font-style: normal;
-}
+
+
 @font-face {
   font-family: 'Hana Min';
   src: url('fonts/HanaMinA.ttf'); /* IE9 Compat Modes */
@@ -298,6 +270,7 @@ body[lang='cn'] .traditional {
 #section-genjyuugothic {
   font-family: 'GenJyuuGothic';
   font-size: 14px;
+  font-weight: 300;
 }
   #section-genjyuugothic .wrapper {
     line-height: 1em;
@@ -319,59 +292,58 @@ body[lang='cn'] .traditional {
     z-index: 100;
   }
   #section-genjyuugothic .weekday-cn {
-    font-size: 22vh;
-    letter-spacing: 14vh;
-    text-indent: 14vh;
-    line-height: 22vh;
-    width: 22vh;
+    font-size: 30vh;
+    letter-spacing: 2vh;
+    text-indent: 2vh;
+    line-height: 30vh;
+    width: 30vh;
     white-space: nowrap;
   }
   #section-genjyuugothic .month-cn {
     height: 100%;
   }
   #section-genjyuugothic .wrapper-month-cn {
-    width: 16vh;
-    font-size: 16vh;
-    letter-spacing: 22vh;
-    text-indent: 22vh;
-    line-height: 16vh;
+    width: 20vh;
+    font-size: 20vh;
+    letter-spacing: 14.6vh;
+    text-indent: 14.6vh;
+    line-height: 20vh;
   }
   #section-genjyuugothic .wrapper-weekday-en-shorten {
-    font-size: 13vh;
-    letter-spacing: 36vh;
-    text-indent: 36vh;
-    width: 13vh;
-    line-height: 13vh;
+    font-size: 16vh;
+    letter-spacing: 34.5vh;
+    text-indent: 34.5vh;
+    width: 16vh;
+    line-height: 16vh;
   }
   #section-genjyuugothic .weekday-en-shorten {
     height: 100%;
   }
   #section-genjyuugothic .wrapper-group-ganzhi {
-    font-size: 3vh;
-    width: 3vh;
-    letter-spacing: 1.6vh;
-    text-indent: 1.6vh;
+    font-size: 3.6vh;
+    width: 3.6vh;
+    letter-spacing: 1vh;
+    text-indent: 1vh;
     text-transform: uppercase;
-    line-height: 3vh;
-    /* margin: 0 2vh 0 3vh; */
+    line-height: 3.6vh;
   }
   #section-genjyuugothic .group-ganzhi {
     height: 100%;
   }
   #section-genjyuugothic .wrapper-lunar-calendar {
-    font-size: 5vh;
-    line-height: 5vh;
-    letter-spacing: 7.2vh;
-    text-indent: 7.2vh;
-    width: 5vh;
+    font-size: 6vh;
+    line-height: 6vh;
+    letter-spacing: 6.1vh;
+    text-indent: 6.1vh;
+    width: 6vh;
     margin: 0 1vh 0 2vh;
   }
   #section-genjyuugothic .wrapper-zodiac {
-    font-size: 7vh;
-    line-height: 7vh;
-    letter-spacing: 14vh;
-    text-indent: 14vh;
-    width: 7vh;
+    font-size: 9vh;
+    line-height: 9vh;
+    letter-spacing: 10.8vh;
+    text-indent: 10.8vh;
+    width: 9vh;
     margin: 0 0 0 2vh;
   }
 
