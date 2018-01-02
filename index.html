@@ -91,46 +91,68 @@
     </div>
   </div>
 
+
   <div id="templates-notoserif" class="templates">
     <div class="weight-700 centered-hv flexbox row wrapper load-font justify-center">
-      <div class="flexbox column">
-        <div class="text-center label-lunar-calendar"><span class="lunar-calendar-cn"></span></div>
-        <div class="flexbox row flex">
-          <div class="ganzhi-group flexbox column justify-space-between">
-            <div>
-              <div class="text-vert ganzhi-day"></div>
-              <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
-            </div>
-            <div>
-              <div class="text-vert ganzhi-day"></div>
-              <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
-            </div>
-            <div>
-              <div class="text-vert ganzhi-day"></div>
-              <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
-            </div>
-          </div>
 
-          <div class="text-vert flexbox justify-center label-lunar-month-date-name">
-              <div class="lunar-month-date-name"></div>
-            </div>
-          </div>
+      <div class="vline"></div>
 
-      </div>
-
-      <div class="flexbox justify-center date-cn text-vert"></div>
-
-      <div class="column flexbox text-center justify-space-between">
-        <div class="label-month-cn text-center"><div class="month-cn"></div></div>
-        <div class="text-vert flexbox column justify-center group-year-weekday" style="margin: 2vh 0 0 0;">
-          <div class="year-cn" style="margin:0 4px;"></div>
-          <div class="vline"></div>
-          <div class="weekday-cn"></div>
+      <div class="text-vert group-lunar">
+        <div class="centered-hv flexbox row">
+          <div class="text-vert lunar-calendar-cn"></div>
+          <div class="text-vert lunar-month-date-name"></div>
         </div>
-
-        <div class="label-zodiac hexagon"><span class="centered-hv zodiac"></span></div>
-        <div class="label-number-date"><div class="centered-hv number-date"></div></div>
       </div>
+
+      <div class="vline"></div>
+
+      <div class="ganzhi-group flexbox column justify-space-between">
+        <div>
+          <div class="text-vert ganzhi-day"></div>
+          <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
+        </div>
+        <div>
+          <div class="text-vert ganzhi-day"></div>
+          <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
+        </div>
+        <div>
+          <div class="text-vert ganzhi-day"></div>
+          <div class="label">干支<br><span class="ganzhi-label"></span>日</div>
+        </div>
+      </div>
+
+      <div class="vline"></div>
+
+      <div class="label-date-cn text-vert">
+        <div class="date-cn-how centered-hv"></div>
+      </div>
+
+      <div class="vline"></div>
+
+      <div class="label-year-month">
+        <div class="flexbox column centered-hv" style="align-items: center;">
+          <div class="year-cn text-vert"></div>
+          <span>∕</span>
+          <div class="text-vert month-cn"></div>
+        </div>
+      </div>
+
+      <div class="vline"></div>
+
+      <div class="column flexbox label-weekday-cn">
+        <div class="centered-hv text-vert weekday-cn"></div>
+      </div>
+
+      <div class="vline"></div>
+
+      <div class="group-numbers">
+        <div class="flexbox column centered-hv" style="align-items: center;line-height: 14vh;">
+          <div class="number-year-two-dgt"></div>∕<div class="number-month-two-dgt"></div>∕<div class="number-date-two-dgt"></div>
+        </div>
+      </div>
+
+      <div class="vline"></div>
+
     </div>
   </div>
 
@@ -236,12 +258,10 @@
 
   <div id="templates-genjyuugothic" class="templates">
     <div class="wrapper load-font">
-      <div class="number-date centered-hv"></div>
-      <div class="row flexbox centered-hv" style="align-items: center;">
 
-        <div class="wrapper-text wrapper-date-cn">
-          <div class="date-cn"></div>
-        </div>
+      <div class="number-date centered-hv"></div>
+      
+      <div class="row flexbox centered-hv" style="align-items: center;">
 
         <div class="wrapper-text wrapper-group-ganzhi">
           <div class="group-ganzhi">干支<span class="ganzhi-label"></span>年<span class="ganzhi-year"></span>∕干支<span class="ganzhi-label"></span>月<span class="ganzhi-month"></span>∕干支<span class="ganzhi-label"></span>日<span class="ganzhi-day"></span></span></div>
@@ -252,6 +272,10 @@
             <span class="lunar-calendar-cn"></span><span class="lunar-month-date-name"></span>
           </div>
         </div>
+
+
+
+
 
         <div class="wrapper-text wrapper-year-cn">
           <div class="year-cn"></div>
@@ -264,7 +288,7 @@
         </div>
 
         <div class="wrapper-text wrapper-month-cn">
-          <div class="month-cn"></div>
+          <div class="month-date-cn"></div>
         </div>
 
       </div>

@@ -24,6 +24,10 @@ var designerByFont = {
   'GenJyuu': '自家製フォント工房',
 };
 
+var HOW_LABEL = {
+  'tw':'號',
+  'cn':'号'
+};
 var GANZHI_LABEL = {
   'tw':'紀',
   'cn':'纪'
@@ -98,7 +102,6 @@ function init() {
     CONFIG.y = CONFIG.today.getFullYear();
     CONFIG.weekday = CONFIG.today.getDay();
   }
-
   console.log('CONFIG', CONFIG);
 
   createPages();
@@ -130,7 +133,8 @@ function updateContent() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var date_cn = converter.toWords(CONFIG.d).length>2 ? converter.toWords(CONFIG.d) : + converter.toWords(CONFIG.d)+'日';
+  var date_cn = converter.toWords(CONFIG.d)+'日';
+  // converter.toWords(CONFIG.d).length>2 ? converter.toWords(CONFIG.d) : +
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
@@ -142,11 +146,16 @@ function updateContent() {
     pages.find('.month-date-cn').removeClass('h1').addClass('h2');
   }
   pages.find('.month-date-cn').text( month_cn + date_cn );
+  pages.find('.date-cn-how').text( converter.toWords(CONFIG.d)+HOW_LABEL[CONFIG.lang] );
 
   pages.find('.month-en').text( month_en );
   pages.find('.month-cn').text( month_cn );
   pages.find('.number-year').text( CONFIG.y );
   pages.find('.number-month').text( CONFIG.m );
+
+  pages.find('.number-date-two-dgt').text( ("0" + CONFIG.d).slice(-2) );
+  pages.find('.number-month-two-dgt').text( ("0" + CONFIG.m).slice(-2) );
+  pages.find('.number-year-two-dgt').text( CONFIG.y.toString().slice(2,5) );
 
   var lunar = window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d,CONFIG.lang);
 

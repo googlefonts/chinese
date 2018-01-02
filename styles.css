@@ -297,11 +297,11 @@ body[lang='cn'] .traditional {
     white-space: nowrap;
   }
   #section-genjyuugothic .wrapper-month-cn {
-    width: 20vh;
-    font-size: 20vh;
-    letter-spacing: 9vh;
-    text-indent: 9vh;
-    line-height: 20vh;
+    width: 15vh;
+    font-size: 15vh;
+    letter-spacing: 6.2vh;
+    text-indent: 6.2vh;
+    line-height: 15vh;
   }
   #section-genjyuugothic .wrapper-date-cn {
     font-size: 9vh;
@@ -403,111 +403,87 @@ body[lang='cn'] .traditional {
   #section-notoserif * {
     line-height: 1em;
   }
-  #section-notoserif .date-cn {
-    font-size: 15vh;
-    letter-spacing: .08em;
-    padding: 6vh 2.4vh;
-    border: 8px solid #222;
-    /* color: powderblue; */
-    margin: 0 20px;
-    border-radius: 24px;
-    box-sizing: border-box;
+  #section-notoserif .number-date {
+    font-size: 14vh;
   }
-  #section-notoserif .month-cn {
-    background: #222;
-    border-radius: 10vh;
-    padding: 16px;
-    color: powderblue;
-  }
+
   #section-notoserif .label-month-cn {
     border-radius: 8vh;
     padding: .8vh;
     font-size: 4vh;
     border: 2px solid #222;
   }
-  #section-notoserif .label-lunar-month-date-name {
-    background: #222;
-    margin: 14px;
-    outline: 2px solid #222;
-    outline-offset: 12px;
-    color: powderblue;
-    padding: 12px;
+  #section-notoserif .label-year-month {
+    position: relative;
+    width: 7vh;
     font-size: 7vh;
-    letter-spacing: .2em;
-    border-radius: 12px;
+    letter-spacing: 1.4vh;
+    text-indent: 1.4vh;
+    white-space: nowrap;
+    align-items: center;
   }
-  #section-notoserif .label-lunar-calendar {
-    font-size: 5.4vh;
-    margin-bottom: 24px;
-    outline: 6px dotted #222;
-    padding: 14px 0 16px 0;
-    border-radius: 6px;
-    outline-offset: -6px;
+  #section-notoserif .label-lunar-month-date-name {
+    align-items: center;
   }
-  #section-notoserif .group-year-weekday {
-    outline: 1px solid #222;
-    outline-offset: -4px;
-    margin: 2vh 0 0 0;
-    padding: 2vh 0;
+
+  #section-notoserif .group-lunar {
+    position: relative;
+    font-size: 5vh;
+    width: 5vh;
+    letter-spacing: 2.1vh;
+    text-indent: 2.1vh;
+    white-space: nowrap;
   }
-  #section-notoserif .weekday-cn {
-    font-size: 5.4vh;
-    letter-spacing: .1em;
-    text-indent: .1em;
+  #section-notoserif .label-date-cn {
+    position: relative;
+    width: 25vh;
+    font-size: 25vh;
+    white-space: nowrap;
+    letter-spacing: 9vh;
+    text-indent: 9vh;
   }
-  #section-notoserif .year-cn {
-    font-size: 4.4vh;
-    letter-spacing: .1em;
+  #section-notoserif .label-weekday-cn {
+    position: relative;
+    width: 14vh;
+    letter-spacing: 8vh;
+    font-size: 14vh;
+    white-space: nowrap;
+    text-indent: 8vh;
+  }
+  #section-notoserif .group-numbers {
+    position: relative;
+    width: 13vh;
+    font-size: 10.3vh;
+    white-space: nowrap;
+  }
+  #section-notoserif .vline {
+    margin: 0 2.6vh;
+  }
+  #section-notoserif .group-number {
+    font-size: 7vh;
   }
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
   #section-notoserif .ganzhi-day {
-    font-size: 3.4vh;
-    letter-spacing: .2em;
-    margin: 0 auto;
-    background: #222;
-    color: powderblue;
-    padding: 1.4vh;
+    font-size: 6vh;
     margin-bottom: 1vh;
-    border-radius: 4px;
-    text-indent: .2em;
   }
-  #section-notoserif .ganzhi-group {
-    margin-right: 2.4vh;
-  }
+
   #section-notoserif .ganzhi-group .label {
     text-align: center;
     font-size: 2.6vh;
     line-height: 1.25em;
   }
   #section-notoserif .weekday-en-shorten {
-    font-size: 9vh;
+    font-size: 13vh;
+    text-transform: lowercase;
   }
-  #section-notoserif .number-date {
-    font-size: 11vh;
-    margin-top: -.5vh;
-  }
-  #section-notoserif .label-number-date {
-    border: 4px dotted #222;
-    border-radius: 20vh;
-    width: 100%;
-    padding-bottom: calc(100% - 8px);
-    position: relative;
-    box-sizing: border-box;
-  }
+
   #section-notoserif .label-zodiac {
-    width: 100%;
-    padding-bottom: 116%;
-    font-size: 8vh;
-    position: relative;
-    background-image: url(images/shape3.svg);
-    background-size: 94%;
-    background-repeat: no-repeat;
-    color: powderblue;
-    background-position: 50% 50%;
+    font-size: 4vh;
   }
   #section-notoserif .zodiac {
-    margin-top: -.05em;
+    /* margin-top: -.05em; */
   }
 
 
