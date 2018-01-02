@@ -172,16 +172,25 @@
   <div id="templates-setofont" class="templates">
     <div class="wrapper centered-hv flexbox row load-font justify-center">
       <div class="column flexbox justify-center" style="align-items: flex-end;">
-        <div class="row flexbox group-ganzhiyear">
-          <div class="text-vert ganzhi-year" style="font-size: 5vh; letter-spacing: 3vh; text-indent: 1.5vh; margin-bottom:-1vh;"></div>
-          <div class="vline two-px"></div>
-          <div class="text-vert text-indent-4" style="letter-spacing: 1vh;">干支<span class="ganzhi-label"></span>年<br></div>
+
+        <div class="flexbox row" style="align-items: flex-start;">
+          <div class="label-weekday-en">
+            <div class="weekday-en-shorten centered-hv"></div>
+          </div>
+
+          <div class="row flexbox group-ganzhiyear">
+            <div class="wrapper-bg text-center">
+              <div class="ganzhi-year text-vert"></div>
+              <div class="label-ganzhiyear">干支<span class="ganzhi-label"></span>年<br></div>
+            </div>
+          </div>
         </div>
+
         <div class="group-ganzhimonth">
           <div class="wrapper-bg">
             <div class="ganzhi-month text-center"></div>
             <div class="centered-hv text-vert" style="letter-spacing: 1vh;margin-top:-1vh;">干支</div>
-            <div class="centered-h text-center label-ganzhi-month"><span class="ganzhi-label"></span>年</div>
+            <div class="centered-h text-center label-ganzhi-month"><span class="ganzhi-label"></span>月</div>
           </div>
         </div>
       </div>
@@ -197,14 +206,18 @@
         <div class="group-ganzhiday">
           <div class="wrapper-bg"></div>
           <div class="ganzhi-day centered-hv text-vert"></div>
-          <div class="centered-v" style="letter-spacing: 1vh;">干支</div>
-          <div class="centered-v" style="right:0;"><span class="ganzhi-label"></span>年</div>
+          <div class="centered-v label-ganzhiday-1">干支</div>
+          <div class="centered-v label-ganzhiday-2"><span class="ganzhi-label"></span>日</div>
         </div>
 
         <div class="row flexbox">
-          <div>
+          <div class="label-weekday">
+            <div class="weekday-cn centered-hv text-vert"></div>
           </div>
-          <div></div>
+          <div class="label-zodiac">
+            <div class="zodiac centered-hv"></div>
+            <div class="text-center label-zodiac-title">生肖</div>
+          </div>
         </div>
 
       </div>
