@@ -135,42 +135,129 @@ body[lang='cn'] .traditional {
 
 #section-setofont {
   font-family: 'Seto Font', sans-serif;
-  font-size: 20px;
 }
+  #section-setofont * {
+    line-height: 1em;
+  }
+  #section-setofont .label-month-date {
+    border: 4px solid #222;
+    border-radius: 20px;
+    font-size: 5vh;
+    letter-spacing: .1em;
+    padding: 2vh;
+  }
+  #section-setofont .lunar-month-date-name {
+    font-size: 4vh;
+    letter-spacing: 0.15em;
+    margin: 1vh auto;
+  }
+  #section-setofont .lunar-calendar-cn-1,
+  #section-setofont .lunar-calendar-cn-2 {
+    margin: 0 auto;
+    border: 2px solid khaki;
+    border-radius: 2vh;
+    font-size: 2.6vh;
+    padding: 0vh .4vh;
+  }
+  #section-setofont .label-lunar-month-date {
+    background: #222;
+    color: khaki;
+    outline: 2px solid #222;
+    outline-offset: 4px;
+    margin: 3vh 0px 0 0;
+    padding: 11px;
+  }
+  #section-setofont .group-ganzhiyear {
+    background: #222;
+    color: khaki;
+    outline: 2px solid #222;
+    outline-offset: 8px;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 0vh 4vh 2vh 0;
+  }
+  #section-setofont .group-ganzhimonth {
+    position: relative;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid #222;
+    margin: 2vh 2vh 0vh 0;
+  }
+  #section-setofont .ganzhi-month {
+    font-size: 5vh;
+    padding: 3.6vh 4vh;
+    margin-right: -6vh;
+    letter-spacing: 6vh;
+  }
+  #section-setofont .group-ganzhiday {
+    position: relative;
+    width: 16vh;
+    height: 16vh;
+    color: khaki;
+    -webkit-transform: translate3d(6vh,0,0);
+  }
+  #section-setofont .group-ganzhiday .wrapper-bg {
+    background: #222;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 50% 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  #section-setofont .ganzhi-day {
+    font-size: 5vh;
+    height: 10vh;
+  }
+  #section-setofont .label-ganzhi-month {
+    bottom: 2.8vh;
+  }
+  #section-setofont .group-ganzhimonth .wrapper-bg {
+    background: #222;
+    color: khaki;
+    border-radius: 50%;
+  }
+
   #section-setofont .vline {
+    border-left-color: khaki;
+    margin: 0 1.2vh;
+  }
+
+#section-genjyuugothic {
+  font-family: 'GenJyuuGothic';
+  font-size: 14px;
+}
+  #section-genjyuugothic .vline {
     margin: 0 16px;
   }
-  #section-setofont .hline {
+  #section-genjyuugothic .hline {
     margin: 16px 0;
   }
-  #section-setofont .number-date {
+  #section-genjyuugothic .number-date {
     margin-bottom: 8px;
   }
-  #section-setofont .wrapper {
+  #section-genjyuugothic .wrapper {
     flex: 1.5;
     width: 90%;
     max-width: 880px;
   }
-  #section-setofont .h1 {
+  #section-genjyuugothic .h1 {
     font-size: 280px;
     line-height: 1em;
   }
-  #section-setofont .h3 {
+  #section-genjyuugothic .h3 {
     font-size: 64px;
     line-height: 1em;
   }
-  #section-setofont .h4 {
+  #section-genjyuugothic .h4 {
     font-size: 40px;
   }
-  #section-setofont .h5 {
+  #section-genjyuugothic .h5 {
     font-size: 30px;
     line-height: 1.25em;
   }
-
-
-#section-genjyuugothic {
-  font-family: 'GenJyuuGothic';
-}
 
 #section-notosans {
   font-family: 'Noto Sans SC Sliced', sans-serif;
@@ -358,7 +445,7 @@ body[lang='cn'] .traditional {
     /* letter-spacing: .5em; */
   }
   #section-hanamin .h3 {
-    font-size: 48px;
+    font-size: 5.6vh;
     line-height: 1em;
   }
   #section-hanamin .h1 {
@@ -367,9 +454,9 @@ body[lang='cn'] .traditional {
     letter-spacing: .12em;
   }
   #section-hanamin .h2 {
-    font-size: 80px;
+    font-size: 10.6vh;
     line-height: 1em;
-    letter-spacing: .12em;
+    letter-spacing: .2em;
   }
   #section-hanamin .month-en {
     font-size: 40px;
@@ -381,10 +468,22 @@ body[lang='cn'] .traditional {
     line-height: 1.8em;
   }
 
-
-#section-hanamin .blocks {
-  width: 90%;
+.hide {
+  display: none;
 }
+
+.frame1 {
+  width: 200px;
+  height: 400px;
+  position: relative;
+}
+  .frame1:before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid
+  }
 
 body {
   background: #ecf0f1;
@@ -403,6 +502,7 @@ body {
   .vline.two-px {
     border-left-width: 2px;
   }
+
 .hline {
   width: 100%;
   border-top-style: solid;

@@ -121,6 +121,8 @@ function updateContent() {
 
   pages.find('.ganzhi-label').text( GANZHI_LABEL[CONFIG.lang] );
   pages.find('.lunar-calendar-cn').text( LUNAR_CALENDAR_LABEL[CONFIG.lang] );
+  pages.find('.lunar-calendar-cn-1').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(0,1) ); // LUNAR_CALENDAR_LABEL[CONFIG.lang][0]
+  pages.find('.lunar-calendar-cn-2').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(1,2) );
 
   var converter = window.index.NumberToChineseWords;
   var today = CONFIG.today;
@@ -128,7 +130,7 @@ function updateContent() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var date_cn = converter.toWords(CONFIG.d) + '日';
+  var date_cn = converter.toWords(CONFIG.d).length>2 ? converter.toWords(CONFIG.d) : + converter.toWords(CONFIG.d)+'日';
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
@@ -182,14 +184,6 @@ function updateContent() {
   } else {
     pages.find('.festival').remove();
   }
-
-    // for(var i=0; i<month_cn.length; i++) {
-    //   $('#section-notoserif .blocks').append('<div class="grid-18">'+month_cn[i]+'</div>');
-    // }
-    // var date_cn = '二十五';
-    // for(var i=0; i<date_cn.length; i++) {
-    //   $('#section-notoserif .blocks').append('<div class="grid-18">'+date_cn[i]+'</div>');
-    // }
 }
 
 function updateDesignerInfoAndHash(index) {
