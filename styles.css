@@ -274,7 +274,6 @@ body[lang='cn'] .traditional {
 }
   #section-genjyuugothic .wrapper {
     line-height: 1em;
-    /* position: relative; */
   }
   #section-genjyuugothic .wrapper-text {
     position: relative;
@@ -292,59 +291,53 @@ body[lang='cn'] .traditional {
     z-index: 100;
   }
   #section-genjyuugothic .weekday-cn {
-    font-size: 30vh;
-    line-height: 30vh;
-    width: 30vh;
+    font-size: 27vh;
+    line-height: 27vh;
+    width: 27vh;
     white-space: nowrap;
-  }
-  #section-genjyuugothic .month-cn {
-    height: 100%;
   }
   #section-genjyuugothic .wrapper-month-cn {
     width: 20vh;
     font-size: 20vh;
-    letter-spacing: 13vh;
-    text-indent: 13vh;
+    letter-spacing: 9vh;
+    text-indent: 9vh;
     line-height: 20vh;
   }
   #section-genjyuugothic .wrapper-date-cn {
-    font-size: 11vh;
-    letter-spacing: 26.8vh;
-    text-indent: 26.8vh;
-    width: 11vh;
-    line-height: 11vh;
+    font-size: 9vh;
+    letter-spacing: 25vh;
+    text-indent: 25vh;
+    width: 9vh;
+    line-height: 9vh;
   }
   #section-genjyuugothic .wrapper-year-cn {
-    font-size: 14vh;
+    font-size: 12vh;
     letter-spacing: 10vh;
     text-indent: 10vh;
-    width: 14vh;
-    line-height: 14vh;
+    width: 12vh;
+    line-height: 12vh;
   }
   #section-genjyuugothic .wrapper-group-ganzhi {
-    font-size: 3.6vh;
-    width: 3.6vh;
-    letter-spacing: .7vh;
-    text-indent: .7vh;
+    font-size: 3vh;
+    width: 3vh;
+    letter-spacing: .85vh;
+    text-indent: .85vh;
     text-transform: uppercase;
-    line-height: 3.6vh;
-  }
-  #section-genjyuugothic .group-ganzhi {
-    height: 100%;
+    line-height: 3vh;
   }
   #section-genjyuugothic .wrapper-lunar-calendar {
-    font-size: 6vh;
-    line-height: 6vh;
-    letter-spacing: 5.4vh;
-    text-indent: 5.4vh;
-    width: 6vh;
+    font-size: 5vh;
+    line-height: 5vh;
+    letter-spacing: 5.2vh;
+    text-indent: 5.2vh;
+    width: 5vh;
     margin: 0 1vh 0 2vh;
   }
   #section-genjyuugothic .wrapper-zodiac {
     font-size: 9vh;
     line-height: 9vh;
-    letter-spacing: 10vh;
-    text-indent: 10vh;
+    letter-spacing: 8vh;
+    text-indent: 8vh;
     width: 9vh;
     margin: 0 0 0 2vh;
   }
@@ -399,7 +392,7 @@ body[lang='cn'] .traditional {
     margin-bottom: 16px;
   }
   #section-notosans .label-month {
-    font-size: 3.3vh;
+    font-size: 5.6vh;
     text-transform: uppercase;
   }
 
