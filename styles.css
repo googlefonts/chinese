@@ -55,8 +55,8 @@
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Light.ttf'); /* IE9 Compat Modes */
-  font-weight: 300;
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Normal.ttf'); /* IE9 Compat Modes */
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -270,7 +270,7 @@ body[lang='cn'] .traditional {
 #section-genjyuugothic {
   font-family: 'GenJyuuGothic';
   font-size: 14px;
-  font-weight: 300;
+  /* font-weight: 300; */
 }
   #section-genjyuugothic .wrapper {
     line-height: 1em;
