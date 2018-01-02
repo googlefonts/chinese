@@ -293,8 +293,6 @@ body[lang='cn'] .traditional {
   }
   #section-genjyuugothic .weekday-cn {
     font-size: 30vh;
-    letter-spacing: 2vh;
-    text-indent: 2vh;
     line-height: 30vh;
     width: 30vh;
     white-space: nowrap;
@@ -305,25 +303,29 @@ body[lang='cn'] .traditional {
   #section-genjyuugothic .wrapper-month-cn {
     width: 20vh;
     font-size: 20vh;
-    letter-spacing: 14.6vh;
-    text-indent: 14.6vh;
+    letter-spacing: 13vh;
+    text-indent: 13vh;
     line-height: 20vh;
   }
-  #section-genjyuugothic .wrapper-weekday-en-shorten {
-    font-size: 16vh;
-    letter-spacing: 34.5vh;
-    text-indent: 34.5vh;
-    width: 16vh;
-    line-height: 16vh;
+  #section-genjyuugothic .wrapper-date-cn {
+    font-size: 11vh;
+    letter-spacing: 26.8vh;
+    text-indent: 26.8vh;
+    width: 11vh;
+    line-height: 11vh;
   }
-  #section-genjyuugothic .weekday-en-shorten {
-    height: 100%;
+  #section-genjyuugothic .wrapper-year-cn {
+    font-size: 14vh;
+    letter-spacing: 10vh;
+    text-indent: 10vh;
+    width: 14vh;
+    line-height: 14vh;
   }
   #section-genjyuugothic .wrapper-group-ganzhi {
     font-size: 3.6vh;
     width: 3.6vh;
-    letter-spacing: 1vh;
-    text-indent: 1vh;
+    letter-spacing: .7vh;
+    text-indent: .7vh;
     text-transform: uppercase;
     line-height: 3.6vh;
   }
@@ -333,16 +335,16 @@ body[lang='cn'] .traditional {
   #section-genjyuugothic .wrapper-lunar-calendar {
     font-size: 6vh;
     line-height: 6vh;
-    letter-spacing: 6.1vh;
-    text-indent: 6.1vh;
+    letter-spacing: 5.4vh;
+    text-indent: 5.4vh;
     width: 6vh;
     margin: 0 1vh 0 2vh;
   }
   #section-genjyuugothic .wrapper-zodiac {
     font-size: 9vh;
     line-height: 9vh;
-    letter-spacing: 10.8vh;
-    text-indent: 10.8vh;
+    letter-spacing: 10vh;
+    text-indent: 10vh;
     width: 9vh;
     margin: 0 0 0 2vh;
   }
