@@ -149,17 +149,18 @@ body[lang='cn'] .traditional {
     background-repeat: no-repeat;
     color: khaki;
     background-position: 50% 50%;
-    margin: 0 3.2vh 0vh 0;
+    margin: 0 2.8vh 0vh 0;
   }
   #section-setofont .label-month-date {
     border: 4px solid #222;
     border-radius: 20px;
-    font-size: 4.2vh;
+    font-size: 5vh;
     letter-spacing: .1em;
-    padding: 1.6vh;
+    padding: 1.6vh 1.6vh;
+    text-indent: .1em;
   }
   #section-setofont .lunar-month-date-name {
-    font-size: 4vh;
+    font-size: 3.6vh;
     letter-spacing: 0.15em;
     margin: 1.2vh auto;
   }
@@ -168,8 +169,8 @@ body[lang='cn'] .traditional {
     margin: 0 auto;
     border: 2px solid khaki;
     border-radius: 2vh;
-    font-size: 2.6vh;
-    padding: 0vh .4vh;
+    font-size: 2vh;
+    padding: .4vh;
   }
   #section-setofont .label-lunar-month-date {
     background: #222;
@@ -187,7 +188,7 @@ body[lang='cn'] .traditional {
     background: #222;
     padding: 8px;
     position: relative;
-    margin: -4vh 4vh 0vh 0;
+    margin: -3vh 3.4vh 0vh 0;
   }
   #section-setofont .label-ganzhiyear {
     margin: 1.6vh 0 0.4vh 0;
@@ -213,10 +214,10 @@ body[lang='cn'] .traditional {
   }
   #section-setofont .group-ganzhiday {
     position: relative;
-    width: 18vh;
-    height: 18vh;
+    width: 17vh;
+    height: 17vh;
     color: khaki;
-    margin-left: 2vh;
+    margin-left: 1.4vh;
     -webkit-transform: translate3d(6vh,0,0);
   }
   #section-setofont .label-ganzhiday-1 {
@@ -260,7 +261,7 @@ body[lang='cn'] .traditional {
     height: 18vh;
     border-radius: 9vh;
     box-sizing: border-box;
-    margin-top: 1.2vh;
+    margin-top: 2.2vh;
   }
   #section-setofont .zodiac {
     font-size: 5vh;
@@ -279,7 +280,7 @@ body[lang='cn'] .traditional {
   }
   #section-setofont .label-weekday {
     position: relative;
-    width: 11vh;
+    width: 10.4vh;
     height: 22vh;
     box-sizing: border-box;
     border-style: solid;
@@ -287,7 +288,7 @@ body[lang='cn'] .traditional {
     color: khaki;
     -moz-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     -webkit-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
-    margin: 6vh 3.6vh 0 4.2vh;
+    margin: 4vh 3.2vh 0 4.2vh;
   }
   #section-setofont .vline {
     border-left-color: khaki;
@@ -298,34 +299,80 @@ body[lang='cn'] .traditional {
   font-family: 'GenJyuuGothic';
   font-size: 14px;
 }
-  #section-genjyuugothic .vline {
-    margin: 0 16px;
+  #section-genjyuugothic .wrapper {
+    line-height: 1em;
+    /* position: relative; */
   }
-  #section-genjyuugothic .hline {
-    margin: 16px 0;
+  #section-genjyuugothic .wrapper-text {
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    writing-mode: tb-rl;
+    text-align: center;
+    margin: 0px 2vh;
   }
   #section-genjyuugothic .number-date {
-    margin-bottom: 8px;
+    -webkit-text-stroke: 4px #222;
+    font-size: 86vh;
+    -webkit-text-stroke: 2px #222;
+    -webkit-text-fill-color: transparent; /* honeydew; */
+    z-index: 100;
   }
-  #section-genjyuugothic .wrapper {
-    flex: 1.5;
-    width: 90%;
-    max-width: 880px;
+  #section-genjyuugothic .weekday-cn {
+    font-size: 22vh;
+    letter-spacing: 14vh;
+    text-indent: 14vh;
+    line-height: 22vh;
+    width: 22vh;
+    white-space: nowrap;
   }
-  #section-genjyuugothic .h1 {
-    font-size: 280px;
-    line-height: 1em;
+  #section-genjyuugothic .month-cn {
+    height: 100%;
   }
-  #section-genjyuugothic .h3 {
-    font-size: 64px;
-    line-height: 1em;
+  #section-genjyuugothic .wrapper-month-cn {
+    width: 16vh;
+    font-size: 16vh;
+    letter-spacing: 22vh;
+    text-indent: 22vh;
+    line-height: 16vh;
   }
-  #section-genjyuugothic .h4 {
-    font-size: 40px;
+  #section-genjyuugothic .wrapper-weekday-en-shorten {
+    font-size: 13vh;
+    letter-spacing: 36vh;
+    text-indent: 36vh;
+    width: 13vh;
+    line-height: 13vh;
   }
-  #section-genjyuugothic .h5 {
-    font-size: 30px;
-    line-height: 1.25em;
+  #section-genjyuugothic .weekday-en-shorten {
+    height: 100%;
+  }
+  #section-genjyuugothic .wrapper-group-ganzhi {
+    font-size: 3vh;
+    width: 3vh;
+    letter-spacing: 1.6vh;
+    text-indent: 1.6vh;
+    text-transform: uppercase;
+    line-height: 3vh;
+    /* margin: 0 2vh 0 3vh; */
+  }
+  #section-genjyuugothic .group-ganzhi {
+    height: 100%;
+  }
+  #section-genjyuugothic .wrapper-lunar-calendar {
+    font-size: 5vh;
+    line-height: 5vh;
+    letter-spacing: 7.2vh;
+    text-indent: 7.2vh;
+    width: 5vh;
+    margin: 0 1vh 0 2vh;
+  }
+  #section-genjyuugothic .wrapper-zodiac {
+    font-size: 7vh;
+    line-height: 7vh;
+    letter-spacing: 14vh;
+    text-indent: 14vh;
+    width: 7vh;
+    margin: 0 0 0 2vh;
   }
 
 #section-notosans {
@@ -390,9 +437,9 @@ body[lang='cn'] .traditional {
     line-height: 1em;
   }
   #section-notoserif .date-cn {
-    font-size: 18vh;
+    font-size: 15vh;
     letter-spacing: .08em;
-    padding: 0 2.4vh;
+    padding: 6vh 2.4vh;
     border: 8px solid #222;
     /* color: powderblue; */
     margin: 0 20px;
@@ -409,7 +456,7 @@ body[lang='cn'] .traditional {
     border-radius: 8vh;
     padding: .8vh;
     font-size: 4vh;
-    border: 1px dotted #222;
+    border: 2px solid #222;
   }
   #section-notoserif .label-lunar-month-date-name {
     background: #222;
@@ -418,7 +465,7 @@ body[lang='cn'] .traditional {
     outline-offset: 12px;
     color: powderblue;
     padding: 12px;
-    font-size: 9vh;
+    font-size: 7vh;
     letter-spacing: .2em;
     border-radius: 12px;
   }
@@ -431,39 +478,39 @@ body[lang='cn'] .traditional {
     outline-offset: -6px;
   }
   #section-notoserif .group-year-weekday {
-    outline: 4px solid #222;
+    outline: 1px solid #222;
     outline-offset: -4px;
     margin: 2vh 0 0 0;
     padding: 2vh 0;
   }
   #section-notoserif .weekday-cn {
-    font-size: 6vh;
-    letter-spacing: .2em;
-    padding: .5vh;
+    font-size: 5.4vh;
+    letter-spacing: .1em;
+    text-indent: .1em;
   }
   #section-notoserif .year-cn {
     font-size: 4.4vh;
-    /* padding: .vh; */
-    letter-spacing: .2em;
+    letter-spacing: .1em;
   }
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
   #section-notoserif .ganzhi-day {
-    font-size: 5vh;
+    font-size: 3.4vh;
     letter-spacing: .2em;
     margin: 0 auto;
     background: #222;
     color: powderblue;
-    padding: .8vh .8vh 0 .8vh;
+    padding: 1.4vh;
     margin-bottom: 1vh;
-    border-radius: 8px;
+    border-radius: 4px;
+    text-indent: .2em;
   }
   #section-notoserif .ganzhi-group {
     margin-right: 2.4vh;
   }
   #section-notoserif .ganzhi-group .label {
     text-align: center;
-    font-size: 3.2vh;
+    font-size: 2.6vh;
     line-height: 1.25em;
   }
   #section-notoserif .weekday-en-shorten {
@@ -484,9 +531,9 @@ body[lang='cn'] .traditional {
   #section-notoserif .label-zodiac {
     width: 100%;
     padding-bottom: 116%;
-    font-size: 10vh;
+    font-size: 8vh;
     position: relative;
-    background-image: url(images/hexagon.svg);
+    background-image: url(images/shape3.svg);
     background-size: 94%;
     background-repeat: no-repeat;
     color: powderblue;
@@ -850,10 +897,10 @@ body.use-font #headerbar > div {
   right: 24px;
   bottom: 14px;
   z-index: 10000;
-  /* background-image: url(badge.svg); */
+  background-image: url(images/badge.svg);
   width: 136px;
   height: 42px;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   opacity: .5;
 }
 #badge:hover {
