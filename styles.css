@@ -564,12 +564,12 @@ body[lang='cn'] .traditional {
 }
   #section-hanamin .zodiac {
     padding: 0 4vh;
-    font-size: 6.4vh;
+    font-size: 6vh;
     margin-top: 2vh;
     line-height: 1em;
   }
   #section-hanamin .h5 {
-    font-size: 2vh;
+    font-size: 2.4vh;
   }
   #section-hanamin .text-vert {
     letter-spacing: .4vh;
@@ -846,11 +846,6 @@ body.use-font #headerbar > div {
   z-index: 10000;
   width: 148px;
   height: 48px;
-  /* font-size: 24px;
-  font-weight: 700;
-  line-height: 1.45em; */
-
-  /* background-image: url(images/logo2.svg); */
   background-image: url(images/project-title.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -863,7 +858,7 @@ body.use-font #headerbar > div {
   text-align: center;
   height: 240px;
   margin-top: -120px;
-  z-index: 10000;
+  z-index: 10;
   letter-spacing: 2px;
 }
 

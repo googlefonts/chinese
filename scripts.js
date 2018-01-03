@@ -21,7 +21,7 @@ var designerByFont = {
   'NotoSerif': '谷歌、奧多比',
   'HanaMin': '上地宏一',
   'SetoFont': '瀬戸のぞみ',
-  'GenJyuu': '自家製フォント工房',
+  'GenJyuuGothic': '自家製フォント工房',
 };
 
 var HOW_LABEL = {
@@ -177,7 +177,6 @@ function updateContent() {
   pages.find('.ganzhi-day').text( lunar.GanZhiDay );
   pages.find('.ganzhi-month').text( lunar.GanZhiMonth );
   pages.find('.ganzhi-year').text( lunar.GanZhiYear );
-  pages.find('.lunar-day').text( lunar.lunarDay );
 
   var labeLunarMonthDateName = lunar.lunarMonthName + lunar.lunarDayName;
 
@@ -200,19 +199,17 @@ function updateContent() {
     pages.find('.label-term').addClass('hide');
   }
 
-  // if(festival.length==0)
-  console.log('festival', festival);
-  if(festival) {
-    pages.find('.festival').text( festival );
-  } else {
-    pages.find('.festival').remove();
-  }
+  // if(festival) {
+  //   pages.find('.festival').text( festival );
+  // } else {
+  //   pages.find('.festival').remove();
+  // }
 }
 
 function updateDesignerInfoAndHash(index) {
   CONFIG.font = fontListByLang[CONFIG.lang][index-1];
   var designer = designerByFont[CONFIG.font];
-  $('#designer-info').text(designer);
+  $('.designer-name').text(designer);
   var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
 
   if(history.pushState) {
@@ -249,6 +246,7 @@ function createPages() {
     verticalCentered: false,
     sectionsColor: BG[CONFIG.lang],
     scrollingSpeed: 100,
+    // loopBottom: true,
     navigation: {
       'textColor': '#000',
       'bulletsColor': '#000',
