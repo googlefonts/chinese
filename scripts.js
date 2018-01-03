@@ -194,7 +194,12 @@ function updateContent() {
 
   pages.find('.zodiac').text( lunar.zodiac );
 
-  pages.find('.term').text( lunar.term );
+  if(lunar.term) {
+    pages.find('.term').text( lunar.term );
+  } else {
+    pages.find('.label-term').addClass('hide');
+  }
+
   // if(festival.length==0)
   console.log('festival', festival);
   if(festival) {

@@ -548,26 +548,27 @@ body[lang='cn'] .traditional {
   #section-notoserif .label-zodiac {
     font-size: 4vh;
   }
-  #section-notoserif .zodiac {
-    /* margin-top: -.05em; */
-  }
 
 
 #section-hanamin {
   font-family: 'Hana Min';
 }
-  #section-hanamin .wrapper {
-    width: 36%;
+  #section-hanamin .zodiac {
+    padding: 0 4vh;
+    font-size: 6.4vh;
+    margin-top: 2vh;
+    line-height: 1em;
   }
   #section-hanamin .h5 {
-    font-size: 18px;
+    font-size: 2vh;
   }
   #section-hanamin .text-vert {
-    letter-spacing: 8px;
+    letter-spacing: .4vh;
+    margin: 0 auto;
   }
   #section-hanamin .label-lunardate {
     line-height:1.25em;
-    letter-spacing: 8px;
+    letter-spacing: .7vh;
     margin: 2.2vh auto 0 auto;
   }
     #section-hanamin .label-lunardate.length-5 {
@@ -577,18 +578,19 @@ body[lang='cn'] .traditional {
 
     }
   #section-hanamin .h4 {
-    font-size: 2.8vh;
-    /* letter-spacing: .5em; */
+    font-size: 3.6vh;
   }
   #section-hanamin .h3 {
     font-size: 5.6vh;
     line-height: 1em;
+    margin-top: 2vh;
   }
   #section-hanamin .h1 {
-    font-size: 9.6vh;
-    line-height: 1em;
-    letter-spacing: .12em;
-    text-indent: .12em;
+    font-size: 10.8vh;
+    letter-spacing: .15em;
+    text-indent: .15em;
+    line-height: 12vh;
+    white-space: nowrap;
   }
   #section-hanamin .h1.short-title {
     font-size: 12.2vh;
@@ -683,6 +685,9 @@ body {
 }
 .justify-space-between {
   justify-content: space-between;
+}
+.justify-space-around {
+  justify-content:space-around;
 }
 
 .text-indent-4 {
