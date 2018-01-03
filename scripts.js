@@ -124,7 +124,7 @@ function updateContent() {
 
   pages.find('.ganzhi-label').text( GANZHI_LABEL[CONFIG.lang] );
   pages.find('.lunar-calendar-cn').text( LUNAR_CALENDAR_LABEL[CONFIG.lang] );
-  pages.find('.lunar-calendar-cn-1').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(0,1) ); // LUNAR_CALENDAR_LABEL[CONFIG.lang][0]
+  pages.find('.lunar-calendar-cn-1').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(0,1) );
   pages.find('.lunar-calendar-cn-2').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(1,2) );
 
   var converter = window.index.NumberToChineseWords;
@@ -133,26 +133,40 @@ function updateContent() {
   var weekday_cn = WEEKDAY_TW[0] + NUMBERS_CN[ CONFIG.weekday ];
   var month_en = MONTHS_EN[CONFIG.m-1];
   var month_cn = NUMBERS_CN[CONFIG.m] + '月';
-  var date_cn = converter.toWords(CONFIG.d)+'日';
-  // converter.toWords(CONFIG.d).length>2 ? converter.toWords(CONFIG.d) : +
+  var date_cn = converter.toWords(CONFIG.d);
 
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
-  pages.find('.date-cn').text( date_cn );
 
-  if( ( date_cn.length + month_cn.length) > 5 ) {
-    pages.find('.month-date-cn').removeClass('h1').addClass('h2');
+  if( date_cn.length < 2 ) {
+    pages.find('.date-cn').text( date_cn + '日' );
+    pages.find('.date-cn-how').text( date_cn + HOW_LABEL[CONFIG.lang] );
+    pages.find('.label-date-cn-how').addClass('short-title');
+  } else if ( date_cn.length>2 ) {
+    pages.find('.date-cn').text( date_cn );
+    pages.find('.date-cn-how').text( date_cn );
+  } else {
+    pages.find('.date-cn').text( date_cn + '日' );
+    pages.find('.date-cn-how').text( date_cn + HOW_LABEL[CONFIG.lang] );
   }
-  pages.find('.month-date-cn').text( month_cn + date_cn );
-  pages.find('.date-cn-how').text( converter.toWords(CONFIG.d)+HOW_LABEL[CONFIG.lang] );
 
-  pages.find('.month-en').text( month_en );
+  if( (date_cn.length + month_cn.length) == 4 ) {
+    pages.find('.month-date-cn').addClass('short-title');
+    pages.find('.month-date-cn').text(month_cn + date_cn + '日');
+  } else if( (date_cn.length + month_cn.length)<4 ) {
+    pages.find('.month-date-cn').text( '西元' + month_cn + date_cn + '日');
+  } else {
+    pages.find('.month-date-cn').text(month_cn + date_cn);
+  }
+
+  if(month_cn.length==2) {
+    pages.find('.label-year-month').addClass('short-title');
+    pages.find('.label-month').addClass('short-title');
+  }
+
   pages.find('.month-cn').text( month_cn );
-  pages.find('.number-year').text( CONFIG.y );
-  pages.find('.number-month').text( CONFIG.m );
-
   pages.find('.number-date-two-dgt').text( ("0" + CONFIG.d).slice(-2) );
   pages.find('.number-month-two-dgt').text( ("0" + CONFIG.m).slice(-2) );
   pages.find('.number-year-two-dgt').text( CONFIG.y.toString().slice(2,5) );
@@ -169,18 +183,13 @@ function updateContent() {
 
   pages.find('.year-cn').text( getChineseYearText(CONFIG.y) );
 
-  if(lunar.lunarDayName.indexOf('初') !== -1) {
-    pages.find('.lunar-dayname').text( lunar.lunarDayName );
-  } else {
-    pages.find('.lunar-dayname').text( lunar.lunarDayName + '日');
+  if(lunar.lunarDayName.indexOf('初') == -1 && labeLunarMonthDateName.length<6) {
     labeLunarMonthDateName += '日';
-  }
-  if(labeLunarMonthDateName.length>5) {
-    pages.find('.label-lunardate').addClass('longtext');
   }
   pages.find('.lunar-month-date-name').text( labeLunarMonthDateName );
 
-  pages.find('.lunar-monthname').text( lunar.lunarMonthName );
+  pages.find('.label-lunardate').addClass('length-'+labeLunarMonthDateName.length);
+
   pages.find('.lunar-year').text( getChineseYearText( lunar.lunarYear ) );
 
   pages.find('.zodiac').text( lunar.zodiac );

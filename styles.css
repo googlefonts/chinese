@@ -126,15 +126,30 @@ body[lang='cn'] .traditional {
   #section-setofont .label-month-date {
     border: 4px solid #222;
     border-radius: 20px;
-    font-size: 5vh;
     letter-spacing: .1em;
     padding: 1.6vh 1.6vh;
     text-indent: .1em;
   }
+  #section-setofont .label-month-date .month-date-cn {
+    font-size: 5.4vh;
+  }
+  #section-setofont .label-month-date .month-date-cn.short-title {
+    font-size: 6vh;
+  }
+  #section-setofont .label-lunardate {
+    font-size: 5vh;
+  }
+  #section-setofont .label-lunardate.length-4 {
+    font-size: 6vh;
+  }
+  #section-setofont .label-lunardate.length-6 {
+    font-size: 4vh;
+  }
   #section-setofont .lunar-month-date-name {
-    font-size: 3.6vh;
-    letter-spacing: 0.15em;
-    margin: 1.2vh auto;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    white-space: nowrap;
+    text-indent: .15em;
   }
   #section-setofont .lunar-calendar-cn-1,
   #section-setofont .lunar-calendar-cn-2 {
@@ -144,7 +159,7 @@ body[lang='cn'] .traditional {
     font-size: 2vh;
     padding: .4vh;
   }
-  #section-setofont .label-lunar-month-date {
+  #section-setofont .label-lunardate {
     background: #222;
     color: khaki;
     outline: 2px solid #222;
@@ -297,12 +312,16 @@ body[lang='cn'] .traditional {
     white-space: nowrap;
   }
   #section-genjyuugothic .wrapper-month-cn {
-    width: 15vh;
-    font-size: 15vh;
-    letter-spacing: 6.2vh;
-    text-indent: 6.2vh;
-    line-height: 15vh;
+    width: 6vh;
+    font-size: 6vh;
+    letter-spacing: 8.1vh;
+    text-indent: 8.1vh;
+    line-height: 6vh;
   }
+    #section-genjyuugothic .month-date-cn.short-title {
+      letter-spacing: 11.6vh;
+      text-indent: 11.6vh;
+    }
   #section-genjyuugothic .wrapper-date-cn {
     font-size: 9vh;
     letter-spacing: 25vh;
@@ -325,7 +344,7 @@ body[lang='cn'] .traditional {
     text-transform: uppercase;
     line-height: 3vh;
   }
-  #section-genjyuugothic .wrapper-lunar-calendar {
+  #section-genjyuugothic .label-lunardate {
     font-size: 5vh;
     line-height: 5vh;
     letter-spacing: 5.2vh;
@@ -333,6 +352,16 @@ body[lang='cn'] .traditional {
     width: 5vh;
     margin: 0 1vh 0 2vh;
   }
+    #section-genjyuugothic .label-lunardate.length-4 {
+      letter-spacing: 9.35vh;
+      text-indent: 9.35vh;
+    }
+    #section-genjyuugothic .label-lunardate.length-5 {
+      letter-spacing: 6.9vh;
+      text-indent: 6.9vh;
+    }
+
+
   #section-genjyuugothic .wrapper-zodiac {
     font-size: 9vh;
     line-height: 9vh;
@@ -373,12 +402,18 @@ body[lang='cn'] .traditional {
     margin: 1.5vh 0 3vh 0;
   }
   #section-notosans .label-lunardate {
-    font-size: 4vh;
+    font-size: 3.9vh;
     margin-top: 1vh;
   }
-    #section-notosans .label-lunardate.longtext {
-      font-size: 3.5vh;
+    #section-notosans .label-lunardate.length-4 {
+      font-size: 4.5vh;
+      margin-top: 1vh;
     }
+    #section-notosans .label-lunardate.length-6 {
+      font-size: 3.5vh;
+      margin-top: 1vh;
+    }
+
 
   #section-notosans .weekday-cn {
     font-size: 10.5vh;
@@ -392,9 +427,12 @@ body[lang='cn'] .traditional {
     margin-bottom: 16px;
   }
   #section-notosans .label-month {
-    font-size: 5.6vh;
+    font-size: 5.2vh;
     text-transform: uppercase;
   }
+    #section-notosans .label-month.short-title {
+      font-size: 6.4vh;
+    }
 
 
 #section-notoserif {
@@ -415,45 +453,71 @@ body[lang='cn'] .traditional {
   }
   #section-notoserif .label-year-month {
     position: relative;
-    width: 7vh;
-    font-size: 7vh;
+    width: 6.3vh;
+    font-size: 6.3vh;
     letter-spacing: 1.4vh;
     text-indent: 1.4vh;
     white-space: nowrap;
     align-items: center;
   }
+    #section-notoserif .label-year-month.short-title {
+      width: 7.4vh;
+      font-size: 7.4vh;
+    }
   #section-notoserif .label-lunar-month-date-name {
     align-items: center;
   }
 
-  #section-notoserif .group-lunar {
+  #section-notoserif .label-lunardate {
     position: relative;
     font-size: 5vh;
     width: 5vh;
-    letter-spacing: 2.1vh;
-    text-indent: 2.1vh;
     white-space: nowrap;
+    letter-spacing: 1.4vh;
+    text-indent: -1.2vh;
   }
-  #section-notoserif .label-date-cn {
+    #section-notoserif .label-lunardate.length-4 {
+      font-size: 6vh;
+      width: 6vh;
+      letter-spacing: 2.2vh;
+      text-indent: -1vh;
+    }
+    #section-notoserif .label-lunardate.length-5 {
+      font-size: 6vh;
+      width: 6vh;
+      letter-spacing: 1.2vh;
+      text-indent: -1.8vh;
+    }
+
+
+
+  #section-notoserif .label-date-cn-how {
     position: relative;
-    width: 25vh;
-    font-size: 25vh;
     white-space: nowrap;
-    letter-spacing: 9vh;
-    text-indent: 9vh;
+    font-size: 20.4vh;
+    letter-spacing: 1vh;
+    text-indent: 1vh;
+    width: 20vh;
   }
+    #section-notoserif .label-date-cn-how.short-title {
+      width: 26vh;
+      font-size: 26vh;
+      letter-spacing: 9vh;
+      text-indent: 9vh;
+    }
+
   #section-notoserif .label-weekday-cn {
     position: relative;
-    width: 14vh;
+    width: 15vh;
     letter-spacing: 8vh;
-    font-size: 14vh;
+    font-size: 15vh;
     white-space: nowrap;
     text-indent: 8vh;
   }
   #section-notoserif .group-numbers {
     position: relative;
-    width: 13vh;
-    font-size: 10.3vh;
+    width: 13.6vh;
+    font-size: 11.2vh;
     white-space: nowrap;
   }
   #section-notoserif .vline {
@@ -465,10 +529,12 @@ body[lang='cn'] .traditional {
   #section-notoserif .ganzhi-year,
   #section-notoserif .ganzhi-month,
   #section-notoserif .ganzhi-day {
-    font-size: 6vh;
+    font-size: 5vh;
     margin-bottom: 1vh;
   }
-
+  #section-notoserif .ganzhi-group {
+    height: 60vh;
+  }
   #section-notoserif .ganzhi-group .label {
     text-align: center;
     font-size: 2.6vh;
@@ -499,7 +565,17 @@ body[lang='cn'] .traditional {
   #section-hanamin .text-vert {
     letter-spacing: 8px;
   }
+  #section-hanamin .label-lunardate {
+    line-height:1.25em;
+    letter-spacing: 8px;
+    margin: 2.2vh auto 0 auto;
+  }
+    #section-hanamin .label-lunardate.length-5 {
 
+    }
+    #section-hanamin .label-lunardate.length-4 {
+
+    }
   #section-hanamin .h4 {
     font-size: 2.8vh;
     /* letter-spacing: .5em; */
@@ -509,20 +585,22 @@ body[lang='cn'] .traditional {
     line-height: 1em;
   }
   #section-hanamin .h1 {
-    font-size: 120px;
+    font-size: 9.6vh;
     line-height: 1em;
     letter-spacing: .12em;
+    text-indent: .12em;
   }
+  #section-hanamin .h1.short-title {
+    font-size: 12.2vh;
+  }
+
   #section-hanamin .h2 {
     font-size: 9vh;
     line-height: 1em;
     letter-spacing: .2em;
     text-indent: .2em;
   }
-  #section-hanamin .month-en {
-    font-size: 40px;
-    line-height: 1em;
-  }
+
   #section-hanamin .ganzhi-year,
   #section-hanamin .ganzhi-month,
   #section-hanamin .ganzhi-day {
