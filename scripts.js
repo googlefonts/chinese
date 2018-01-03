@@ -24,6 +24,8 @@ var designerByFont = {
   'GenJyuuGothic': '自家製フォント工房',
 };
 
+var page_idx = 0;
+
 var HOW_LABEL = {
   'tw':'號',
   'cn':'号'
@@ -248,13 +250,16 @@ function createPages() {
       console.log('onLeave');
     },
 		afterLoad: function(anchorLink, index){
-      console.log('afterLoad');
+      page_idx = index;
+      console.log('afterLoad page_idx', page_idx);
       updateDesignerInfoAndHash(index);
     },
 		afterRender: function(){
       console.log( 'afterRender');
       var idx = fontListByLang[CONFIG.lang].indexOf( CONFIG.font )+1;
       $.fn.pagepiling.moveTo(idx);
+      page_idx = idx;
+      console.log('afterRender page_idx', page_idx);
       updateDesignerInfoAndHash( idx );
     },
   });
@@ -305,6 +310,10 @@ $( document ).ready(function() {
 
   $('#button-use, #headerbar a').click(function(){
     $('body').toggleClass('use-font');
+    if(page_idx==1) {
+      $.fn.pagepiling.moveTo(2);
+    }
+    console.log('USE FONT',page_idx);
   });
 
 });

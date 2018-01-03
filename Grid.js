@@ -52,7 +52,7 @@
       col.setAttribute("id", '_col'+i);
       columns.appendChild(col);
     }
-
+    /*
     var handleMatchMedia = function (mediaQuery) {
       console.log('handleMatchMedia', mediaQuery.matches);
       var display = 'block';
@@ -71,6 +71,7 @@
     window.onresize = function(event) {
       handleMatchMedia(mql);
     };
+    */
   }
 
 })();
