@@ -8,6 +8,7 @@
   <meta name="description" content="Typographic Calendar">
   <meta name="author" content="Yuin Chien">
 
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -32,12 +33,8 @@
   </div>
 
   <a id="badge" href="https://fonts.google.com/" target="_blank"></a>
-  <div id="designer-info" class="load-font designer-name text-vert"></div>
+  <div id="designer-info" class="load-font text-vert"></div>
 
-  <div id="overlay" class="load-font">
-    <div id="font-title" class="text-vert"></div>
-    <div class="designer-name text-vert"></div>
-  </div>
 
   <div id="templates-about" class="templates section-about weight-600">
 
@@ -66,11 +63,43 @@
       </div>
     </div>
 
-  <div id="templates-notosans" class="templates">
-    <div class="wrapper centered-h load-font centered-hv weight-500">
+    <!-- 'tw': {
+      'About': '網站介绍',
+      'NotoSerif': '思源宋體',
+      'NotoSans': '思源黑體',
+      'SetoFont': '瀨戶字體',
+      'GenJyuuGothic': '思源柔黑體',
+      'HanaMin': '花園明朝',
+    },
+    'cn': {
+      'About': '网站介绍',
+      'NotoSerif': '思源宋体',
+      'NotoSans': '思源黑体',
+      'HanaMin': '花园明朝',
+    }, -->
+
+  <div id="templates-notosans" class="font-notosans templates">
+    <div class="wrapper-use-font centered-hv">
+
+      <div class="font-name traditional">思源黑體</div>
+      <div class="font-name simplified">思源黑体</div>
+      <div class="font-name">Noto Sans</div>
+
+      <pre class="traditional">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="traditional">font-family: “{font_name}”;</pre>
+      <pre class="simplified">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="simplified">font-family: “{font_name}”;</pre>
+
+      <div class="group-desc">
+        <div class="desc traditional">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="desc simplified">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <!-- <div class="desc-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div> -->
+      </div>
+    </div>
+
+    <div class="wrapper centered-h load-font centered-hv">
       <div class="hline eight-px" style="margin: 0 auto 1.4vh auto;"></div>
-      <!-- <div class="weekday-en weight-500 uppercase"></div> -->
-      <!-- <div class="arrows">❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯❯</div> -->
+
       <div class="weekday-cn text-center"></div>
       <div class="number-date text-center"></div>
 
@@ -94,9 +123,28 @@
     </div>
   </div>
 
+  <div id="templates-notoserif" class="font-notoserif templates">
 
-  <div id="templates-notoserif" class="templates">
-    <div class="weight-700 centered-hv flexbox row wrapper load-font justify-center">
+    <div class="wrapper-use-font centered-hv">
+
+      <div class="font-name traditional">思源宋體</div>
+      <div class="font-name simplified">思源宋体</div>
+      <div class="font-name traditional">Noto Serif CJK TC</div>
+      <div class="font-name simplified">Noto Serif CJK SC</div>
+
+      <pre class="traditional">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="traditional">font-family: “{font_name}”;</pre>
+      <pre class="simplified">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="simplified">font-family: “{font_name}”;</pre>
+
+      <div class="group-desc">
+        <div class="desc traditional">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="desc simplified">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <!-- <div class="desc-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div> -->
+      </div>
+    </div>
+
+    <div class="centered-hv flexbox row wrapper load-font justify-center">
 
       <div class="vline"></div>
 
@@ -156,7 +204,25 @@
     </div>
   </div>
 
-  <div id="templates-setofont" class="templates">
+  <div id="templates-setofont" class="font-setofont templates">
+
+    <div class="wrapper-use-font centered-hv">
+
+      <div class="font-name traditional">思源黑體</div>
+      <div class="font-name traditional">Seto Font</div>
+
+      <pre class="traditional">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="traditional">font-family: “{font_name}”;</pre>
+      <pre class="simplified">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="simplified">font-family: “{font_name}”;</pre>
+
+      <div class="group-desc">
+        <div class="desc traditional">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="desc simplified">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <!-- <div class="desc-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div> -->
+      </div>
+    </div>
+
     <div class="wrapper centered-hv flexbox row load-font justify-center">
       <div class="column flexbox justify-center" style="align-items: flex-end;">
 
@@ -212,9 +278,27 @@
     </div>
   </div>
 
-  <div id="templates-hanamin" class="templates">
+  <div id="templates-hanamin" class="font-hanamin templates">
 
-      <div class="wrapper flexbox row centered-hv load-font">
+    <div class="wrapper-use-font centered-hv">
+
+      <div class="font-name traditional">花園明朝</div>
+      <div class="font-name simplified">花园明朝</div>
+      <div class="font-name">Hana Min</div>
+
+      <pre class="traditional">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="traditional">font-family: “{font_name}”;</pre>
+      <pre class="simplified">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="simplified">font-family: “{font_name}”;</pre>
+
+      <div class="group-desc">
+        <div class="desc traditional">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="desc simplified">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <!-- <div class="desc-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div> -->
+      </div>
+    </div>
+
+    <div class="wrapper flexbox row centered-hv load-font">
         <div class="flex flexbox column justify-space-around" style="padding: 8px 20px;">
 
           <div class="label-term text-center">
@@ -254,10 +338,27 @@
           <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="h3 ganzhi-day"></span></div>
         </div>
       </div>
+  </div>
 
+  <div id="templates-genjyuugothic" class="font-genjyuugothic templates">
+
+    <div class="wrapper-use-font centered-hv">
+
+      <div class="font-name traditional">思源柔黑體</div>
+      <div class="font-name">Gen Jyuu Gothic</div>
+
+      <pre class="traditional">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="traditional">font-family: “{font_name}”;</pre>
+      <pre class="simplified">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
+      <pre class="simplified">font-family: “{font_name}”;</pre>
+
+      <div class="group-desc">
+        <div class="desc traditional">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="desc simplified">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <!-- <div class="desc-en">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div> -->
+      </div>
     </div>
 
-  <div id="templates-genjyuugothic" class="templates">
     <div class="wrapper load-font">
 
       <div class="number-date centered-hv"></div>

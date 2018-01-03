@@ -60,18 +60,11 @@ var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July",
 var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
-
 var BG = {
   'tw': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
   'cn': ['#FFF','powderblue','beige','lemonchiffon']
 };
 
-var DARK_THEMES = {
-  'midnightblue':true,
-};
-
-
-var calendars = {};
 
 function init() {
   var hash = window.location.hash;
@@ -199,18 +192,16 @@ function updateContent() {
     pages.find('.label-term').addClass('hide');
   }
 
-  // if(festival) {
-  //   pages.find('.festival').text( festival );
-  // } else {
-  //   pages.find('.festival').remove();
-  // }
 }
 
 function updateDesignerInfoAndHash(index) {
   CONFIG.font = fontListByLang[CONFIG.lang][index-1];
   var designer = designerByFont[CONFIG.font];
-  $('.designer-name').text(designer);
+  $('#designer-info').text(designer);
   var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
+
+  // $('#font-title').text( fontByLang[CONFIG.lang][ CONFIG.font ] );
+  // $("#font-title").attr('class', 'font-'+CONFIG.font.toLowerCase());
 
   if(history.pushState) {
     history.pushState(null, null, hash);
@@ -267,6 +258,7 @@ function createPages() {
       updateDesignerInfoAndHash( idx );
     },
   });
+
 }
 
 $( document ).ready(function() {
