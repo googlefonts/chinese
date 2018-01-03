@@ -107,14 +107,15 @@ body[lang='cn'] .traditional {
 
 #section-setofont {
   font-family: 'Seto Font', sans-serif;
+
 }
   #section-setofont * {
     line-height: 1em;
   }
   #section-setofont .label-weekday-en {
-    width: 18vh;
-    padding-bottom: 22vh;
-    font-size: 6vh;
+    width: 20vh;
+    padding-bottom: 23vh;
+    font-size: 7vh;
     position: relative;
     background-image: url(images/shape3.svg);
     background-size: 94%;
@@ -156,8 +157,12 @@ body[lang='cn'] .traditional {
     margin: 0 auto;
     border: 2px solid khaki;
     border-radius: 2vh;
-    font-size: 2vh;
+    font-size: 2.4vh;
     padding: .4vh;
+  }
+  #section-setofont .group-ganzhiyear {
+    font-size: 2.4vh;
+    white-space: nowrap;
   }
   #section-setofont .label-lunardate {
     background: #222;
@@ -168,44 +173,46 @@ body[lang='cn'] .traditional {
     padding: 2vh;
   }
   #section-setofont .ganzhi-year {
-    font-size: 5vh;
-    margin: .6vh auto 2.6vh auto;
+    font-size: 6vh;
+    margin: 0 auto 2.6vh auto;
   }
   #section-setofont .group-ganzhiyear {
     background: #222;
     padding: 8px;
     position: relative;
-    margin: -3vh 3.4vh 0vh 0;
+    margin: -7vh 3.4vh 0vh 0;
   }
-  #section-setofont .label-ganzhiyear {
+  /* #section-setofont .label-ganzhiyear {
     margin: 1.6vh 0 0.4vh 0;
-  }
+  } */
   #section-setofont .group-ganzhiyear .wrapper-bg {
     background: khaki;
-    padding: 2vh 1.2vh 1.4vh 1.2vh;
+    padding: 3.4vh 2vh 2.4vh 2vh;
     border-radius: 8px;
     border: 0px solid #222;
   }
   #section-setofont .group-ganzhimonth {
+    font-size: 2.2vh;
     position: relative;
     padding: 8px;
     border-radius: 50%;
     border: 1px solid #222;
-    margin: -1.2vh 3.2vh 0vh 0;
+    margin: 0.6vh 3.2vh 0vh 0;
   }
   #section-setofont .ganzhi-month {
-    font-size: 5vh;
-    padding: 4vh 5vh;
+    font-size: 5.4vh;
+    padding: 4.4vh 6vh;
     margin-right: -6vh;
     letter-spacing: 6vh;
   }
   #section-setofont .group-ganzhiday {
     position: relative;
-    width: 17vh;
-    height: 17vh;
+    width: 19vh;
+    height: 19vh;
     color: khaki;
     margin-left: 1.4vh;
     -webkit-transform: translate3d(6vh,0,0);
+    font-size: 2.4vh;
   }
   #section-setofont .label-ganzhiday-1 {
     letter-spacing: 1vh;
@@ -234,7 +241,7 @@ body[lang='cn'] .traditional {
     height: 10vh;
   }
   #section-setofont .label-ganzhi-month {
-    bottom: 2.8vh;
+    bottom: 3.4vh;
   }
   #section-setofont .group-ganzhimonth .wrapper-bg {
     background: #222;
@@ -244,38 +251,40 @@ body[lang='cn'] .traditional {
   #section-setofont .label-zodiac {
     position: relative;
     border: 8px solid #222;
-    width: 18vh;
-    height: 18vh;
-    border-radius: 9vh;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 10vh;
     box-sizing: border-box;
     margin-top: 2.2vh;
   }
   #section-setofont .zodiac {
-    font-size: 5vh;
+    font-size: 7.4vh;
   }
   #section-setofont .label-zodiac-title {
-    letter-spacing: 7vh;
-    width: 23vh;
+    letter-spacing: 9vh;
+    width: 27vh;
     height: 2.6vh;
     font-size: 2.6vh;
     margin-top: calc( 50% - 1.3vh );
   }
   #section-setofont .weekday-cn {
-    font-size: 4.6vh;
+    /* font-size: 4.6vh;
     width: 4.6vh;
-    height: 13.8vh;
+    height: 13.8vh; */
+    white-space: nowrap;
   }
   #section-setofont .label-weekday {
     position: relative;
-    width: 10.4vh;
-    height: 22vh;
+    font-size: 6vh;
+    height: 28vh;
+    width: 11vh;
     box-sizing: border-box;
     border-style: solid;
     border-width: 5vh;
     color: khaki;
     -moz-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     -webkit-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
-    margin: 4vh 3.2vh 0 4.2vh;
+    margin: 4.8vh 3.2vh 0 4.2vh;
   }
   #section-setofont .vline {
     border-left-color: khaki;
