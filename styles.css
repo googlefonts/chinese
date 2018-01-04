@@ -929,15 +929,27 @@ body.use-font .section .wrapper-use-font {
   transform: translateX(-50%);
 }
 
+.section-about .content {
+  font-size: 14vh;
+  left: 30%;
+  top: 10%;
+  line-height: 15vh;
+  margin-left: 6vh;
+  letter-spacing: 1vh;
+}
+.line1 {
+  text-indent: 9vh;
+}
+
 #designer-info {
   position: fixed;
   right: 18px;
   top: 50%;
   text-align: center;
-  height: 240px;
-  margin-top: -120px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
   z-index: 10;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 #headerbar {
@@ -1057,26 +1069,32 @@ body.use-font .section .wrapper-use-font {
 }
 
 .about-text {
-  height: 90%;
-  /* width: 72%; */
-  margin: 5% auto;
-  width: 128vh;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
 }
 .chinese-text {
 
 }
+.title-text {
+  font-size: 3vh;
+  line-height: 1.5em;
+  margin-bottom: 2vh;
+  margin: 12px 23px;
+}
 .chinese-text span {
-  line-height: 1.8em;
-  font-size: 4.2vh;
+  line-height: 1.4em;
+  font-size: 3.2vh;
   letter-spacing: .125em;
   border-left: 1px solid #222;
-  padding: 0px 5px;
+  /* padding: 0px 5px; */
   white-space: nowrap;
 }
 .eng-text {
-  max-width: 56vh;
-  /* text-align: right; */
-  margin-top: -33vh;
+  margin-right: 6vh;
+  width: 38vh;
+  align-self: flex-end;
+  line-height: 1.5em;
 }
 
 .eng-text a {
@@ -1085,7 +1103,8 @@ body.use-font .section .wrapper-use-font {
 }
 
 .about-bg {
-  /* background-image: url(images/chinese_horz_yellow.svg); */
+  opacity: .1;
+  background-image: url(images/chinese_outline.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;

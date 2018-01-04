@@ -16,9 +16,9 @@ var fontByLang = {
 };
 
 var designerByFont = {
-  'About': '',
-  'NotoSans': '谷歌、奧多比',
-  'NotoSerif': '谷歌、奧多比',
+  'About': 'Google Fonts 預先發布中文字體',
+  'NotoSans': 'Google / Adobe',
+  'NotoSerif': 'Google / Adobe',
   'HanaMin': '上地宏一',
   'SetoFont': '瀬戸のぞみ',
   'GenJyuuGothic': '自家製フォント工房',
