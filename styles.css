@@ -1056,42 +1056,27 @@ body.use-font .section .wrapper-use-font {
   writing-mode: tb-rl;
 }
 
-.chinese-text {
-  line-height: 1.6em;
-  font-size: 28px;
-  letter-spacing: .125em;
-  margin-left: 8px;
-  position: relative;
-  left: 50%;
-  text-align: center;
+.about-text {
+  height: 90%;
+  /* width: 72%; */
+  margin: 5% auto;
+  width: 128vh;
 }
-.chinese-text > span {
-  /* text-decoration: underline;
-  text-decoration-color: #222;
-  padding: 12px 4px; */
+.chinese-text {
+
+}
+.chinese-text span {
+  line-height: 1.8em;
+  font-size: 4.2vh;
+  letter-spacing: .125em;
   border-left: 1px solid #222;
-/* line-height: 1.8em; */
-  padding: 0;
-  padding: 0 1px;
+  padding: 0px 5px;
+  white-space: nowrap;
 }
 .eng-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  font-size: 15px;
-  text-align: right;
-  line-height: 1.8em;
-  margin: 0;
-  transform: translateX( calc( -100% - 14px) ) translateY(-50%);
-  width: 360px;
-}
-.eng-text > .large {
-  display: inline-block;
-  font-size: 21px;
-  line-height: 1.5em;
-}
-.eng-text > span {
-  margin-bottom: 4px;
+  max-width: 56vh;
+  /* text-align: right; */
+  margin-top: -33vh;
 }
 
 .eng-text a {
@@ -1135,18 +1120,18 @@ body.use-font .section .wrapper-use-font {
   font-size: 13px;
   display: inline-block;
   margin-top: 12px;
-  padding: 20px 0 0 0;
+  /* padding: 20px 0 0 0; */
 }
 
-#author-text:before {
+/* #author-text:before {
   position: absolute;
   top: 8px;
-  right: 0;
+  left: 0;
   width: 32px;
   height: 2px;
   background: #222;
   content: "";
-}
+} */
 
 
 /* cldr */
