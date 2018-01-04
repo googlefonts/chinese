@@ -930,10 +930,10 @@ body.use-font .section .wrapper-use-font {
 }
 
 .section-about .content {
-  font-size: 18vh;
+  font-size: 17vh;
   left: 30%;
   top: 10%;
-  line-height: 17vh;
+  line-height: 16vh;
   letter-spacing: -.5vh;
 }
 .line2 {
