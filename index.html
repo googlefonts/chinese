@@ -63,21 +63,6 @@
       </div>
     </div>
 
-    <!-- 'tw': {
-      'About': '網站介绍',
-      'NotoSerif': '思源宋體',
-      'NotoSans': '思源黑體',
-      'SetoFont': '瀨戶字體',
-      'GenJyuuGothic': '思源柔黑體',
-      'HanaMin': '花園明朝',
-    },
-    'cn': {
-      'About': '网站介绍',
-      'NotoSerif': '思源宋体',
-      'NotoSans': '思源黑体',
-      'HanaMin': '花园明朝',
-    }, -->
-
   <div id="templates-notosans" class="font-notosans templates">
     <div class="wrapper-use-font centered-hv">
 
@@ -146,13 +131,13 @@
 
     <div class="centered-hv flexbox row wrapper load-font justify-center">
 
-      <div class="vline"></div>
+      <div class="vline four-px"></div>
 
       <div class="text-vert label-lunardate">
         <div class="centered-hv">︻<span class="text-vert lunar-calendar-cn"></span>︼<span class="text-vert lunar-month-date-name"></span></div>
       </div>
 
-      <div class="vline"></div>
+      <div class="vline four-px"></div>
 
       <div class="ganzhi-group flexbox column justify-space-between">
         <div>
@@ -169,37 +154,29 @@
         </div>
       </div>
 
-      <div class="vline"></div>
+      <div class="vline four-px"></div>
 
       <div class="text-vert label-date-cn-how">
         <div class="date-cn-how centered-hv"></div>
       </div>
 
-      <div class="vline"></div>
+      <div class="vline four-px"></div>
 
       <div class="label-year-month">
         <div class="flexbox column centered-hv" style="align-items: center;">
           <div class="year-cn text-vert"></div>
-          <span>∕</span>
+          <span>年</span>
           <div class="text-vert month-cn"></div>
         </div>
       </div>
 
-      <div class="vline"></div>
+      <div class="vline four-px"></div>
 
       <div class="column flexbox label-weekday-cn">
-        <div class="centered-hv text-vert weekday-cn"></div>
+        <div class="centered-hv text-vert">今天<span class="weekday-cn"></span></div>
       </div>
 
-      <div class="vline"></div>
-
-      <div class="group-numbers">
-        <div class="flexbox column centered-hv" style="align-items: center;line-height: 14vh;">
-          <div class="number-year-two-dgt"></div>∕<div class="number-month-two-dgt"></div>∕<div class="number-date-two-dgt"></div>
-        </div>
-      </div>
-
-      <div class="vline"></div>
+      <div class="vline four-px"></div>
 
     </div>
   </div>
@@ -247,6 +224,12 @@
             <div class="centered-h text-center label-ganzhi-month"><span class="ganzhi-label"></span>月</div>
           </div>
         </div>
+
+        <!-- <div class="label-term text-center">
+          <div class="text-vert">節氣</div>
+          <div class="term text-vert"></div>
+        </div> -->
+
       </div>
       <div class="">
         <div class="text-vert label-month-date"><span class="month-date-cn"></span></div>
@@ -365,15 +348,17 @@
 
       <div class="row flexbox centered-hv" style="align-items: center;">
 
-        <div class="wrapper-text wrapper-group-ganzhi">
-          <div class="group-ganzhi">干支<span class="ganzhi-label"></span>年<span class="ganzhi-year"></span>∕干支<span class="ganzhi-label"></span>月<span class="ganzhi-month"></span>∕干支<span class="ganzhi-label"></span>日<span class="ganzhi-day"></span></span></div>
-        </div>
-
         <div class="wrapper-text label-lunardate">
           <div>
             <span class="lunar-calendar-cn"></span><span class="lunar-month-date-name"></span>
           </div>
         </div>
+
+        <div class="wrapper-text wrapper-group-ganzhi" style="margin-right: .6vh;">
+          <div class="group-ganzhi">干支<span class="ganzhi-label"></span>年<span class="ganzhi-year"></span>∕干支<span class="ganzhi-label"></span>月<span class="ganzhi-month"></span>∕干支<span class="ganzhi-label"></span>日<span class="ganzhi-day"></span></span></div>
+        </div>
+
+
 
         <div class="wrapper-text wrapper-year-cn">
           <div class="year-cn"></div>
@@ -381,12 +366,12 @@
 
         <div class="text-vert weekday-cn"></div>
 
-        <div class="wrapper-text wrapper-zodiac">
-          <div class="">十二生肖<span class="zodiac"></span></div>
-        </div>
-
         <div class="wrapper-text wrapper-month-cn">
           <div class="month-date-cn"></div>
+        </div>
+        
+        <div class="wrapper-text wrapper-zodiac">
+          <div class="">十二生肖<span class="zodiac"></span></div>
         </div>
 
       </div>

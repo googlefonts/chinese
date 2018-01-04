@@ -252,6 +252,15 @@ body[lang='cn'] .traditional {
     width: 100%;
     height: 100%;
   }
+    #section-setofont .group-ganzhiday .wrapper-bg:after {
+      border: 1px solid khaki;
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      right: 6px;
+      bottom: 6px;
+      content: "";
+    }
   #section-setofont .ganzhi-day {
     font-size: 5vh;
     height: 10vh;
@@ -528,18 +537,18 @@ body[lang='cn'] .traditional {
 
   #section-notoserif .label-weekday-cn {
     position: relative;
-    width: 15vh;
-    letter-spacing: 8vh;
-    font-size: 15vh;
+    width: 11.2vh;
+    letter-spacing: 1vh;
+    font-size: 11.2vh;
     white-space: nowrap;
-    text-indent: 8vh;
+    text-indent: 1vh;
   }
-  #section-notoserif .group-numbers {
+  /* #section-notoserif .group-numbers {
     position: relative;
     width: 13.6vh;
     font-size: 11.2vh;
     white-space: nowrap;
-  }
+  } */
   #section-notoserif .vline {
     margin: 0 2.6vh;
   }
@@ -660,6 +669,9 @@ body {
 }
   .vline.two-px {
     border-left-width: 2px;
+  }
+  .vline.four-px {
+    border-left-width: 4px;
   }
 
 .hline {
