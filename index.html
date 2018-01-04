@@ -26,9 +26,9 @@
 
   <div id="project-title"></div>
   <div id="headerbar" class="load-font">
-    <div class="bordered-button" id="button-use">使用字體</div>
-    <div class="lang" content="tw">繁</div>
-    <div class="lang" content="cn">简</div>
+    <div class="bordered-button tooltip" id="button-use">使用字體<span class="tooltiptext" style="right: 0px;">Use font</span></div>
+    <div class="lang tooltip" content="tw">繁<span class="tooltiptext" style="right: -38px;">Traditional</span></div>
+    <div class="lang tooltip" content="cn">简<span class="tooltiptext" style="right: 0;">Simplified</span></div>
     <a class="overlay-only button-close"><div></div></a>
   </div>
 
@@ -355,10 +355,8 @@
         </div>
 
         <div class="wrapper-text wrapper-group-ganzhi" style="margin-right: .6vh;">
-          <div class="group-ganzhi">干支<span class="ganzhi-label"></span>年<span class="ganzhi-year"></span>∕干支<span class="ganzhi-label"></span>月<span class="ganzhi-month"></span>∕干支<span class="ganzhi-label"></span>日<span class="ganzhi-day"></span></span></div>
+          <div class="group-ganzhi">干支<span class="ganzhi-label"></span>年<span class="ganzhi-year"></span>&middot;干支<span class="ganzhi-label"></span>月<span class="ganzhi-month"></span>&middot;干支<span class="ganzhi-label"></span>日<span class="ganzhi-day"></span></span></div>
         </div>
-
-
 
         <div class="wrapper-text wrapper-year-cn">
           <div class="year-cn"></div>
@@ -369,7 +367,7 @@
         <div class="wrapper-text wrapper-month-cn">
           <div class="month-date-cn"></div>
         </div>
-        
+
         <div class="wrapper-text wrapper-zodiac">
           <div class="">十二生肖<span class="zodiac"></span></div>
         </div>

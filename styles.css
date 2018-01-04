@@ -104,6 +104,39 @@ body[lang='cn'] .traditional {
   display: none;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; /* If you want dots under the hoverable text */ */
+}
+  .tooltip .tooltiptext {
+      visibility: hidden;
+      /* width: 90px; */
+      background-color: #222;
+      color: #fff;
+      white-space: nowrap;
+      text-align: center;
+      padding: 4px 10px;
+      border-radius: 4px;
+      position: absolute;
+      z-index: 1;
+      bottom: -39px;
+      box-shadow: 0 0 2px rgba(0,0,0,.2);
+  }
+  .tooltip .tooltiptext:before {
+    position: absolute;
+    top: -8px;
+    left: calc(50% - 4px);
+    /* content: ""; */
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #222;
+  }
+  .tooltip:hover .tooltiptext {
+      /* visibility: visible; */
+  }
 
 .font-notoserif {
   font-family: 'Noto Serif TC';
@@ -333,22 +366,22 @@ body[lang='cn'] .traditional {
   }
   #section-genjyuugothic .number-date {
     -webkit-text-stroke: 4px #222;
-    font-size: 86vh;
+    font-size: 118vh;
     -webkit-text-stroke: 2px #222;
-    -webkit-text-fill-color: transparent; /* honeydew; */
+    -webkit-text-fill-color: transparent;
     z-index: 100;
   }
   #section-genjyuugothic .weekday-cn {
-    font-size: 27vh;
-    line-height: 27vh;
-    width: 27vh;
+    font-size: 26vh;
+    line-height: 26vh;
+    width: 26vh;
     white-space: nowrap;
   }
   #section-genjyuugothic .wrapper-month-cn {
     width: 6vh;
     font-size: 6vh;
-    letter-spacing: 8.1vh;
-    text-indent: 8.1vh;
+    letter-spacing: 7.5vh;
+    text-indent: 7.5vh;
     line-height: 6vh;
   }
     #section-genjyuugothic .month-date-cn.short-title {
@@ -364,24 +397,23 @@ body[lang='cn'] .traditional {
   }
   #section-genjyuugothic .wrapper-year-cn {
     font-size: 12vh;
-    letter-spacing: 10vh;
-    text-indent: 10vh;
+    letter-spacing: 9.1vh;
+    text-indent: 9.1vh;
     width: 12vh;
     line-height: 12vh;
   }
   #section-genjyuugothic .wrapper-group-ganzhi {
     font-size: 3vh;
     width: 3vh;
-    letter-spacing: .85vh;
-    text-indent: .85vh;
-    text-transform: uppercase;
+    letter-spacing: 0.82vh;
+    text-indent: 0.82vh;
     line-height: 3vh;
   }
   #section-genjyuugothic .label-lunardate {
     font-size: 5vh;
     line-height: 5vh;
-    letter-spacing: 5.2vh;
-    text-indent: 5.2vh;
+    letter-spacing: 4.8vh;
+    text-indent: 4.8vh;
     width: 5vh;
     margin: 0 1vh 0 2vh;
   }
@@ -398,8 +430,8 @@ body[lang='cn'] .traditional {
   #section-genjyuugothic .wrapper-zodiac {
     font-size: 9vh;
     line-height: 9vh;
-    letter-spacing: 8vh;
-    text-indent: 8vh;
+    letter-spacing: 7.1vh;
+   text-indent: 7.1vh;
     width: 9vh;
     margin: 0 0 0 2vh;
   }
@@ -877,7 +909,7 @@ body.use-font .section .wrapper-use-font {
 
 #project-title {
   position: fixed;
-  top: 16px;
+  top: 23px;
   left: 24px;
   z-index: 10000;
   width: 148px;
@@ -910,7 +942,7 @@ body.use-font .section .wrapper-use-font {
 
 #headerbar {
   position: fixed;
-  right: 24px;
+  right: 16px;
   top: 24px;
   z-index: 10000;
 }
@@ -918,12 +950,15 @@ body.use-font .section .wrapper-use-font {
 #headerbar > * {
   vertical-align: middle;
   display: inline-block;
-  margin-left: 12px;
   cursor: pointer;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;          /* Likely future */
+}
+
+#headerbar .lang {
+  padding: 5px 8px;
 }
 
 .circle-bordered {
