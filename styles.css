@@ -930,15 +930,14 @@ body.use-font .section .wrapper-use-font {
 }
 
 .section-about .content {
-  font-size: 14vh;
+  font-size: 18vh;
   left: 30%;
   top: 10%;
-  line-height: 15vh;
-  margin-left: 9vh;
-  letter-spacing: 1vh;
+  line-height: 17vh;
+  letter-spacing: -.5vh;
 }
-.line1 {
-  text-indent: 9vh;
+.line2 {
+  text-indent: 23vh;
 }
 
 #designer-info {
@@ -1069,13 +1068,14 @@ body.use-font .section .wrapper-use-font {
 }
 
 .about-text {
-  top: 50%;
-  position: relative;
-  transform: translateY(-50%);
-}
-.chinese-text {
+  /* top: 50%; */
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 
+  /* transform: translateY(-50%); */
 }
+
 .title-text {
   font-size: 3vh;
   line-height: 1.5em;
@@ -1083,18 +1083,18 @@ body.use-font .section .wrapper-use-font {
   margin: 12px 23px;
 }
 .chinese-text span {
-  line-height: 1.4em;
-  font-size: 3.2vh;
+  line-height: 1.6em;
+  font-size: 3.6vh;
   letter-spacing: .125em;
   border-left: 1px solid #222;
-  /* padding: 0px 5px; */
   white-space: nowrap;
 }
 .eng-text {
-  margin-right: 6vh;
-  width: 38vh;
+  width: 40vh;
   align-self: flex-end;
   line-height: 1.5em;
+  font-size: 13px;
+  margin: 0 0 5vh 6vh;
 }
 
 .eng-text a {
