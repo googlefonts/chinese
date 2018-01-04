@@ -16,7 +16,7 @@ var fontByLang = {
 };
 
 var designerByFont = {
-  'About': 'Google Fonts 預先發布中文字體',
+  'About': '',
   'NotoSans': 'Google / Adobe',
   'NotoSerif': 'Google / Adobe',
   'HanaMin': '上地宏一',
