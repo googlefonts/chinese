@@ -4,6 +4,12 @@ As Google makes progress on supporting Japanese web typography, we invite design
 
 This repository contains the type specimen site built to showcase the collection.
 
-## Getting started
+This project is not an official Google project, and Google provides no support for it.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Licensing
+
+The original code and text for this project is licensed under the Apache 2.0 License. 
+
+Third party packages are used, subject to each package's own (compatible) licenses, and can be found in the `/third_party` directory. 
+
+Third party fonts are used, subject to their own licenses, in the `/fonts` directory.
