@@ -853,7 +853,7 @@ pre {
   line-height: 1.4em;
 }
 .wrapper-use-font .group-desc {
-  max-width: 640px;
+  /* max-width: 640px; */
   position: relative;
   padding-top: 12px;
   margin-top: 28px;
@@ -1082,6 +1082,7 @@ body.use-font .section .wrapper-use-font {
 .chinese-text {
   align-self: center;
   text-align: center;
+
 }
 .chinese-text span {
   line-height: 1.6em;
@@ -1095,7 +1096,7 @@ body.use-font .section .wrapper-use-font {
   align-self: flex-end;
   line-height: 1.5em;
   font-size: 13px;
-  margin: 0 4vh 5vh 6vh;
+  margin: 0 4vh 1vh 6vh;
 }
 
 .eng-text a {

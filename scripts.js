@@ -19,7 +19,7 @@ var designerByFont = {
   'About': '',
   'NotoSans': 'Google / Adobe',
   'NotoSerif': 'Google / Adobe',
-  'HanaMin': '上地宏一',
+  'HanaMin': 'GlyphWiki',
   'SetoFont': '瀬戸のぞみ',
   'GenJyuuGothic': '自家製フォント工房',
 };
