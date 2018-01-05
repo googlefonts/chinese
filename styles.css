@@ -930,11 +930,10 @@ body.use-font .section .wrapper-use-font {
 }
 
 .section-about .content {
-  font-size: 17vh;
+  font-size: 16vh;
   left: 30%;
   top: 10%;
   line-height: 16vh;
-  letter-spacing: -.5vh;
 }
 .line2 {
   text-indent: 23vh;
@@ -1068,12 +1067,10 @@ body.use-font .section .wrapper-use-font {
 }
 
 .about-text {
-  /* top: 50%; */
-  bottom: 0;
+  top: 50%;
   position: absolute;
   width: 100%;
-
-  /* transform: translateY(-50%); */
+  transform: translateY(-50%);
 }
 
 .title-text {
@@ -1081,6 +1078,10 @@ body.use-font .section .wrapper-use-font {
   line-height: 1.5em;
   margin-bottom: 2vh;
   margin: 12px 23px;
+}
+.chinese-text {
+  align-self: center;
+  text-align: center;
 }
 .chinese-text span {
   line-height: 1.6em;
@@ -1094,7 +1095,7 @@ body.use-font .section .wrapper-use-font {
   align-self: flex-end;
   line-height: 1.5em;
   font-size: 13px;
-  margin: 0 0 5vh 6vh;
+  margin: 0 4vh 5vh 6vh;
 }
 
 .eng-text a {
