@@ -38,6 +38,10 @@ var LUNAR_CALENDAR_LABEL = {
   'tw':'農曆',
   'cn':'农历'
 };
+var TERM_LABEL = {
+  'tw':'節氣',
+  'cn':'节气',
+};
 
 var fontListByLang = {
   'tw': Object.keys( fontByLang['tw'] ),
@@ -121,6 +125,7 @@ function updateContent() {
   pages.find('.lunar-calendar-cn').text( LUNAR_CALENDAR_LABEL[CONFIG.lang] );
   pages.find('.lunar-calendar-cn-1').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(0,1) );
   pages.find('.lunar-calendar-cn-2').text( LUNAR_CALENDAR_LABEL[CONFIG.lang].slice(1,2) );
+  pages.find('.term-cn').text( TERM_LABEL[CONFIG.lang] );
 
   var converter = window.index.NumberToChineseWords;
   var today = CONFIG.today;
@@ -133,6 +138,7 @@ function updateContent() {
   pages.find('.weekday-cn').text( weekday_cn );
   pages.find('.weekday-en').text( weekday_en );
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
+  pages.find('.month-en-shorten').text( month_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
 
   if( date_cn.length < 2 ) {
@@ -191,7 +197,7 @@ function updateContent() {
   if(lunar.term) {
     pages.find('.term').text( lunar.term );
   } else {
-    pages.find('.label-term').addClass('hide');
+    pages.find('.term-related').addClass('hide');
   }
 
 }
@@ -310,10 +316,9 @@ $( document ).ready(function() {
 
   $('#button-use, #headerbar a').click(function(){
     $('body').toggleClass('use-font');
-    if(page_idx==1) {
+    if(page_idx==1 && $('body').hasClass('use-font') ) {
       $.fn.pagepiling.moveTo(2);
     }
-    console.log('USE FONT',page_idx);
   });
 
 });

@@ -140,7 +140,7 @@ body[lang='cn'] .traditional {
 
 .font-notoserif {
   font-family: 'Noto Serif TC';
-  font-weight: 700;
+  font-weight: 600;
 }
 .font-notosans {
   font-family: 'Noto Sans SC Sliced', sans-serif;
@@ -160,6 +160,13 @@ body[lang='cn'] .traditional {
 
   #section-setofont .wrapper * {
     line-height: 1em;
+  }
+  #section-setofont .group-term {
+    border: 8px solid #222;
+    padding: 16px;
+    font-size: 4vh;
+    border-radius: 2px;
+    margin: 20px 28px;
   }
   #section-setofont .label-weekday-en {
     width: 20vh;
@@ -231,9 +238,7 @@ body[lang='cn'] .traditional {
     position: relative;
     margin: -7vh 3.4vh 0vh 0;
   }
-  /* #section-setofont .label-ganzhiyear {
-    margin: 1.6vh 0 0.4vh 0;
-  } */
+
   #section-setofont .group-ganzhiyear .wrapper-bg {
     background: khaki;
     padding: 3.4vh 2vh 2.4vh 2vh;
@@ -251,8 +256,9 @@ body[lang='cn'] .traditional {
   #section-setofont .ganzhi-month {
     font-size: 5.4vh;
     padding: 4.4vh 6vh;
-    margin-right: -6vh;
-    letter-spacing: 6vh;
+    margin-right: -9vh;
+    letter-spacing: 9vh;
+    white-space: nowrap;
   }
   #section-setofont .group-ganzhiday {
     position: relative;
@@ -333,8 +339,8 @@ body[lang='cn'] .traditional {
   }
   #section-setofont .label-weekday {
     position: relative;
-    font-size: 6vh;
-    height: 28vh;
+    font-size: 4.6vh;
+    height: 26vh;
     width: 11vh;
     box-sizing: border-box;
     border-style: solid;
@@ -350,9 +356,6 @@ body[lang='cn'] .traditional {
   }
 
 
-#section-genjyuugothic {
-  font-size: 14px;
-}
   #section-genjyuugothic .wrapper {
     line-height: 1em;
   }
@@ -363,6 +366,14 @@ body[lang='cn'] .traditional {
     writing-mode: tb-rl;
     text-align: center;
     margin: 0px 2vh;
+  }
+  #section-genjyuugothic .label-term {
+    font-size: 8vh;
+    line-height: 8vh;
+    letter-spacing: 13.8vh;
+    text-indent: 13.8vh;
+    width: 8vh;
+    margin: 0 1vh 0 2vh;
   }
   #section-genjyuugothic .number-date {
     -webkit-text-stroke: 4px #222;
@@ -440,6 +451,17 @@ body[lang='cn'] .traditional {
   #section-notosans .hline {
     width: 30.5vh;
   }
+
+  #section-notosans .term {
+    font-size: 37vw;
+    position: absolute;
+    white-space: nowrap;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #222;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 10vw;
+    text-indent: 10vw;
+  }
   #section-notosans .wrapper * {
     line-height: 1em;
   }
@@ -505,7 +527,22 @@ body[lang='cn'] .traditional {
   #section-notoserif .number-date {
     font-size: 14vh;
   }
-
+  #section-notoserif .label-zodiac {
+    position: relative;
+    font-size: 8vh;
+    white-space: nowrap;
+    letter-spacing: 1.2vh;
+    text-indent: -2vh;
+    width: 8vh;
+  }
+  #section-notoserif .label-term {
+    position: relative;
+    font-size: 10vh;
+    white-space: nowrap;
+    letter-spacing: 1vh;
+    text-indent: -4vh;
+    width: 10vh;
+  }
   #section-notoserif .label-month-cn {
     border-radius: 8vh;
     padding: .8vh;
@@ -569,11 +606,11 @@ body[lang='cn'] .traditional {
 
   #section-notoserif .label-weekday-cn {
     position: relative;
-    width: 11.2vh;
-    letter-spacing: 1vh;
-    font-size: 11.2vh;
+    width: 18.8vh;
+    letter-spacing: 2.5vh;
+    font-size: 18.8vh;
     white-space: nowrap;
-    text-indent: 1vh;
+    text-indent: 2.5vh;
   }
   /* #section-notoserif .group-numbers {
     position: relative;
@@ -606,15 +643,9 @@ body[lang='cn'] .traditional {
     text-transform: lowercase;
   }
 
-  #section-notoserif .label-zodiac {
-    font-size: 4vh;
-  }
-
-
-
   #section-hanamin .zodiac {
     padding: 0 4vh;
-    font-size: 6vh;
+    font-size: 5.4vh;
     margin-top: 2vh;
     line-height: 1em;
   }
@@ -669,7 +700,7 @@ body[lang='cn'] .traditional {
   }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .frame1 {
@@ -684,10 +715,6 @@ body[lang='cn'] .traditional {
     border-radius: 10px;
     border: 2px solid
   }
-
-body {
-  background: #ecf0f1;
-}
 
 .uppercase {
   text-transform: uppercase;
@@ -842,7 +869,7 @@ body {
 
 pre {
   /* white-space: pre-wrap; */
-  background: rgba(0,0,0,.15);
+  background: rgba(0,0,0,.1);
   font-family: 'Roboto Mono', monospace;
   padding: 10px 12px;
   line-height: 1.6em !important;
@@ -853,11 +880,18 @@ pre {
   line-height: 1.2em;
 }
 .wrapper-use-font .group-desc {
-  /* max-width: 640px; */
+  font-weight: 600;
   position: relative;
   padding-top: 12px;
   margin-top: 28px;
 }
+body[lang="tw"] .wrapper-use-font .group-desc {
+  font-family: 'Noto Serif TC';
+}
+body[lang="cn"] .wrapper-use-font .group-desc {
+  font-family: 'Noto Serif SC';
+}
+
 .wrapper-use-font .group-desc::after {
   position: absolute;
   width: 32px;
@@ -999,7 +1033,7 @@ body.use-font .section .wrapper-use-font {
 #pp-nav,
 #headerbar,
 #designer-info {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .bordered-button {
