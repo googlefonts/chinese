@@ -1087,6 +1087,24 @@ body.use-font .section .wrapper-use-font {
   transform: translateY(-50%);
 }
 
+.column-1 {
+  width: 40vh;
+  margin-right: 2vh;
+}
+.column-2 {
+  width: 26vh;
+}
+.label-earlyaccess {
+  font-size: 20vh;
+  line-height: 20vh;
+  margin-top: 1vh;
+}
+.label-font {
+  font-size: 26vh;
+  line-height: 26vh;
+  letter-spacing: -1.2vh;
+}
+
 .title-text {
   font-size: 3vh;
   line-height: 1.5em;
@@ -1100,17 +1118,16 @@ body.use-font .section .wrapper-use-font {
 }
 .chinese-text span {
   line-height: 1.6em;
-  font-size: 3.6vh;
+  font-size: 2.6vh;
   letter-spacing: .125em;
   border-left: 1px solid #222;
   white-space: nowrap;
 }
-.eng-text {
-  width: 40vh;
-  align-self: flex-end;
-  line-height: 1.5em;
-  font-size: 13px;
-  margin: 0 4vh 1vh 6vh;
+.eng-block {
+  font-size: 1.52vh;
+  line-height: 2.4vh;
+  margin-top: 2vh;
+  padding: 0;
 }
 
 .eng-text a {
