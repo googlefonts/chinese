@@ -16,12 +16,12 @@ var fontByLang = {
 };
 
 var designerByFont = {
-  'About': '',
-  'NotoSans': 'Google',
-  'NotoSerif': 'Google / Adobe',
-  'HanaMin': 'GlyphWiki',
-  'SetoFont': '瀬戸のぞみ',
-  'GenJyuuGothic': '自家製フォント工房',
+  'About': {'label':'Project by Yuin Chien', 'link':'http://www.yuinchien.com/'},
+  'NotoSans': {'label':'Google', 'link':'https://www.google.com/get/noto/'},
+  'NotoSerif': {'label':'Google / Adobe', 'link':'https://www.google.com/get/noto/'},
+  'HanaMin': {'label':'GlyphWiki', 'link':'http://fonts.jp/hanazono/'},
+  'SetoFont': {'label':'瀬戸のぞみ', 'link':'http://setofont.osdn.jp/'},
+  'GenJyuuGothic': {'label':'自家製フォント工房', 'link':'http://jikasei.me/font/genjyuu/'},
 };
 
 var page_idx = 0;
@@ -206,8 +206,9 @@ function updateContent() {
 
 function updateDesignerInfoAndHash(index) {
   CONFIG.font = fontListByLang[CONFIG.lang][index-1];
-  var designer = designerByFont[CONFIG.font];
-  $('#designer-info').text(designer);
+  var designer = designerByFont[CONFIG.font].label;
+  var link = designerByFont[CONFIG.font].link;
+  $('#designer-info').html('<a href="'+link+'" target="_blank">'+designer+'</a>');
   var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
 
   // $('#font-title').text( fontByLang[CONFIG.lang][ CONFIG.font ] );

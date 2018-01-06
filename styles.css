@@ -840,8 +840,13 @@ body[lang='sc'] .traditional {
 }
 
 a {
-  color: #444;
+  color: #222;
+  opacity: .7;
   text-decoration: none;
+  -webkit-transition: .2s opacity;
+}
+a:hover {
+  opacity: 1;
 }
 
 .hline-4 {
@@ -973,9 +978,9 @@ body.use-font .section .wrapper-use-font {
   top: 50%;
   text-align: center;
   top: 50%;
-  -webkit-transform: translateY(-50%);
+  -webkit-transform: translate3d(0,-50%,0);
   z-index: 10;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 #headerbar {
@@ -1014,7 +1019,7 @@ body.use-font .section .wrapper-use-font {
 #pp-nav,
 #headerbar,
 #designer-info {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .bordered-button {

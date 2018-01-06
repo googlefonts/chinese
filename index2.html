@@ -9,33 +9,25 @@
   <meta name="author" content="Yuin Chien">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+  <link rel="stylesheet" type="text/css" href="third_party/jquery.pagepiling.css" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
-  <script type="text/javascript" src="jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="third_party/jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="third_party/LunarCalendar.js"></script>
+  <script type="text/javascript" src="third_party/number-to-chinese-words.min.js"></script>
   <script type="text/javascript" src="Grid.js"></script>
-  <script type="text/javascript" src="LunarCalendar.js"></script>
-  <script type="text/javascript" src="number-to-chinese-words.min.js"></script>
-
-  <style>
-  .huge-size {
-    font-size: 68vh;
-    margin-top: -10vh;
-  }
-  </style>
 
 </head>
 
-<body class="loading" lang="tw">
+<body class="loading" lang="tc">
 
   <div id="project-title"></div>
   <div id="headerbar" class="load-font">
-    <div class="bordered-button" id="button-use">使用字體</div>
-    <div class="lang" content="tc">繁</div>
-    <div class="lang" content="sc">简</div>
+    <div class="bordered-button tooltip-wrapper" id="button-use">使用字體<div class="tooltip" style="padding:2px 17px;">Use font</div></div>
+    <div class="lang tooltip-wrapper" content="tc" title="Traditional">繁<div class="tooltip" style="right:-25px;">Traditional</div></div>
+    <div class="lang tooltip-wrapper" content="sc" title="Simplified">简<div class="tooltip">Simplified</div></div>
     <a class="overlay-only button-close"><div></div></a>
   </div>
 
@@ -47,48 +39,25 @@
 
     <div class="about-text load-font flexbox row justify-center flex">
 
-      <div class=" load-font weight-900">
-        <div class="traditional centered-v huge-size" style="left:-25vh;">中</div>
-        <div class="traditional centered-v huge-size" style="right:-25vh;">文</div>
-
-        <div class="flexbox row centered-hv" style="width: 48vw;">
-          <div class="flexbox column flex">
-            <div class="weight-600" style="font-size: 13px;line-height: 20px;">
-              <div>Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the time needed to create the huge character set to the web infrastructure required to serve the massive font files. This project – "Typographic Calendar" is designed and created with libre web fonts to showcase Chinese typography. We hope to invite designers and developers to experiment with the fonts on Early Access as the standards and technology continue to develop.<br></div>
-              <div id="author-text">—Project made by <a href="http://www.yuinchien.com/" target="_blank">Yuin Chien</a>.</div>
-            </div>
-            <div class="flexbox row">
-              <div class="text-vert" style="font-size:12vh;line-height:20vh;">預先發佈</div>
-              <div class="text-vert">Google Fonts</div>
-            </div>
-          </div>
-          <div class="flexbox column flex">
-            <div class="text-vert" style="font-size:30vh;line-height:45vh;">字型</div>
-            <div class="chinese-text traditional text-vert">
-              <span>谷歌字庫擁有超過八百多個開源字型，</span><br><span>涵蓋一百三十五種以上的語言。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載檔案。</span><br><span>此作品以開源的網頁字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發佈的中文字體。</span>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        <!-- <div class="simplified text-vert line1">中文字体</div>
-        <div class="simplified text-vert line2">预先发布</div> -->
+      <div class="content load-font flexbox row weight-600">
+        <div class="traditional text-vert line1">中文字體</div>
+        <div class="traditional text-vert line2">預先發佈</div>
+        <div class="simplified text-vert line1">中文字体</div>
+        <div class="simplified text-vert line2">预先发布</div>
       </div>
 
-      <!-- <div class="eng-text weight-600">
+      <div class="eng-text weight-600">
         <div>Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the time needed to create the huge character set to the web infrastructure required to serve the massive font files. This project – "Typographic Calendar" is designed and created with libre web fonts to showcase Chinese typography. We hope to invite designers and developers to experiment with the fonts on Early Access as the standards and technology continue to develop.<br></div>
         <div id="author-text">—Project made by <a href="http://www.yuinchien.com/" target="_blank">Yuin Chien</a>.</div>
-      </div> -->
+      </div>
 
-      <!-- <div class="chinese-text traditional text-vert">
+      <div class="chinese-text traditional text-vert">
         <span>谷歌字庫擁有超過八百多個開源字型，</span><br><span>涵蓋一百三十五種以上的語言。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載檔案。</span><br><span>此作品以開源的網頁字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發佈的中文字體。</span>
       </div>
 
       <div class="chinese-text simplified text-vert">
         <span>谷歌字库拥有超过八百多个开源字体，</span><br><span>涵盖一百三十五种以上的语言。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载档案。</span><br><span>此作品以开源的网页字体来创作日历，</span><br><span>希望在推动技术研发的同时，</span><br><span>也邀清设计人与工程师共襄盛举，</span><br><span>一起试用预先发布的中文字体。</span>
-      </div> -->
+      </div>
 
     </div>
 

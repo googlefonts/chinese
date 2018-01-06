@@ -602,7 +602,7 @@
 		var lunarLeapMonth = getLunarLeapYear(lunarDate[0]);
 		var lunarMonthName = '';
 		if(lunarLeapMonth>0 && lunarLeapMonth==lunarDate[1]){
-			if(_lang=='tc') {
+			if(_lang=='tw') {
 				lunarMonthName = '閏'+_DATA.monthCn[lunarDate[1]-1]+'月';
 			} else {
 				lunarMonthName = '闰'+_DATA.monthCn[lunarDate[1]-1]+'月';
