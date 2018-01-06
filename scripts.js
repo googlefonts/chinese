@@ -1,16 +1,16 @@
 var fontByLang = {
   'tc': {
     'About': '網站介绍',
-    'NotoSerif': '思源宋體',
     'NotoSans': '思源黑體',
+    'NotoSerif': '思源宋體',
     'SetoFont': '瀨戶字體',
     'GenJyuuGothic': '思源柔黑體',
     'HanaMin': '花園明朝',
   },
   'sc': {
     'About': '网站介绍',
-    'NotoSerif': '思源宋体',
     'NotoSans': '思源黑体',
+    'NotoSerif': '思源宋体',
     'HanaMin': '花园明朝',
   },
 };

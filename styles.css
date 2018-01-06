@@ -443,15 +443,10 @@ body[lang='sc'] .traditional {
     width: 30.5vh;
   }
 
-  #section-notosans .term {
-    font-size: 37vw;
-    position: absolute;
-    white-space: nowrap;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: #222;
-    -webkit-text-stroke-width: 1px;
-    letter-spacing: 10vw;
-    text-indent: 10vw;
+  #section-notosans .label-term {
+    font-size: 3.6vh;
+    text-indent: -1.7vh;
+    margin: 2vh 0;
   }
   #section-notosans .wrapper * {
     line-height: 1em;
@@ -474,8 +469,12 @@ body[lang='sc'] .traditional {
     letter-spacing: .2em;
   }
   #section-notosans .label-zodiac {
-    font-size: 10vh; /*  18vh; */
-    margin: 1.5vh 0 3vh 0;
+    font-size: 10.4vh; /*  18vh; */
+    margin: 1.5vh 0 2vh 0;
+  }
+  #section-notosans .label-zodiac-big {
+     font-size: 18vh;
+     margin: 1.2vh 0 2.4vh 0;
   }
   #section-notosans .label-lunardate {
     font-size: 3.9vh;
@@ -496,7 +495,8 @@ body[lang='sc'] .traditional {
   }
   #section-notosans .number-date {
     font-size: 28vh;
-    margin-top: -1.5vh;
+    margin-top: -2vh;
+    margin-bottom: -.8vh;
   }
   #section-notosans .label-year {
     font-size: 8.6em;
