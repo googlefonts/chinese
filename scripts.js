@@ -15,6 +15,11 @@ var fontByLang = {
   },
 };
 
+var BG = {
+  'tc': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
+  'sc': ['#FFF','powderblue','honeydew','peachpuff']
+};
+
 var designerByFont = {
   'About': {'label':'Project by Yuin Chien', 'link':'http://www.yuinchien.com/'},
   'NotoSans': {'label':'Google', 'link':'https://www.google.com/get/noto/'},
@@ -65,12 +70,6 @@ var NUMBERS_YEAR_CN = ['零','一','二','三','四','五','六','七','八','�
 var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
-
-var BG = {
-  'tc': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
-  'sc': ['#FFF','powderblue','beige','lemonchiffon']
-};
-
 
 function init() {
   var hash = window.location.hash;
