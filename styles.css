@@ -4,47 +4,66 @@
 /* Noto Serif TC */
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.otf'); /* IE9 Compat Modes */
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Light.otf'); /* IE9 Compat Modes */
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Regular.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Regular.otf'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Medium.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Medium.otf'); /* IE9 Compat Modes */
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-SemiBold.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-SemiBold.otf'); /* IE9 Compat Modes */
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Bold.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Bold.otf'); /* IE9 Compat Modes */
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Black.otf'); /* IE9 Compat Modes */
   font-weight: 900;
   font-style: normal;
 }
 
+/* Noto Serif SC */
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Regular.otf'); /* IE9 Compat Modes */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Medium.otf'); /* IE9 Compat Modes */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-SemiBold.otf'); /* IE9 Compat Modes */
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Bold.otf'); /* IE9 Compat Modes */
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Black.otf'); /* IE9 Compat Modes */
+  font-weight: 900;
+  font-style: normal;
+}
 
 
 /* Seto Font */
@@ -813,7 +832,7 @@ body[lang='sc'] .traditional {
   font-weight: 700;
 }
 .weight-900 {
-  font-weight: 800;
+  font-weight: 900;
 }
 .text-outline {
   -webkit-text-stroke: 4px black;
@@ -980,19 +999,6 @@ body.use-font .section .wrapper-use-font {
   padding: 5px 8px;
 }
 
-.circle-bordered {
-  width: 320px;
-  height: 320px;
-  border: 8px solid #222;
-  border-radius: 160px;
-  text-align: center;
-  line-height: 320px;
-  font-size: 15em;
-  box-sizing: border-box;
-  background: #222;
-  color: honeydew;
-}
-
 .templates {
   display: none;
 }
@@ -1040,35 +1046,6 @@ body.use-font .section .wrapper-use-font {
 
 .text-center {
   text-align: center;
-}
-
-.square {
-  position: absolute;
-  left: 8%;
-  top: 8%;
-  right: 8%;
-  bottom: 8%;
-}
-
-.xl {
-  font-size: 10em;
-  line-height: 1em;
-}
-.x {
-  font-size: 8em;
-  line-height: 1em;
-}
-.m {
-  font-size: 5em;
-  line-height: 1em;
-}
-.s {
-  font-size: 2em;
-  line-height: 1em;
-}
-.xs {
-  font-size: 1em;
-  line-height: 1em;
 }
 
 .text-vert {
@@ -1150,55 +1127,4 @@ body.use-font .section .wrapper-use-font {
   font-size: 13px;
   display: inline-block;
   margin-top: 12px;
-  /* padding: 20px 0 0 0; */
 }
-
-/* #author-text:before {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 32px;
-  height: 2px;
-  background: #222;
-  content: "";
-} */
-
-
-/* cldr */
-.clndr {
-  font-size: 12px;
-  position: absolute;
-  bottom: 80px;
-  right: 80px;
-  width: 220px;
-  height: 240px;
-  font-weight: 500;
-}
-.header-day {
-  width: 13%;
-  /* display: inline-block; */
-  float: left;
-  opacity: .25;
-
-}
-.days .day.today {
-  background: #ff5252;
-  /* color: transparent; */
-  border-radius: 100%;
-  /* border: 2px solid red; */
-  /* border-radius: 30px; */
-}
-.day.adjacent-month {
-  opacity: 0;
-}
-.days .day {
-  /* display: inline-block; */
-  float: left;
-  width: 13%;
-}
-
-/* @media screen and (max-width: 640px) {
-  #section-hanamin .wrapper {
-    width: 80%;
-  }
-} */
