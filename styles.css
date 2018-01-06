@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansscsliced.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 /* Noto Serif TC */
 @font-face {
@@ -40,14 +41,16 @@
 @font-face {
   font-family: 'Noto Serif TC';
   src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.otf'); /* IE9 Compat Modes */
-  font-weight: 800;
+  font-weight: 900;
   font-style: normal;
 }
+
+
 
 /* Seto Font */
 @font-face {
   font-family: 'Seto Font';
-  src: url('fonts/setofont.ttf'); /* IE9 Compat Modes */
+  src: url('fonts/SetoFont/setofont.ttf'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
@@ -55,20 +58,43 @@
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Normal.ttf'); /* IE9 Compat Modes */
+  src: url('fonts/GenJyuuGothic/GenJyuuGothic-Normal.ttf'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/HanaMinA.ttf'); /* IE9 Compat Modes */
+  src: url('fonts/HanaMin/HanaMinA.ttf'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }
 
-body[lang='tw'] .simplified,
-body[lang='cn'] .traditional {
+.font-notoserif {
+  font-family: 'Noto Serif TC';
+  font-weight: 600;
+}
+body[lang=sc] .font-notosans {
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  font-weight: 500;
+}
+body[lang="tc"] .font-notosans {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+}
+.font-setofont {
+  font-family: 'Seto Font', sans-serif;
+}
+.font-genjyuugothic {
+  font-family: 'GenJyuuGothic';
+}
+.font-hanamin {
+  font-family: 'Hana Min';
+}
+
+
+body[lang='tc'] .simplified,
+body[lang='sc'] .traditional {
   display: none;
 }
 
@@ -103,60 +129,6 @@ body[lang='cn'] .traditional {
 .festival {
   display: none;
 }
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    /* border-bottom: 1px dotted black; /* If you want dots under the hoverable text */ */
-}
-  .tooltip .tooltiptext {
-      visibility: hidden;
-      /* width: 90px; */
-      background-color: #222;
-      color: #fff;
-      white-space: nowrap;
-      text-align: center;
-      padding: 4px 10px;
-      border-radius: 4px;
-      position: absolute;
-      z-index: 1;
-      bottom: -39px;
-      box-shadow: 0 0 2px rgba(0,0,0,.2);
-  }
-  .tooltip .tooltiptext:before {
-    position: absolute;
-    top: -8px;
-    left: calc(50% - 4px);
-    /* content: ""; */
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #222;
-  }
-  .tooltip:hover .tooltiptext {
-      /* visibility: visible; */
-  }
-
-.font-notoserif {
-  font-family: 'Noto Serif TC';
-  font-weight: 600;
-}
-.font-notosans {
-  font-family: 'Noto Sans SC Sliced', sans-serif;
-  font-weight: 500;
-}
-.font-setofont {
-  font-family: 'Seto Font', sans-serif;
-}
-.font-genjyuugothic {
-  font-family: 'GenJyuuGothic';
-}
-.font-hanamin {
-  font-family: 'Hana Min';
-}
-
-
 
   #section-setofont .wrapper * {
     line-height: 1em;
@@ -483,7 +455,7 @@ body[lang='cn'] .traditional {
     letter-spacing: .2em;
   }
   #section-notosans .label-zodiac {
-    font-size: 18vh;
+    font-size: 10vh; /*  18vh; */
     margin: 1.5vh 0 3vh 0;
   }
   #section-notosans .label-lunardate {
@@ -839,6 +811,9 @@ body[lang='cn'] .traditional {
 }
 .weight-700 {
   font-weight: 700;
+}
+.weight-900 {
+  font-weight: 800;
 }
 .text-outline {
   -webkit-text-stroke: 4px black;

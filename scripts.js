@@ -1,5 +1,5 @@
 var fontByLang = {
-  'tw': {
+  'tc': {
     'About': '網站介绍',
     'NotoSerif': '思源宋體',
     'NotoSans': '思源黑體',
@@ -7,7 +7,7 @@ var fontByLang = {
     'GenJyuuGothic': '思源柔黑體',
     'HanaMin': '花園明朝',
   },
-  'cn': {
+  'sc': {
     'About': '网站介绍',
     'NotoSerif': '思源宋体',
     'NotoSans': '思源黑体',
@@ -17,7 +17,7 @@ var fontByLang = {
 
 var designerByFont = {
   'About': '',
-  'NotoSans': 'Google / Adobe',
+  'NotoSans': 'Google',
   'NotoSerif': 'Google / Adobe',
   'HanaMin': 'GlyphWiki',
   'SetoFont': '瀬戸のぞみ',
@@ -27,30 +27,30 @@ var designerByFont = {
 var page_idx = 0;
 
 var HOW_LABEL = {
-  'tw':'號',
-  'cn':'号'
+  'tc':'號',
+  'sc':'号'
 };
 var GANZHI_LABEL = {
-  'tw':'紀',
-  'cn':'纪'
+  'tc':'紀',
+  'sc':'纪'
 };
 var LUNAR_CALENDAR_LABEL = {
-  'tw':'農曆',
-  'cn':'农历'
+  'tc':'農曆',
+  'sc':'农历'
 };
 var TERM_LABEL = {
-  'tw':'節氣',
-  'cn':'节气',
+  'tc':'節氣',
+  'sc':'节气',
 };
 
 var fontListByLang = {
-  'tw': Object.keys( fontByLang['tw'] ),
-  'cn': Object.keys( fontByLang['cn'] ),
+  'tc': Object.keys( fontByLang['tc'] ),
+  'sc': Object.keys( fontByLang['sc'] ),
 };
 
 var CONFIG = {
-  'lang': 'tw',
-  'font': fontListByLang['tw'][0],
+  'lang': 'tc',
+  'font': fontListByLang['tc'][0],
   'y': null,
   'm': null,
   'd': null,
@@ -67,17 +67,17 @@ var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
 var BG = {
-  'tw': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
-  'cn': ['#FFF','powderblue','beige','lemonchiffon']
+  'tc': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
+  'sc': ['#FFF','powderblue','beige','lemonchiffon']
 };
 
 
 function init() {
   var hash = window.location.hash;
   var hash = hash.replace('#','').split('-');
-  if(hash[0]=='cn') {
-    CONFIG.lang = 'cn';
-    CONFIG.font = fontListByLang['cn'][0];
+  if(hash[0]=='sc') {
+    CONFIG.lang = 'sc';
+    CONFIG.font = fontListByLang['sc'][0];
     $('body').attr('lang', CONFIG.lang);
   }
   if(hash.length>1) {
@@ -140,6 +140,8 @@ function updateContent() {
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
   pages.find('.month-en-shorten').text( month_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
+  pages.find('.number-month').text( CONFIG.m );
+  pages.find('.number-year').text( CONFIG.y );
 
   if( date_cn.length < 2 ) {
     pages.find('.date-cn').text( date_cn + '日' );
@@ -226,7 +228,7 @@ function createPages() {
   $('#pages').remove();
   $('#pp-nav').remove();
 
-  var languages = ['tw', 'cn'];
+  var languages = ['tc', 'sc'];
 
   var pages = $('<div id="pages"></div>');
   $('body').append(pages);

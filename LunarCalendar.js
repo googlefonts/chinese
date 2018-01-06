@@ -448,7 +448,7 @@
 	 * 返回key:日期，value:节气中文名
 	 */
 	function getYearTerm(year,_lang){
-		var _DATA = _lang=='tw' ? DATA_TRADITIONAL : DATA;
+		var _DATA = _lang=='tc' ? DATA_TRADITIONAL : DATA;
 		var res = {};
 		var month = 0;
 		for(var i=0;i<24;i++){
@@ -464,7 +464,7 @@
 	 * @param {Number} year 干支所在年（默认以立春前的公历年作为基数）
 	 */
 	function getYearZodiac(year,_lang){
-		var _DATA = _lang=='tw' ? DATA_TRADITIONAL : DATA;
+		var _DATA = _lang=='tc' ? DATA_TRADITIONAL : DATA;
 		var num = year-1890+25; //参考干支纪年的计算，生肖对应地支
 		return _DATA.zodiac[num%12];
 	};
@@ -475,7 +475,7 @@
 	 */
 	function cyclical(num,lang) {
 		console.log( 'cyclical', num, lang );
-		var _DATA = lang=='tw' ? DATA_TRADITIONAL : DATA;
+		var _DATA = lang=='tc' ? DATA_TRADITIONAL : DATA;
 		return(_DATA.heavenlyStems[num%10]+_DATA.earthlyBranches[num%12]);
 	}
 
@@ -578,9 +578,9 @@
 	 * @param {Number} year,month,day 公历年，月，日
 	 */
 	function solarToLunar(_year,_month,_day,_lang){
-		var _DATA = _lang=='tw' ? DATA_TRADITIONAL : DATA;
-		var _solarFestival = _lang=='tw' ? solarFestivalTraditional : solarFestival;
-		var _lunarFestival = _lang=='tw' ? lunarFestivalTraditional : lunarFestival;
+		var _DATA = _lang=='tc' ? DATA_TRADITIONAL : DATA;
+		var _solarFestival = _lang=='tc' ? solarFestivalTraditional : solarFestival;
+		var _lunarFestival = _lang=='tc' ? lunarFestivalTraditional : lunarFestival;
 
 		var inputDate = formateDate(_year,_month,_day,minYear);
 		if(inputDate.error)return inputDate;
@@ -602,7 +602,7 @@
 		var lunarLeapMonth = getLunarLeapYear(lunarDate[0]);
 		var lunarMonthName = '';
 		if(lunarLeapMonth>0 && lunarLeapMonth==lunarDate[1]){
-			if(_lang=='tw') {
+			if(_lang=='tc') {
 				lunarMonthName = '閏'+_DATA.monthCn[lunarDate[1]-1]+'月';
 			} else {
 				lunarMonthName = '闰'+_DATA.monthCn[lunarDate[1]-1]+'月';
