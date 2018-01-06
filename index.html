@@ -9,16 +9,15 @@
   <meta name="author" content="Yuin Chien">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+  <link rel="stylesheet" type="text/css" href="third_party/jquery.pagepiling.css" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
-  <script type="text/javascript" src="jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="third_party/jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="third_party/LunarCalendar.js"></script>
+  <script type="text/javascript" src="third_party/number-to-chinese-words.min.js"></script>
   <script type="text/javascript" src="Grid.js"></script>
-  <script type="text/javascript" src="LunarCalendar.js"></script>
-  <script type="text/javascript" src="number-to-chinese-words.min.js"></script>
 
 </head>
 
@@ -26,9 +25,9 @@
 
   <div id="project-title"></div>
   <div id="headerbar" class="load-font">
-    <div class="bordered-button" id="button-use">使用字體</div>
-    <div class="lang" content="tc">繁</div>
-    <div class="lang" content="sc">简</div>
+    <div class="bordered-button tooltip-wrapper" id="button-use">使用字體<div class="tooltip" style="padding:2px 17px;">Use font</div></div>
+    <div class="lang tooltip-wrapper" content="tc" title="Traditional">繁<div class="tooltip" style="right:-25px;">Traditional</div></div>
+    <div class="lang tooltip-wrapper" content="sc" title="Simplified">简<div class="tooltip">Simplified</div></div>
     <a class="overlay-only button-close"><div></div></a>
   </div>
 

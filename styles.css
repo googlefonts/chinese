@@ -996,7 +996,7 @@ body.use-font .section .wrapper-use-font {
 }
 
 #headerbar .lang {
-  padding: 5px 8px;
+  padding: 4px 8px;
 }
 
 .templates {
@@ -1031,7 +1031,7 @@ body.use-font .section .wrapper-use-font {
 #badge {
   position: fixed;
   right: 24px;
-  bottom: 14px;
+  bottom: 18px;
   z-index: 10000;
   background-image: url(images/badge.svg);
   width: 136px;
@@ -1043,6 +1043,29 @@ body.use-font .section .wrapper-use-font {
   opacity: .8;
 }
 
+.tooltip-wrapper {
+  position: relative;
+}
+.tooltip-wrapper:hover .tooltip {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+}
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  font-size: 12px;
+  background: #444;
+  color: white;
+  /* border-radius: 2px; */
+  box-shadow: 0 0 2px rgba(0,0,0,.1);
+  bottom: -31px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  right: 0;
+  /* -webkit-transform: translate3d(0,-2px,0); */
+  -webkit-transition: .2s all;
+}
 
 .text-center {
   text-align: center;
