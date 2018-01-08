@@ -634,61 +634,17 @@ body[lang='sc'] .traditional {
     text-transform: lowercase;
   }
 
-  #section-hanamin .zodiac {
-    padding: 0 4vh;
-    font-size: 5.4vh;
-    margin-top: 2vh;
-    line-height: 1em;
-  }
-  #section-hanamin .h5 {
-    font-size: 2.4vh;
-  }
-  #section-hanamin .text-vert {
-    letter-spacing: .4vh;
-    margin: 0 auto;
-  }
-  #section-hanamin .label-lunardate {
-    line-height:1.25em;
-    letter-spacing: .7vh;
-    margin: 2.2vh auto 0 auto;
-  }
-    #section-hanamin .label-lunardate.length-5 {
 
-    }
-    #section-hanamin .label-lunardate.length-4 {
-
-    }
-  #section-hanamin .h4 {
+  #section-hanamin > .wrapper {
     font-size: 3.6vh;
+    height: 64vh;
+    letter-spacing: 1vh;
+    line-height: 8vh;
   }
-  #section-hanamin .h3 {
-    font-size: 5.6vh;
-    line-height: 1em;
-    margin-top: 2vh;
-  }
-  #section-hanamin .h1 {
-    font-size: 10.8vh;
-    letter-spacing: .15em;
-    text-indent: .15em;
-    line-height: 12vh;
-    white-space: nowrap;
-  }
-  #section-hanamin .h1.short-title {
-    font-size: 12.2vh;
+  #section-hanamin .group {
+    align-items: center;
   }
 
-  #section-hanamin .h2 {
-    font-size: 9vh;
-    line-height: 1em;
-    letter-spacing: .2em;
-    text-indent: .2em;
-  }
-
-  #section-hanamin .ganzhi-year,
-  #section-hanamin .ganzhi-month,
-  #section-hanamin .ganzhi-day {
-    line-height: 1.8em;
-  }
 
 .hide {
   display: none !important;
@@ -770,9 +726,6 @@ body[lang='sc'] .traditional {
   justify-content:space-around;
 }
 
-.text-indent-4 {
-  text-indent: 4px;
-}
 
 .grid-18 {
   display: inline-block;
@@ -881,8 +834,8 @@ pre {
 .wrapper-use-font .group-desc {
   font-weight: 600;
   position: relative;
-  padding-top: 12px;
-  margin-top: 28px;
+  /* padding-top: 12px;
+  margin-top: 28px; */
 }
 body[lang="tw"] .wrapper-use-font .group-desc {
   font-family: 'Noto Serif TC';
@@ -891,15 +844,7 @@ body[lang="cn"] .wrapper-use-font .group-desc {
   font-family: 'Noto Serif SC';
 }
 
-.wrapper-use-font .group-desc::after {
-  position: absolute;
-  width: 32px;
-  height: 2px;
-  background: #222;
-  top: 0;
-  left: 0;
-  content: "";
-}
+
 
 body > *,
 .load-font,
@@ -1051,19 +996,20 @@ body.use-font .section .wrapper-use-font {
 .tooltip-wrapper {
   position: relative;
 }
-.tooltip-wrapper:hover .tooltip {
+/* .tooltip-wrapper:hover .tooltip {
   opacity: 1;
   -webkit-transform: translate3d(0,0,0);
-}
+} */
 .tooltip {
   pointer-events: none;
   position: absolute;
   opacity: 0;
   font-size: 12px;
-  background: #444;
-  color: white;
+  /* background: #444; */
+  /* color: white; */
+  /* border: 1px solid #222; */
   /* border-radius: 2px; */
-  box-shadow: 0 0 2px rgba(0,0,0,.1);
+  /* box-shadow: 0 0 2px rgba(0,0,0,.1); */
   bottom: -31px;
   padding: 2px 8px;
   white-space: nowrap;

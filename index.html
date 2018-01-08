@@ -26,15 +26,14 @@
 
   <div id="project-title"></div>
   <div id="headerbar" class="load-font">
-    <div class="bordered-button" id="button-use">使用字體</div>
-    <div class="lang" content="tc">繁</div>
-    <div class="lang" content="sc">简</div>
+    <div class="bordered-button tooltip-wrapper" id="button-use">使用字體<div class="tooltip" style="padding:2px 17px;">Use font</div></div>
+    <div class="lang tooltip-wrapper" content="tc" title="Traditional">繁<div class="tooltip" style="right:-25px;">Traditional</div></div>
+    <div class="lang tooltip-wrapper" content="sc" title="Simplified">简<div class="tooltip">Simplified</div></div>
     <a class="overlay-only button-close"><div></div></a>
   </div>
 
   <a id="badge" href="https://fonts.google.com/" target="_blank"></a>
   <div id="designer-info" class="load-font text-vert"></div>
-
 
   <div id="templates-about" class="templates section-about weight-700">
     <div class="about-text load-font flexbox row justify-center load-font weight-900">
@@ -58,7 +57,6 @@
       </div>
     </div>
   </div>
-
 
   <div id="templates-notosans" class="font-notosans templates">
 
@@ -85,9 +83,7 @@
 
     </div>
 
-    <div class="wrapper centered-h load-font centered-hv">
-
-      <!-- <div class="term-related term centered-hv"></div> -->
+    <div class="wrapper load-font centered-hv">
 
       <div class="hline eight-px" style="margin: 0 auto 1.4vh auto;"></div>
 
@@ -101,11 +97,11 @@
       <div class="label-zodiac-big text-center">「<span class="zodiac"></span>」</div>
       <div class="label-term term-related text-center">【二十四節氣】<span class="term"></span></div>
       <div class="justify-center flexbox row ganzhi-group">
-        <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="ganzhi-year"></span></div>
+        <div class="text-vert" style="text-indent: 4px;">干支<span class="ganzhi-label"></span>年<br><span class="ganzhi-year"></span></div>
         <div style="width:2vh;"></div>
-        <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="ganzhi-month"></span></div>
+        <div class="text-vert" style="text-indent: 4px;">干支<span class="ganzhi-label"></span>月<br><span class="ganzhi-month"></span></div>
         <div style="width:2vh;"></div>
-        <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="ganzhi-day"></span></div>
+        <div class="text-vert" style="text-indent: 4px;">干支<span class="ganzhi-label"></span>日<br><span class="ganzhi-day"></span></div>
       </div>
 
       <div class="text-center label-lunardate">[<span class="lunar-calendar-cn"></span>] <span class="lunar-month-date-name"></span></div>
@@ -315,43 +311,80 @@
     </div>
 
     <div class="wrapper flexbox row centered-hv load-font">
-        <div class="flex flexbox column justify-space-around" style="padding: 8px 20px;width:18vh;">
 
-          <div class="label-term text-center term-related">
-            <div class="h5 text-vert"><span class="term-cn"></span></div>
-            <div class="hline"></div>
-            <div class="term text-vert h4"></div>
-          </div>
+      <div class="group flex flexbox row text-vert">
+        <div>十二生肖</div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="zodiac"></div>
+        <div>︼</div>
+      </div>
 
-          <div class="text-center">
-            <div class="h5 text-vert">生肖</div>
-            <div class="hline"></div>
-            <div class="zodiac"></div>
-          </div>
+      <div class="group flex flexbox row text-vert">
+        <div class="label-ganzhi">干支<span class="ganzhi-label"></span>年</div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="ganzhi-year"></div>
+        <div>︼</div>
+      </div>
 
-          <div>
-            <div class="text-center h5 text-vert lunar-calendar-cn"></div>
-            <div class="hline"></div>
-            <div class="text-vert h4 label-lunardate">
-              <!-- <div class="lunar-year"></div> -->
-              <div class="lunar-month-date-name"></div>
-            </div>
-          </div>
-        </div>
-        <div class="vline"></div>
+      <div class="group flex flexbox row text-vert">
+        <div class="label-ganzhi">干支<span class="ganzhi-label"></span>月</div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="ganzhi-month"></div>
+        <div>︼</div>
+      </div>
 
-        <div class="flex flexbox text-center justify-center" style="padding: 0 3vh;">
-          <div class="h1 text-vert month-date-cn"></div>
-        </div>
+      <div class="group flex flexbox row text-vert">
+        <div class="label-ganzhi">干支<span class="ganzhi-label"></span>日</div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="ganzhi-day"></div>
+        <div>︼</div>
+      </div>
 
-        <div class="vline"></div>
-        <div class="flex flexbox column h5 justify-space-around" style="padding: 20px; width:18vh;">
-          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="h3 ganzhi-year"></span></div>
-          <div class="hline"></div>
-          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="h3 ganzhi-month"></span></div>
-          <div class="hline"></div>
-          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="h3 ganzhi-day"></span></div>
-        </div>
+      <div class="group flex flexbox row text-vert term-related">
+        <div class="term-cn"></div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="term"></div>
+        <div>︼</div>
+      </div>
+
+      <div class="group flex flexbox row text-vert">
+        <div class="lunar-calendar-cn"></div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="lunar-month-date-name"></div>
+        <div>︼</div>
+      </div>
+
+      <div class="group flex flexbox row text-vert">
+        <div class="traditional">週</div>
+        <div class="simplified">周</div>
+        <div class="vline flex"></div>
+        <div>︻</div>
+        <div class="weekday-cn"></div>
+        <div>︼</div>
+      </div>
+
+      <div class="group flex flexbox row text-vert">
+        <div>年</div>
+        <div class="vline flex"></div>
+        <div>︻</div>
+        <div class="year-cn"></div>
+        <div>︼</div>
+      </div>
+
+      <div class="group flex flexbox row text-vert">
+        <div>西元</div>
+        <div class="flex vline"></div>
+        <div>︻</div>
+        <div class="month-cn"></div><div class="date-cn"></div>
+        <div>︼</div>
+      </div>
+
       </div>
   </div>
 
