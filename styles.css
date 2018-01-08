@@ -361,30 +361,29 @@ body[lang='sc'] .traditional {
   #section-genjyuugothic .label-term {
     font-size: 8vh;
     line-height: 8vh;
-    letter-spacing: 13.8vh;
-    text-indent: 13.8vh;
+    letter-spacing: 11.4vh;
+    text-indent: 11.4vh;
     width: 8vh;
     margin: 0 1vh 0 2vh;
   }
   #section-genjyuugothic .number-date {
-    -webkit-text-stroke: 4px #222;
-    font-size: 118vh;
+    font-size: 104vh;
     -webkit-text-stroke: 2px #222;
     -webkit-text-fill-color: transparent;
     z-index: 100;
   }
   #section-genjyuugothic .weekday-cn {
-    font-size: 26vh;
-    line-height: 26vh;
+    font-size: 23vh;
+    line-height: 23vh;
     width: 26vh;
     white-space: nowrap;
   }
   #section-genjyuugothic .wrapper-month-cn {
-    width: 6vh;
-    font-size: 6vh;
-    letter-spacing: 7.5vh;
-    text-indent: 7.5vh;
-    line-height: 6vh;
+    width: 5vh;
+    font-size: 5vh;
+    letter-spacing: 6.9vh;
+    text-indent: 6.9vh;
+    line-height: 5vh;
   }
     #section-genjyuugothic .month-date-cn.short-title {
       letter-spacing: 11.6vh;
@@ -398,24 +397,24 @@ body[lang='sc'] .traditional {
     line-height: 9vh;
   }
   #section-genjyuugothic .wrapper-year-cn {
-    font-size: 12vh;
-    letter-spacing: 9.1vh;
-    text-indent: 9.1vh;
-    width: 12vh;
-    line-height: 12vh;
+    font-size: 10.8vh;
+    letter-spacing: 8vh;
+    text-indent: 8vh;
+    width: 10.8vh;
+    line-height: 10.8vh;
   }
   #section-genjyuugothic .wrapper-group-ganzhi {
-    font-size: 3vh;
+    font-size: 2vh;
     width: 3vh;
-    letter-spacing: 0.82vh;
-    text-indent: 0.82vh;
+    letter-spacing: 1.4vh;
+    text-indent: 1.4vh;
     line-height: 3vh;
   }
   #section-genjyuugothic .label-lunardate {
     font-size: 5vh;
     line-height: 5vh;
-    letter-spacing: 4.8vh;
-    text-indent: 4.8vh;
+    letter-spacing: 3.8vh;
+    text-indent: 3.8vh;
     width: 5vh;
     margin: 0 1vh 0 2vh;
   }
@@ -427,14 +426,12 @@ body[lang='sc'] .traditional {
       letter-spacing: 6.9vh;
       text-indent: 6.9vh;
     }
-
-
   #section-genjyuugothic .wrapper-zodiac {
-    font-size: 9vh;
-    line-height: 9vh;
-    letter-spacing: 7.1vh;
-   text-indent: 7.1vh;
-    width: 9vh;
+    font-size: 8vh;
+    line-height: 8vh;
+    letter-spacing: 6.2vh;
+    text-indent: 6.2vh;
+    width: 8vh;
     margin: 0 0 0 2vh;
   }
 
@@ -830,6 +827,7 @@ pre {
 .wrapper-use-font .font-name {
   font-size: 2.4em;
   line-height: 1.2em;
+  text-indent: -.1em;
 }
 .wrapper-use-font .group-desc {
   font-weight: 600;
