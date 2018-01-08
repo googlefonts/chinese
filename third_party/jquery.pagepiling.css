@@ -78,11 +78,11 @@ html, body {
 #pp-nav li,
 .pp-slidesNav li {
     display: block;
-    /* width: 14px; */
     height: 30px;
-    width: 100px;
+    /* width: 200px; */
     /* margin: 7px; */
     position:relative;
+    white-space: nowrap;
 }
 .pp-slidesNav li {
     display: inline-block;

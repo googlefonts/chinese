@@ -637,6 +637,10 @@ body[lang='sc'] .traditional {
     height: 64vh;
     letter-spacing: 1vh;
     line-height: 8vh;
+    border: 8px solid #222;
+    padding: 4vh 1.8vh .8vh 1.8vh;
+    outline: 1px solid #222;
+    outline-offset: 7px;
   }
   #section-hanamin .group {
     align-items: center;
@@ -827,7 +831,6 @@ pre {
 .wrapper-use-font .font-name {
   font-size: 2.4em;
   line-height: 1.2em;
-  text-indent: -.1em;
 }
 .wrapper-use-font .group-desc {
   font-weight: 600;
@@ -848,6 +851,17 @@ body > *,
 .load-font,
 #pp-nav {
   -webkit-transition: .25s opacity;
+}
+
+#headerbar .button .hover,
+#headerbar .button:hover .cn,
+#pp-nav li .hover,
+#pp-nav li:hover .cn {
+  display: none;
+}
+#headerbar .button:hover .hover,
+#pp-nav li:hover .hover {
+  display: block;
 }
 
 body.loading #loader {
@@ -944,19 +958,18 @@ body.use-font .section .wrapper-use-font {
 }
 
 #headerbar .lang {
-  padding: 4px 8px;
+  padding: 4px 4px;
+  opacity: .5;
+  width: 24px;
+  text-align: center;
+}
+#headerbar .lang.selected,
+#headerbar .lang:hover {
+  opacity: 1;
 }
 
 .templates {
   display: none;
-}
-
-.lang {
-  opacity: .5;
-}
-.lang.selected,
-.lang:hover {
-  opacity: 1;
 }
 
 #pp-nav,
@@ -967,13 +980,17 @@ body.use-font .section .wrapper-use-font {
 
 .bordered-button {
   border: 1px solid rgba(0,0,0,.3);
-  padding: 4px 11px;
   border-radius: 0px;
-  /* background: white; */
 }
 
 #button-use {
   margin-right: 8px;
+  width: 86px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #badge {
@@ -991,30 +1008,24 @@ body.use-font .section .wrapper-use-font {
   opacity: .8;
 }
 
-.tooltip-wrapper {
+/* .tooltip-wrapper {
   position: relative;
 }
-/* .tooltip-wrapper:hover .tooltip {
+.tooltip-wrapper:hover .tooltip {
   opacity: 1;
   -webkit-transform: translate3d(0,0,0);
-} */
+}
 .tooltip {
   pointer-events: none;
   position: absolute;
   opacity: 0;
   font-size: 12px;
-  /* background: #444; */
-  /* color: white; */
-  /* border: 1px solid #222; */
-  /* border-radius: 2px; */
-  /* box-shadow: 0 0 2px rgba(0,0,0,.1); */
   bottom: -31px;
   padding: 2px 8px;
   white-space: nowrap;
   right: 0;
-  /* -webkit-transform: translate3d(0,-2px,0); */
   -webkit-transition: .2s all;
-}
+} */
 
 .text-center {
   text-align: center;

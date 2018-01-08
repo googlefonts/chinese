@@ -1,17 +1,17 @@
 var fontByLang = {
   'tc': {
-    'About': '網站介绍',
-    'NotoSans': '思源黑體',
-    'NotoSerif': '思源宋體',
-    'SetoFont': '瀨戶字體',
-    'GenJyuuGothic': '思源柔黑體',
-    'HanaMin': '花園明朝',
+    'About': '<div class="cn">網站介绍</div><div class="hover">About</div>',
+    'NotoSans': '<div class="cn">思源黑體</div><div class="hover">Noto Sans</div>',
+    'NotoSerif': '<div class="cn">思源宋體</div><div class="hover">Noto Serif</div>',
+    'SetoFont': '<div class="cn">瀨戶字體</div><div class="hover">Seto Font</div>',
+    'GenJyuuGothic': '<div class="cn">思源柔黑體</div><div class="hover">Gen Jyuu Gothic</div>',
+    'HanaMin': '<div class="cn">花園明朝</div><div class="hover">Hana Min</div>',
   },
   'sc': {
-    'About': '网站介绍',
-    'NotoSans': '思源黑体',
-    'NotoSerif': '思源宋体',
-    'HanaMin': '花园明朝',
+    'About': '<div class="cn">网站介绍</div><div class="hover">About</div>',
+    'NotoSans': '<div class="cn">思源黑体</div><div class="hover">Noto Sans</div>',
+    'NotoSerif': '<div class="cn">思源宋体</div><div class="hover">Noto Serif</div>',
+    'HanaMin': '<div class="cn">花园明朝</div><div class="hover">Hana Min</div>',
   },
 };
 
@@ -210,9 +210,6 @@ function updateDesignerInfoAndHash(index) {
   $('#designer-info').html('<a href="'+link+'" target="_blank">'+designer+'</a>');
   var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
 
-  // $('#font-title').text( fontByLang[CONFIG.lang][ CONFIG.font ] );
-  // $("#font-title").attr('class', 'font-'+CONFIG.font.toLowerCase());
-
   if(history.pushState) {
     history.pushState(null, null, hash);
   }
@@ -308,7 +305,8 @@ $( document ).ready(function() {
 
   // init headerbar
   $('#headerbar .lang').click(function(ev){
-    var lang = $(ev.target).attr('content');
+    var selected = $(ev.target).closest('.lang');
+    var lang = selected.attr('content');
     if(lang==CONFIG.lang) { return; }
     CONFIG.lang = lang;
     CONFIG.font = fontListByLang[lang][0];
