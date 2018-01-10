@@ -174,6 +174,7 @@ function updateContent() {
   pages.find('.number-year-two-dgt').text( CONFIG.y.toString().slice(2,5) );
 
   var lunar = window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d,CONFIG.lang);
+console.log(lunar);
 
   var festival = lunar.solarFestival ? lunar.solarFestival : lunar.lunarFestival;
   pages.find('.ganzhi-day').text( lunar.GanZhiDay );
@@ -289,12 +290,12 @@ $( document ).ready(function() {
     // inactive: function() {
     //   console.log('inactive');
     // },
-    // fontloading: function(familyName, fvd) {
-    //   console.log('fontloading');
-    // },
-    // fontactive: function(familyName, fvd) {
-    //   console.log('fontactive');
-    // },
+    fontloading: function(familyName, fvd) {
+      console.log('fontloading',familyName, fvd);
+    },
+    fontactive: function(familyName, fvd) {
+      console.log('fontactive',familyName, fvd);
+    },
     // fontinactive: function(familyName, fvd) {
     //   console.log('fontinactive');
     // }

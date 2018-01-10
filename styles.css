@@ -149,6 +149,7 @@ body[lang='sc'] .traditional {
   display: none;
 }
 
+
   #section-setofont .wrapper * {
     line-height: 1em;
   }
@@ -634,16 +635,22 @@ body[lang='sc'] .traditional {
 
   #section-hanamin > .wrapper {
     font-size: 3.6vh;
-    height: 62vh;
-    letter-spacing: 1vh;
-    line-height: 8vh;
-    /* border: 8px solid #222; */
-    padding: 4vh 1.8vh .8vh 1.8vh;
-    /* outline: 1px solid #222; */
-    /* outline-offset: 7px; */
+    /* height: 62vh; */
+    letter-spacing: .8vh;
+    line-height: 10vh;
+    border: 1px solid #222;
+    /* padding: 4vh 1.8vh .8vh 1.8vh; */
+    outline: 6px solid #222;
+    outline-offset: 6px;
+  }
+  #section-hanamin .space-out {
+    letter-spacing: 9.6vh;
+    margin-bottom: -8.8vh;
   }
   #section-hanamin .group {
     align-items: center;
+    border-right: 1px solid #222;
+    padding: 24px 0 8px 0;
   }
 
 
