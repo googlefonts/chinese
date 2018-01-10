@@ -637,10 +637,10 @@ body[lang='sc'] .traditional {
     height: 64vh;
     letter-spacing: 1vh;
     line-height: 8vh;
-    border: 8px solid #222;
+    /* border: 8px solid #222; */
     padding: 4vh 1.8vh .8vh 1.8vh;
-    outline: 1px solid #222;
-    outline-offset: 7px;
+    /* outline: 1px solid #222; */
+    /* outline-offset: 7px; */
   }
   #section-hanamin .group {
     align-items: center;
