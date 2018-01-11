@@ -474,7 +474,6 @@
 	 * @param {Number} num 60进制中的位置(把60个天干地支，当成一个60进制的数)
 	 */
 	function cyclical(num,lang) {
-		console.log( 'cyclical', num, lang );
 		var _DATA = lang=='tc' ? DATA_TRADITIONAL : DATA;
 		return(_DATA.heavenlyStems[num%10]+_DATA.earthlyBranches[num%12]);
 	}
@@ -485,7 +484,6 @@
 	 * @param {Number} offset 偏移量，默认为0，便于查询一个年跨两个干支纪年（以立春为分界线）
 	 */
 	function getLunarYearName(year,offset,lang){
-		console.log('getLunarYearName',year,offset,lang);
 		offset = offset || 0;
 		//1890年1月小寒（小寒一般是1月5或6日）以前为己丑年，在60进制中排25
 		return cyclical(year-1890+25+offset,lang);

@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/HanaMin-Regular.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/HanaMin/HanaMin-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }

@@ -100,7 +100,6 @@ function init() {
     CONFIG.y = CONFIG.today.getFullYear();
     CONFIG.weekday = CONFIG.today.getDay();
   }
-  console.log('CONFIG', CONFIG);
 
   createPages();
   return;
@@ -174,7 +173,6 @@ function updateContent() {
   pages.find('.number-year-two-dgt').text( CONFIG.y.toString().slice(2,5) );
 
   var lunar = window.LunarCalendar.solarToLunar(CONFIG.y,CONFIG.m,CONFIG.d,CONFIG.lang);
-console.log(lunar);
 
   var festival = lunar.solarFestival ? lunar.solarFestival : lunar.lunarFestival;
   pages.find('.ganzhi-day').text( lunar.GanZhiDay );
