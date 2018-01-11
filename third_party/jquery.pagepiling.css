@@ -79,7 +79,7 @@ html, body {
 .pp-slidesNav li {
     display: block;
     height: 30px;
-    /* width: 200px; */
+    width: 100px;
     /* margin: 7px; */
     position:relative;
     white-space: nowrap;

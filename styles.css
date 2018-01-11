@@ -632,25 +632,30 @@ body[lang='sc'] .traditional {
     text-transform: lowercase;
   }
 
-
-  #section-hanamin > .wrapper {
-    font-size: 3.6vh;
-    /* height: 62vh; */
-    letter-spacing: .8vh;
-    line-height: 10vh;
-    border: 1px solid #222;
-    /* padding: 4vh 1.8vh .8vh 1.8vh; */
-    outline: 6px solid #222;
-    outline-offset: 6px;
+  #section-hanamin .vline {
+    margin: 1vh 0;
+  }
+  #section-hanamin .wrapper {
+    font-size: 3vh;
   }
   #section-hanamin .space-out {
-    letter-spacing: 9.6vh;
-    margin-bottom: -8.8vh;
+    letter-spacing: 7.9vh;
+    margin-bottom: -6.8vh;
   }
   #section-hanamin .group {
     align-items: center;
-    border-right: 1px solid #222;
-    padding: 24px 0 0px 0;
+    letter-spacing: .8vh;
+    line-height: 7.6vh;
+  }
+  #section-hanamin .label-month-date {
+    letter-spacing: 1vh;
+    position: absolute;
+    bottom: 8vh;
+    font-size: 3vh;
+  }
+  #section-hanamin .number-month,
+  #section-hanamin .number-date {
+    font-size: 8vh;
   }
 
 
