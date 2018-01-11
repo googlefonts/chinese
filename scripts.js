@@ -1,56 +1,61 @@
 var fontByLang = {
-  'tw': {
-    'About': '網站介绍',
-    'NotoSerif': '思源宋體',
-    'NotoSans': '思源黑體',
-    'SetoFont': '瀨戶字體',
-    'GenJyuuGothic': '思源柔黑體',
-    'HanaMin': '花園明朝',
+  'tc': {
+    'About': '<div class="cn">網站介绍</div><div class="hover">About</div>',
+    'NotoSans': '<div class="cn">思源黑體</div><div class="hover">Noto Sans</div>',
+    'NotoSerif': '<div class="cn">思源宋體</div><div class="hover">Noto Serif</div>',
+    'SetoFont': '<div class="cn">瀨戶字體</div><div class="hover">Seto Font</div>',
+    'GenJyuuGothic': '<div class="cn">思源柔黑體</div><div class="hover">Gen Jyuu Gothic</div>',
+    'HanaMin': '<div class="cn">花園明朝</div><div class="hover">Hana Min</div>',
   },
-  'cn': {
-    'About': '网站介绍',
-    'NotoSerif': '思源宋体',
-    'NotoSans': '思源黑体',
-    'HanaMin': '花园明朝',
+  'sc': {
+    'About': '<div class="cn">网站介绍</div><div class="hover">About</div>',
+    'NotoSans': '<div class="cn">思源黑体</div><div class="hover">Noto Sans</div>',
+    'NotoSerif': '<div class="cn">思源宋体</div><div class="hover">Noto Serif</div>',
+    'HanaMin': '<div class="cn">花园明朝</div><div class="hover">Hana Min</div>',
   },
 };
 
+var BG = {
+  'tc': ['#FFF','#C2E6DF','#FFE6C3','#F8FF8F','#EDFFEC','#E5E5E5'],
+  'sc': ['#FFF','#C2E6DF','#FFE6C3','#F8FF8F']
+};
+
 var designerByFont = {
-  'About': '',
-  'NotoSans': 'Google / Adobe',
-  'NotoSerif': 'Google / Adobe',
-  'HanaMin': 'GlyphWiki',
-  'SetoFont': '瀬戸のぞみ',
-  'GenJyuuGothic': '自家製フォント工房',
+  'About': {'label':'Project by Yuin Chien', 'link':'http://www.yuinchien.com/'},
+  'NotoSans': {'label':'Google', 'link':'https://www.google.com/get/noto/'},
+  'NotoSerif': {'label':'Google / Adobe', 'link':'https://www.google.com/get/noto/'},
+  'HanaMin': {'label':'GlyphWiki', 'link':'http://fonts.jp/hanazono/'},
+  'SetoFont': {'label':'瀬戸のぞみ', 'link':'http://setofont.osdn.jp/'},
+  'GenJyuuGothic': {'label':'自家製フォント工房', 'link':'http://jikasei.me/font/genjyuu/'},
 };
 
 var page_idx = 0;
 
 var HOW_LABEL = {
-  'tw':'號',
-  'cn':'号'
+  'tc':'號',
+  'sc':'号'
 };
 var GANZHI_LABEL = {
-  'tw':'紀',
-  'cn':'纪'
+  'tc':'紀',
+  'sc':'纪'
 };
 var LUNAR_CALENDAR_LABEL = {
-  'tw':'農曆',
-  'cn':'农历'
+  'tc':'農曆',
+  'sc':'农历'
 };
 var TERM_LABEL = {
-  'tw':'節氣',
-  'cn':'节气',
+  'tc':'節氣',
+  'sc':'节气',
 };
 
 var fontListByLang = {
-  'tw': Object.keys( fontByLang['tw'] ),
-  'cn': Object.keys( fontByLang['cn'] ),
+  'tc': Object.keys( fontByLang['tc'] ),
+  'sc': Object.keys( fontByLang['sc'] ),
 };
 
 var CONFIG = {
-  'lang': 'tw',
-  'font': fontListByLang['tw'][0],
+  'lang': 'tc',
+  'font': fontListByLang['tc'][0],
   'y': null,
   'm': null,
   'd': null,
@@ -66,18 +71,12 @@ var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July",
 var WEEKDAY_TW = ['星期','禮拜'];
 var WEEKDAY_CN = ['星期','礼拜'];
 
-var BG = {
-  'tw': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
-  'cn': ['#FFF','powderblue','beige','lemonchiffon']
-};
-
-
 function init() {
   var hash = window.location.hash;
   var hash = hash.replace('#','').split('-');
-  if(hash[0]=='cn') {
-    CONFIG.lang = 'cn';
-    CONFIG.font = fontListByLang['cn'][0];
+  if(hash[0]=='sc') {
+    CONFIG.lang = 'sc';
+    CONFIG.font = fontListByLang['sc'][0];
     $('body').attr('lang', CONFIG.lang);
   }
   if(hash.length>1) {
@@ -101,7 +100,6 @@ function init() {
     CONFIG.y = CONFIG.today.getFullYear();
     CONFIG.weekday = CONFIG.today.getDay();
   }
-  console.log('CONFIG', CONFIG);
 
   createPages();
   return;
@@ -140,6 +138,8 @@ function updateContent() {
   pages.find('.weekday-en-shorten').text( weekday_en.slice(0, 3) );
   pages.find('.month-en-shorten').text( month_en.slice(0, 3) );
   pages.find('.number-date').text( CONFIG.d );
+  pages.find('.number-month').text( CONFIG.m );
+  pages.find('.number-year').text( CONFIG.y );
 
   if( date_cn.length < 2 ) {
     pages.find('.date-cn').text( date_cn + '日' );
@@ -204,12 +204,10 @@ function updateContent() {
 
 function updateDesignerInfoAndHash(index) {
   CONFIG.font = fontListByLang[CONFIG.lang][index-1];
-  var designer = designerByFont[CONFIG.font];
-  $('#designer-info').text(designer);
+  var designer = designerByFont[CONFIG.font].label;
+  var link = designerByFont[CONFIG.font].link;
+  $('#designer-info').html('<a href="'+link+'" target="_blank">'+designer+'</a>');
   var hash = '#'+CONFIG.lang+'-'+CONFIG.font+'-'+CONFIG.y + ("0" + CONFIG.m ).slice(-2) + ("0" + CONFIG.d).slice(-2);
-
-  // $('#font-title').text( fontByLang[CONFIG.lang][ CONFIG.font ] );
-  // $("#font-title").attr('class', 'font-'+CONFIG.font.toLowerCase());
 
   if(history.pushState) {
     history.pushState(null, null, hash);
@@ -226,7 +224,7 @@ function createPages() {
   $('#pages').remove();
   $('#pp-nav').remove();
 
-  var languages = ['tw', 'cn'];
+  var languages = ['tc', 'sc'];
 
   var pages = $('<div id="pages"></div>');
   $('body').append(pages);
@@ -290,12 +288,12 @@ $( document ).ready(function() {
     // inactive: function() {
     //   console.log('inactive');
     // },
-    // fontloading: function(familyName, fvd) {
-    //   console.log('fontloading');
-    // },
-    // fontactive: function(familyName, fvd) {
-    //   console.log('fontactive');
-    // },
+    fontloading: function(familyName, fvd) {
+      console.log('fontloading',familyName, fvd);
+    },
+    fontactive: function(familyName, fvd) {
+      console.log('fontactive',familyName, fvd);
+    },
     // fontinactive: function(familyName, fvd) {
     //   console.log('fontinactive');
     // }
@@ -306,7 +304,8 @@ $( document ).ready(function() {
 
   // init headerbar
   $('#headerbar .lang').click(function(ev){
-    var lang = $(ev.target).attr('content');
+    var selected = $(ev.target).closest('.lang');
+    var lang = selected.attr('content');
     if(lang==CONFIG.lang) { return; }
     CONFIG.lang = lang;
     CONFIG.font = fontListByLang[lang][0];

@@ -9,66 +9,57 @@
   <meta name="author" content="Yuin Chien">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
-  <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
-  <script type="text/javascript" src="jquery.pagepiling.js"></script>
+  <link rel="stylesheet" type="text/css" href="third_party/jquery.pagepiling.css" />
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="text/javascript" src="third_party/jquery.pagepiling.js"></script>
+  <script type="text/javascript" src="third_party/LunarCalendar.js"></script>
+  <script type="text/javascript" src="third_party/number-to-chinese-words.min.js"></script>
   <script type="text/javascript" src="Grid.js"></script>
-  <script type="text/javascript" src="LunarCalendar.js"></script>
-  <script type="text/javascript" src="number-to-chinese-words.min.js"></script>
 
 </head>
 
-<body class="loading" lang="tw">
+<body class="loading" lang="tc">
 
   <div id="project-title"></div>
   <div id="headerbar" class="load-font">
-    <div class="bordered-button tooltip" id="button-use">使用字體<span class="tooltiptext" style="right: 0px;">Use font</span></div>
-    <div class="lang tooltip" content="tw">繁<span class="tooltiptext" style="right: -38px;">Traditional</span></div>
-    <div class="lang tooltip" content="cn">简<span class="tooltiptext" style="right: 0;">Simplified</span></div>
+    <div class="bordered-button button" id="button-use"><div class="cn">使用字體</div><div class="hover">Use font</div></div>
+    <div class="lang button" content="tc"><div class="cn">繁</div><div class="hover">TC</div></div>
+    <div class="lang button" content="sc"><div class="cn">简</div><div class="hover">SC</div></div>
     <a class="overlay-only button-close"><div></div></a>
   </div>
 
   <a id="badge" href="https://fonts.google.com/" target="_blank"></a>
   <div id="designer-info" class="load-font text-vert"></div>
 
-
-  <div id="templates-about" class="templates section-about weight-600">
-
-    <div class="about-text load-font flexbox row justify-center flex">
-
-      <div class="content load-font flexbox row weight-600">
-        <div class="traditional text-vert line1">中文字體</div>
-        <div class="traditional text-vert line2">預先發佈</div>
-        <div class="simplified text-vert line1">中文字体</div>
-        <div class="simplified text-vert line2">预先发布</div>
+  <div id="templates-about" class="templates section-about weight-700">
+    <div class="about-text load-font flexbox row justify-center load-font weight-900">
+      <div class="flexbox row centered-hv">
+        <div class="flexbox column column-1">
+          <div class="chinese-text text-vert traditional">
+            <span>谷歌字庫擁有超過八百多個開源字型，</span><br><span>涵蓋一百三十五種以上的語言。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載檔案。</span><br><span>此作品以開源的網頁字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發佈的中文字體。</span>
+          </div>
+          <div class="chinese-text text-vert simplified">
+            <span>谷歌字库拥有超过八百多个开源字体，</span><br><span>涵盖一百三十五种以上的语言。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载档案。</span><br><span>此作品以开源的网页字体来创作日历，</span><br><span>希望在推动技术研发的同时，</span><br><span>也邀清设计人与工程师共襄盛举，</span><br><span>一起试用预先发布的中文字体。</span>
+          </div>
+          <div class="flexbox column">
+            <div class="label-earlyaccess traditional">預先<br>發佈</div>
+            <div class="label-earlyaccess simplified">预先<br>发布</div>
+          </div>
+        </div>
+        <div class="flexbox column column-2" style="align-items:center;">
+          <div class="text-vert label-font">字型</div>
+          <div class="weight-700 eng-block">Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the time needed to create the huge character set to the web infrastructure required to serve the massive font files. This project Typographic Calendar is designed and created with libre web fonts to showcase Chinese typography. We hope to invite designers and developers to experiment with the fonts on Early Access as the standards and technology continue to develop.</div>
+        </div>
       </div>
-
-      <div class="eng-text weight-600">
-        <div>Google Fonts is a library of over 800 libre licensed fonts and serves over 135 languages worldwide. Chinese typeface design and font development presents many challenges, from the time needed to create the huge character set to the web infrastructure required to serve the massive font files. This project – "Typographic Calendar" is designed and created with libre web fonts to showcase Chinese typography. We hope to invite designers and developers to experiment with the fonts on Early Access as the standards and technology continue to develop.<br></div>
-        <div id="author-text">—Project made by <a href="http://www.yuinchien.com/" target="_blank">Yuin Chien</a>.</div>
-      </div>
-
-      <div class="chinese-text traditional text-vert">
-        <span>谷歌字庫擁有超過八百多個開源字型，</span><br><span>涵蓋一百三十五種以上的語言。</span><br><span>中文字體的設計與開發充滿了挑戰性，</span><br><span>除了需要創作大量的字符，</span><br><span>網頁字體也需要高端的技術來下載檔案。</span><br><span>此作品以開源的網頁字體來創作日曆，</span><br><span>希望在推動技術研發的同時，</span><br><span>也邀清設計人與工程師共襄盛舉，</span><br><span>一起試用預先發佈的中文字體。</span>
-      </div>
-
-      <div class="chinese-text simplified text-vert">
-        <span>谷歌字库拥有超过八百多个开源字体，</span><br><span>涵盖一百三十五种以上的语言。</span><br><span>中文字体的设计与开发充满了挑战性，</span><br><span>除了需要创作大量的字符，</span><br><span>网页字体也需要高端的技术来下载档案。</span><br><span>此作品以开源的网页字体来创作日历，</span><br><span>希望在推动技术研发的同时，</span><br><span>也邀清设计人与工程师共襄盛举，</span><br><span>一起试用预先发布的中文字体。</span>
-      </div>
-
-
-
     </div>
-
   </div>
 
-
-
   <div id="templates-notosans" class="font-notosans templates">
+
     <div class="wrapper-use-font centered-hv">
 
       <div class="font-name traditional">思源黑體</div>
@@ -92,9 +83,7 @@
 
     </div>
 
-    <div class="wrapper centered-h load-font centered-hv">
-
-      <div class="term-related term centered-hv"></div>
+    <div class="wrapper load-font centered-hv">
 
       <div class="hline eight-px" style="margin: 0 auto 1.4vh auto;"></div>
 
@@ -105,19 +94,20 @@
         <span class="month-en-shorten"></span>˙<span class="month-cn"></span>
       </div>
 
-      <div class="label-zodiac text-center">「<span class="zodiac"></span>」</div>
-
+      <div class="label-zodiac-big text-center">「<span class="zodiac"></span>」</div>
+      <div class="label-term term-related text-center">【二十四節氣】<span class="term"></span></div>
       <div class="justify-center flexbox row ganzhi-group">
-        <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="ganzhi-year"></span></div>
+        <div class="text-vert" style="text-indent: 4px;">干支<span class="ganzhi-label"></span>年<br><span class="ganzhi-year"></span></div>
         <div style="width:2vh;"></div>
-        <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="ganzhi-month"></span></div>
+        <div class="text-vert" style="text-indent: 4px;">干支<span class="ganzhi-label"></span>月<br><span class="ganzhi-month"></span></div>
         <div style="width:2vh;"></div>
-        <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="ganzhi-day"></span></div>
+        <div class="text-vert" style="text-indent: 4px;">干支<span class="ganzhi-label"></span>日<br><span class="ganzhi-day"></span></div>
       </div>
 
       <div class="text-center label-lunardate">[<span class="lunar-calendar-cn"></span>] <span class="lunar-month-date-name"></span></div>
       <div class="hline four-px" style="margin: 2.4vh auto 0 auto;"></div>
     </div>
+
   </div>
 
   <div id="templates-notoserif" class="font-notoserif templates">
@@ -300,9 +290,9 @@
 
     <div class="wrapper-use-font centered-hv">
 
+      <div class="font-name">Hana Min</div>
       <div class="font-name traditional">花園明朝</div>
       <div class="font-name simplified">花园明朝</div>
-      <div class="font-name">Hanazono Mincho</div>
 
       <pre class="traditional">&#60;link href="https://fonts.googleapis.com/earlyaccess/{font_name}.css" rel="stylesheet" /&#62;</pre>
       <pre class="traditional">font-family: “HanaMin”;</pre>
@@ -320,45 +310,81 @@
 
     </div>
 
-    <div class="wrapper flexbox row centered-hv load-font">
-        <div class="flex flexbox column justify-space-around" style="padding: 8px 20px;width:18vh;">
 
-          <div class="label-term text-center term-related">
-            <div class="h5 text-vert"><span class="term-cn"></span></div>
-            <div class="hline"></div>
-            <div class="term text-vert h4"></div>
-          </div>
-
-          <div class="text-center">
-            <div class="h5 text-vert">生肖</div>
-            <div class="hline"></div>
-            <div class="zodiac"></div>
-          </div>
-
-          <div>
-            <div class="text-center h5 text-vert lunar-calendar-cn"></div>
-            <div class="hline"></div>
-            <div class="text-vert h4 label-lunardate">
-              <!-- <div class="lunar-year"></div> -->
-              <div class="lunar-month-date-name"></div>
-            </div>
-          </div>
-        </div>
-        <div class="vline"></div>
-
-        <div class="flex flexbox text-center justify-center" style="padding: 0 3vh;">
-          <div class="h1 text-vert month-date-cn"></div>
+      <div class="wrapper load-font">
+        <div class="centered-hv flexbox row">
+        <div class="group flexbox row text-vert">
+          <div class="label-ganzhi">干支<span class="ganzhi-label"></span>年</div>
+          <div class="vline flex"></div>
+          <div>︻</div>
+          <div class="ganzhi-year"></div>
+          <div>︼</div>
         </div>
 
-        <div class="vline"></div>
-        <div class="flex flexbox column h5 justify-space-around" style="padding: 20px; width:18vh;">
-          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>年<br><span class="h3 ganzhi-year"></span></div>
-          <div class="hline"></div>
-          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>月<br><span class="h3 ganzhi-month"></span></div>
-          <div class="hline"></div>
-          <div class="text-vert text-indent-4">干支<span class="ganzhi-label"></span>日<br><span class="h3 ganzhi-day"></span></div>
+        <div class="group flexbox row text-vert">
+          <div class="label-ganzhi">干支<span class="ganzhi-label"></span>月</div>
+          <div class="vline flex"></div>
+          <div>︻</div>
+          <div class="ganzhi-month"></div>
+          <div>︼</div>
         </div>
+
+        <div class="group flexbox row text-vert">
+          <div class="label-ganzhi">干支<span class="ganzhi-label"></span>日</div>
+          <div class="vline flex"></div>
+          <div>︻</div>
+          <div class="ganzhi-day"></div>
+          <div>︼</div>
+        </div>
+
+        <div class="group flexbox row text-vert term-related">
+          <div class="term-cn space-out"></div>
+          <div class="flex vline"></div>
+          <div>︻</div>
+          <div class="term"></div>
+          <div>︼</div>
+        </div>
+
+        <div class="group flexbox row text-vert">
+          <div>十二生肖</div>
+          <div class="vline flex"></div>
+          <div>︻</div>
+          <div class="zodiac"></div>
+          <div>︼</div>
+        </div>
+
+        <div class="group flexbox row text-vert">
+          <div class="lunar-calendar-cn space-out"></div>
+          <div class="flex vline" style="height:8vh;"></div>
+          <div>︻</div>
+          <div class="lunar-month-date-name"></div>
+          <div>︼</div>
+        </div>
+
+        <div class="group flexbox row text-vert">
+          <div class="space-out">年份</div>
+          <div class="vline flex"></div>
+          <div>︻</div>
+          <div class="year-cn"></div>
+          <div>︼</div>
+        </div>
+
+        <div class="group flexbox row text-vert">
+          <div class="space-out">星期</div>
+          <div class="vline flex"></div>
+          <div>︻</div>
+          <div class="weekday-cn"></div>
+          <div>︼</div>
+        </div>
+
+        </div>
+        <div class="load-font centered-h label-month-date"><span class="number-month"></span>月<span class="number-date"></span>日</div>
+
       </div>
+
+
+    </div>
+
   </div>
 
   <div id="templates-genjyuugothic" class="font-genjyuugothic templates">

@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansscsliced.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 /* Noto Serif TC */
 @font-face {
   font-family: 'Noto Serif TC';
   src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.woff2'); /* IE9 Compat Modes */
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -44,6 +45,7 @@
   font-style: normal;
 }
 
+
 /* Seto Font */
 @font-face {
   font-family: 'Seto Font';
@@ -62,13 +64,36 @@
 
 @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/HanaMin-Regular.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/HanaMin/HanaMin-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }
 
-body[lang='tw'] .simplified,
-body[lang='cn'] .traditional {
+.font-notoserif {
+  font-family: 'Noto Serif TC';
+  font-weight: 700;
+}
+body[lang=sc] .font-notosans {
+  font-family: 'Noto Sans SC Sliced', sans-serif;
+  font-weight: 500;
+}
+body[lang="tc"] .font-notosans {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+}
+.font-setofont {
+  font-family: 'Seto Font', sans-serif;
+}
+.font-genjyuugothic {
+  font-family: 'GenJyuuGothic';
+}
+.font-hanamin {
+  font-family: 'Hana Min';
+}
+
+
+body[lang='tc'] .simplified,
+body[lang='sc'] .traditional {
   display: none;
 }
 
@@ -104,59 +129,6 @@ body[lang='cn'] .traditional {
   display: none;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    /* border-bottom: 1px dotted black; /* If you want dots under the hoverable text */ */
-}
-  .tooltip .tooltiptext {
-      visibility: hidden;
-      /* width: 90px; */
-      background-color: #222;
-      color: #fff;
-      white-space: nowrap;
-      text-align: center;
-      padding: 4px 10px;
-      border-radius: 4px;
-      position: absolute;
-      z-index: 1;
-      bottom: -39px;
-      box-shadow: 0 0 2px rgba(0,0,0,.2);
-  }
-  .tooltip .tooltiptext:before {
-    position: absolute;
-    top: -8px;
-    left: calc(50% - 4px);
-    /* content: ""; */
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #222;
-  }
-  .tooltip:hover .tooltiptext {
-      /* visibility: visible; */
-  }
-
-.font-notoserif {
-  font-family: 'Noto Serif TC';
-  font-weight: 600;
-}
-.font-notosans {
-  font-family: 'Noto Sans SC Sliced', sans-serif;
-  font-weight: 500;
-}
-.font-setofont {
-  font-family: 'Seto Font', sans-serif;
-}
-.font-genjyuugothic {
-  font-family: 'GenJyuuGothic';
-}
-.font-hanamin {
-  font-family: 'Hana Min';
-}
-
-
 
   #section-setofont .wrapper * {
     line-height: 1em;
@@ -176,7 +148,7 @@ body[lang='cn'] .traditional {
     background-image: url(images/shape3.svg);
     background-size: 94%;
     background-repeat: no-repeat;
-    color: khaki;
+    color: #F8FF8F;
     background-position: 50% 50%;
     margin: 0 2.8vh 0vh 0;
   }
@@ -211,7 +183,7 @@ body[lang='cn'] .traditional {
   #section-setofont .lunar-calendar-cn-1,
   #section-setofont .lunar-calendar-cn-2 {
     margin: 0 auto;
-    border: 2px solid khaki;
+    border: 2px solid #F8FF8F;
     border-radius: 2vh;
     font-size: 2.4vh;
     padding: .4vh;
@@ -222,7 +194,7 @@ body[lang='cn'] .traditional {
   }
   #section-setofont .label-lunardate {
     background: #222;
-    color: khaki;
+    color: #F8FF8F;
     outline: 2px solid #222;
     outline-offset: 4px;
     margin: 4vh 0px 0 0;
@@ -240,7 +212,7 @@ body[lang='cn'] .traditional {
   }
 
   #section-setofont .group-ganzhiyear .wrapper-bg {
-    background: khaki;
+    background: #F8FF8F;
     padding: 3.4vh 2vh 2.4vh 2vh;
     border-radius: 8px;
     border: 0px solid #222;
@@ -264,7 +236,7 @@ body[lang='cn'] .traditional {
     position: relative;
     width: 19vh;
     height: 19vh;
-    color: khaki;
+    color: #F8FF8F;
     margin-left: 1.4vh;
     -webkit-transform: translate3d(6vh,0,0);
     font-size: 2.4vh;
@@ -292,7 +264,7 @@ body[lang='cn'] .traditional {
     height: 100%;
   }
     #section-setofont .group-ganzhiday .wrapper-bg:after {
-      border: 1px solid khaki;
+      border: 1px solid #F8FF8F;
       position: absolute;
       left: 6px;
       top: 6px;
@@ -309,7 +281,7 @@ body[lang='cn'] .traditional {
   }
   #section-setofont .group-ganzhimonth .wrapper-bg {
     background: #222;
-    color: khaki;
+    color: #F8FF8F;
     border-radius: 50%;
   }
   #section-setofont .label-zodiac {
@@ -345,13 +317,13 @@ body[lang='cn'] .traditional {
     box-sizing: border-box;
     border-style: solid;
     border-width: 5vh;
-    color: khaki;
+    color: #F8FF8F;
     -moz-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     -webkit-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     margin: 4.8vh 3.2vh 0 4.2vh;
   }
   #section-setofont .vline {
-    border-left-color: khaki;
+    border-left-color: #F8FF8F;
     margin: 0 1.4vh 0 1.7vh;
   }
 
@@ -370,30 +342,29 @@ body[lang='cn'] .traditional {
   #section-genjyuugothic .label-term {
     font-size: 8vh;
     line-height: 8vh;
-    letter-spacing: 13.8vh;
-    text-indent: 13.8vh;
+    letter-spacing: 11.4vh;
+    text-indent: 11.4vh;
     width: 8vh;
     margin: 0 1vh 0 2vh;
   }
   #section-genjyuugothic .number-date {
-    -webkit-text-stroke: 4px #222;
-    font-size: 118vh;
+    font-size: 104vh;
     -webkit-text-stroke: 2px #222;
     -webkit-text-fill-color: transparent;
     z-index: 100;
   }
   #section-genjyuugothic .weekday-cn {
-    font-size: 26vh;
-    line-height: 26vh;
+    font-size: 23vh;
+    line-height: 23vh;
     width: 26vh;
     white-space: nowrap;
   }
   #section-genjyuugothic .wrapper-month-cn {
-    width: 6vh;
-    font-size: 6vh;
-    letter-spacing: 7.5vh;
-    text-indent: 7.5vh;
-    line-height: 6vh;
+    width: 5vh;
+    font-size: 5vh;
+    letter-spacing: 6.9vh;
+    text-indent: 6.9vh;
+    line-height: 5vh;
   }
     #section-genjyuugothic .month-date-cn.short-title {
       letter-spacing: 11.6vh;
@@ -407,24 +378,24 @@ body[lang='cn'] .traditional {
     line-height: 9vh;
   }
   #section-genjyuugothic .wrapper-year-cn {
-    font-size: 12vh;
-    letter-spacing: 9.1vh;
-    text-indent: 9.1vh;
-    width: 12vh;
-    line-height: 12vh;
+    font-size: 10.8vh;
+    letter-spacing: 8vh;
+    text-indent: 8vh;
+    width: 10.8vh;
+    line-height: 10.8vh;
   }
   #section-genjyuugothic .wrapper-group-ganzhi {
-    font-size: 3vh;
+    font-size: 2vh;
     width: 3vh;
-    letter-spacing: 0.82vh;
-    text-indent: 0.82vh;
+    letter-spacing: 1.4vh;
+    text-indent: 1.4vh;
     line-height: 3vh;
   }
   #section-genjyuugothic .label-lunardate {
     font-size: 5vh;
     line-height: 5vh;
-    letter-spacing: 4.8vh;
-    text-indent: 4.8vh;
+    letter-spacing: 3.8vh;
+    text-indent: 3.8vh;
     width: 5vh;
     margin: 0 1vh 0 2vh;
   }
@@ -436,14 +407,12 @@ body[lang='cn'] .traditional {
       letter-spacing: 6.9vh;
       text-indent: 6.9vh;
     }
-
-
   #section-genjyuugothic .wrapper-zodiac {
-    font-size: 9vh;
-    line-height: 9vh;
-    letter-spacing: 7.1vh;
-   text-indent: 7.1vh;
-    width: 9vh;
+    font-size: 8vh;
+    line-height: 8vh;
+    letter-spacing: 6.2vh;
+    text-indent: 6.2vh;
+    width: 8vh;
     margin: 0 0 0 2vh;
   }
 
@@ -452,15 +421,10 @@ body[lang='cn'] .traditional {
     width: 30.5vh;
   }
 
-  #section-notosans .term {
-    font-size: 37vw;
-    position: absolute;
-    white-space: nowrap;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: #222;
-    -webkit-text-stroke-width: 1px;
-    letter-spacing: 10vw;
-    text-indent: 10vw;
+  #section-notosans .label-term {
+    font-size: 3.6vh;
+    text-indent: -1.7vh;
+    margin: 2vh 0;
   }
   #section-notosans .wrapper * {
     line-height: 1em;
@@ -483,8 +447,12 @@ body[lang='cn'] .traditional {
     letter-spacing: .2em;
   }
   #section-notosans .label-zodiac {
-    font-size: 18vh;
-    margin: 1.5vh 0 3vh 0;
+    font-size: 10.4vh; /*  18vh; */
+    margin: 1.5vh 0 2vh 0;
+  }
+  #section-notosans .label-zodiac-big {
+     font-size: 18vh;
+     margin: 1.2vh 0 2.4vh 0;
   }
   #section-notosans .label-lunardate {
     font-size: 3.9vh;
@@ -505,7 +473,8 @@ body[lang='cn'] .traditional {
   }
   #section-notosans .number-date {
     font-size: 28vh;
-    margin-top: -1.5vh;
+    margin-top: -2vh;
+    margin-bottom: -.8vh;
   }
   #section-notosans .label-year {
     font-size: 8.6em;
@@ -643,61 +612,29 @@ body[lang='cn'] .traditional {
     text-transform: lowercase;
   }
 
-  #section-hanamin .zodiac {
-    padding: 0 4vh;
-    font-size: 5.4vh;
-    margin-top: 2vh;
-    line-height: 1em;
+  #section-hanamin .vline {
+    margin: 1vh 0;
   }
-  #section-hanamin .h5 {
-    font-size: 2.4vh;
+  #section-hanamin .wrapper {
+    font-size: 3vh;
   }
-  #section-hanamin .text-vert {
-    letter-spacing: .4vh;
-    margin: 0 auto;
+  #section-hanamin .space-out {
+    letter-spacing: 7.9vh;
+    margin-bottom: -6.8vh;
   }
-  #section-hanamin .label-lunardate {
-    line-height:1.25em;
-    letter-spacing: .7vh;
-    margin: 2.2vh auto 0 auto;
-  }
-    #section-hanamin .label-lunardate.length-5 {
-
-    }
-    #section-hanamin .label-lunardate.length-4 {
-
-    }
-  #section-hanamin .h4 {
-    font-size: 3.6vh;
-  }
-  #section-hanamin .h3 {
-    font-size: 5.6vh;
-    line-height: 1em;
-    margin-top: 2vh;
-  }
-  #section-hanamin .h1 {
-    font-size: 10.8vh;
-    letter-spacing: .15em;
-    text-indent: .15em;
-    line-height: 12vh;
-    white-space: nowrap;
-  }
-  #section-hanamin .h1.short-title {
-    font-size: 12.2vh;
+  #section-hanamin .group {
+    align-items: center;
+    letter-spacing: .8vh;
+    line-height: 7.6vh;
   }
 
-  #section-hanamin .h2 {
-    font-size: 9vh;
-    line-height: 1em;
-    letter-spacing: .2em;
-    text-indent: .2em;
+  #section-hanamin .label-month-date {
+    letter-spacing: 1vh;
+    position: absolute;
+    bottom: 4vh;
+    font-size: 3vh;
   }
 
-  #section-hanamin .ganzhi-year,
-  #section-hanamin .ganzhi-month,
-  #section-hanamin .ganzhi-day {
-    line-height: 1.8em;
-  }
 
 .hide {
   display: none !important;
@@ -779,9 +716,6 @@ body[lang='cn'] .traditional {
   justify-content:space-around;
 }
 
-.text-indent-4 {
-  text-indent: 4px;
-}
 
 .grid-18 {
   display: inline-block;
@@ -840,14 +774,22 @@ body[lang='cn'] .traditional {
 .weight-700 {
   font-weight: 700;
 }
+.weight-900 {
+  font-weight: 900;
+}
 .text-outline {
   -webkit-text-stroke: 4px black;
   -webkit-text-fill-color: transparent;
 }
 
 a {
-  color: #444;
+  color: #222;
+  opacity: .7;
   text-decoration: none;
+  -webkit-transition: .2s opacity;
+}
+a:hover {
+  opacity: 1;
 }
 
 .hline-4 {
@@ -882,8 +824,8 @@ pre {
 .wrapper-use-font .group-desc {
   font-weight: 600;
   position: relative;
-  padding-top: 12px;
-  margin-top: 28px;
+  /* padding-top: 12px;
+  margin-top: 28px; */
 }
 body[lang="tw"] .wrapper-use-font .group-desc {
   font-family: 'Noto Serif TC';
@@ -892,20 +834,23 @@ body[lang="cn"] .wrapper-use-font .group-desc {
   font-family: 'Noto Serif SC';
 }
 
-.wrapper-use-font .group-desc::after {
-  position: absolute;
-  width: 32px;
-  height: 2px;
-  background: #222;
-  top: 0;
-  left: 0;
-  content: "";
-}
+
 
 body > *,
 .load-font,
 #pp-nav {
   -webkit-transition: .25s opacity;
+}
+
+#headerbar .button .hover,
+#headerbar .button:hover .cn,
+#pp-nav li .hover,
+#pp-nav li:hover .cn {
+  display: none;
+}
+#headerbar .button:hover .hover,
+#pp-nav li:hover .hover {
+  display: block;
 }
 
 body.loading #loader {
@@ -979,9 +924,9 @@ body.use-font .section .wrapper-use-font {
   top: 50%;
   text-align: center;
   top: 50%;
-  -webkit-transform: translateY(-50%);
+  -webkit-transform: translate3d(0,-50%,0);
   z-index: 10;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 #headerbar {
@@ -1002,55 +947,45 @@ body.use-font .section .wrapper-use-font {
 }
 
 #headerbar .lang {
-  padding: 5px 8px;
-}
-
-.circle-bordered {
-  width: 320px;
-  height: 320px;
-  border: 8px solid #222;
-  border-radius: 160px;
+  padding: 4px 4px;
+  opacity: .5;
+  width: 24px;
   text-align: center;
-  line-height: 320px;
-  font-size: 15em;
-  box-sizing: border-box;
-  background: #222;
-  color: honeydew;
+}
+#headerbar .lang.selected,
+#headerbar .lang:hover {
+  opacity: 1;
 }
 
 .templates {
   display: none;
 }
 
-.lang {
-  opacity: .5;
-}
-.lang.selected,
-.lang:hover {
-  opacity: 1;
-}
-
 #pp-nav,
 #headerbar,
 #designer-info {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .bordered-button {
   border: 1px solid rgba(0,0,0,.3);
-  padding: 4px 11px;
   border-radius: 0px;
-  /* background: white; */
 }
 
 #button-use {
   margin-right: 8px;
+  width: 86px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #badge {
   position: fixed;
   right: 24px;
-  bottom: 14px;
+  bottom: 18px;
   z-index: 10000;
   background-image: url(images/badge.svg);
   width: 136px;
@@ -1062,38 +997,27 @@ body.use-font .section .wrapper-use-font {
   opacity: .8;
 }
 
+/* .tooltip-wrapper {
+  position: relative;
+}
+.tooltip-wrapper:hover .tooltip {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+}
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  font-size: 12px;
+  bottom: -31px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  right: 0;
+  -webkit-transition: .2s all;
+} */
 
 .text-center {
   text-align: center;
-}
-
-.square {
-  position: absolute;
-  left: 8%;
-  top: 8%;
-  right: 8%;
-  bottom: 8%;
-}
-
-.xl {
-  font-size: 10em;
-  line-height: 1em;
-}
-.x {
-  font-size: 8em;
-  line-height: 1em;
-}
-.m {
-  font-size: 5em;
-  line-height: 1em;
-}
-.s {
-  font-size: 2em;
-  line-height: 1em;
-}
-.xs {
-  font-size: 1em;
-  line-height: 1em;
 }
 
 .text-vert {
@@ -1105,6 +1029,24 @@ body.use-font .section .wrapper-use-font {
   position: absolute;
   width: 100%;
   transform: translateY(-50%);
+}
+
+.column-1 {
+  width: 40vh;
+  margin-right: 2vh;
+}
+.column-2 {
+  width: 26vh;
+}
+.label-earlyaccess {
+  font-size: 20vh;
+  line-height: 20vh;
+  margin-top: 1vh;
+}
+.label-font {
+  font-size: 26vh;
+  line-height: 26vh;
+  letter-spacing: -1.2vh;
 }
 
 .title-text {
@@ -1120,17 +1062,16 @@ body.use-font .section .wrapper-use-font {
 }
 .chinese-text span {
   line-height: 1.6em;
-  font-size: 3.6vh;
+  font-size: 2.6vh;
   letter-spacing: .125em;
   border-left: 1px solid #222;
   white-space: nowrap;
 }
-.eng-text {
-  width: 40vh;
-  align-self: flex-end;
-  line-height: 1.5em;
-  font-size: 13px;
-  margin: 0 4vh 1vh 6vh;
+.eng-block {
+  font-size: 1.52vh;
+  line-height: 2.4vh;
+  margin-top: 2vh;
+  padding: 0;
 }
 
 .eng-text a {
@@ -1175,55 +1116,4 @@ body.use-font .section .wrapper-use-font {
   font-size: 13px;
   display: inline-block;
   margin-top: 12px;
-  /* padding: 20px 0 0 0; */
 }
-
-/* #author-text:before {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 32px;
-  height: 2px;
-  background: #222;
-  content: "";
-} */
-
-
-/* cldr */
-.clndr {
-  font-size: 12px;
-  position: absolute;
-  bottom: 80px;
-  right: 80px;
-  width: 220px;
-  height: 240px;
-  font-weight: 500;
-}
-.header-day {
-  width: 13%;
-  /* display: inline-block; */
-  float: left;
-  opacity: .25;
-
-}
-.days .day.today {
-  background: #ff5252;
-  /* color: transparent; */
-  border-radius: 100%;
-  /* border: 2px solid red; */
-  /* border-radius: 30px; */
-}
-.day.adjacent-month {
-  opacity: 0;
-}
-.days .day {
-  /* display: inline-block; */
-  float: left;
-  width: 13%;
-}
-
-/* @media screen and (max-width: 640px) {
-  #section-hanamin .wrapper {
-    width: 80%;
-  }
-} */
