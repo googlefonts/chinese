@@ -4,64 +4,44 @@
 /* Noto Serif TC */
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Regular.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Medium.otf'); /* IE9 Compat Modes */
-  font-weight: 500;
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Light.woff2'); /* IE9 Compat Modes */
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-SemiBold.otf'); /* IE9 Compat Modes */
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Bold.otf'); /* IE9 Compat Modes */
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerifTC/NotoSerifCJKtc-Black.otf'); /* IE9 Compat Modes */
-  font-weight: 900;
-  font-style: normal;
-}
-
-/* Noto Serif SC */
-@font-face {
-  font-family: 'Noto Serif SC';
-  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Regular.otf'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Noto Serif SC';
-  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Medium.otf'); /* IE9 Compat Modes */
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Medium.woff2'); /* IE9 Compat Modes */
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Noto Serif SC';
-  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-SemiBold.otf'); /* IE9 Compat Modes */
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-SemiBold.woff2'); /* IE9 Compat Modes */
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Noto Serif SC';
-  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Bold.otf'); /* IE9 Compat Modes */
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Bold.woff2'); /* IE9 Compat Modes */
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Noto Serif SC';
-  src: url('fonts/NotoSerifSC/NotoSerifCJKsc-Black.otf'); /* IE9 Compat Modes */
-  font-weight: 900;
+  font-family: 'Noto Serif TC';
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.woff2'); /* IE9 Compat Modes */
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -69,7 +49,7 @@
 /* Seto Font */
 @font-face {
   font-family: 'Seto Font';
-  src: url('fonts/SetoFont/setofont.ttf'); /* IE9 Compat Modes */
+  src: url('fonts/seto/Seto-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
@@ -77,14 +57,14 @@
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/GenJyuuGothic/GenJyuuGothic-Normal.ttf'); /* IE9 Compat Modes */
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/HanaMin/HanaMinA.ttf'); /* IE9 Compat Modes */
+  src: url('fonts/HanaMin-Regular.woff2'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }
