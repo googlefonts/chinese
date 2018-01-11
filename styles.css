@@ -367,8 +367,8 @@ body[lang='sc'] .traditional {
     line-height: 5vh;
   }
     #section-genjyuugothic .month-date-cn.short-title {
-      letter-spacing: 11.6vh;
-      text-indent: 11.6vh;
+      letter-spacing: 10vh;
+      text-indent: 10vh;
     }
   #section-genjyuugothic .wrapper-date-cn {
     font-size: 9vh;
@@ -394,8 +394,8 @@ body[lang='sc'] .traditional {
   #section-genjyuugothic .label-lunardate {
     font-size: 5vh;
     line-height: 5vh;
-    letter-spacing: 3.8vh;
-    text-indent: 3.8vh;
+    letter-spacing: 3.7vh;
+    text-indent: 3.7vh;
     width: 5vh;
     margin: 0 1vh 0 2vh;
   }
