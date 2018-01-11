@@ -627,7 +627,10 @@ body[lang='sc'] .traditional {
     letter-spacing: .8vh;
     line-height: 7.6vh;
   }
-
+  #section-hanamin .number-month,
+  #section-hanamin .number-date {
+    font-size: 6vh;
+  }
   #section-hanamin .label-month-date {
     letter-spacing: 1vh;
     position: absolute;
