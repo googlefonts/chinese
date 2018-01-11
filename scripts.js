@@ -16,8 +16,8 @@ var fontByLang = {
 };
 
 var BG = {
-  'tc': ['#FFF','powderblue','blanchedalmond','khaki','honeydew','peachpuff'],
-  'sc': ['#FFF','powderblue','honeydew','peachpuff']
+  'tc': ['#FFF','#C2E6DF','#FFE6C3','#F8FF8F','#EDFFEC','#E5E5E5'],
+  'sc': ['#FFF','#C2E6DF','#FFE6C3','#F8FF8F']
 };
 
 var designerByFont = {

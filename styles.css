@@ -168,7 +168,7 @@ body[lang='sc'] .traditional {
     background-image: url(images/shape3.svg);
     background-size: 94%;
     background-repeat: no-repeat;
-    color: khaki;
+    color: #F8FF8F;
     background-position: 50% 50%;
     margin: 0 2.8vh 0vh 0;
   }
@@ -203,7 +203,7 @@ body[lang='sc'] .traditional {
   #section-setofont .lunar-calendar-cn-1,
   #section-setofont .lunar-calendar-cn-2 {
     margin: 0 auto;
-    border: 2px solid khaki;
+    border: 2px solid #F8FF8F;
     border-radius: 2vh;
     font-size: 2.4vh;
     padding: .4vh;
@@ -214,7 +214,7 @@ body[lang='sc'] .traditional {
   }
   #section-setofont .label-lunardate {
     background: #222;
-    color: khaki;
+    color: #F8FF8F;
     outline: 2px solid #222;
     outline-offset: 4px;
     margin: 4vh 0px 0 0;
@@ -232,7 +232,7 @@ body[lang='sc'] .traditional {
   }
 
   #section-setofont .group-ganzhiyear .wrapper-bg {
-    background: khaki;
+    background: #F8FF8F;
     padding: 3.4vh 2vh 2.4vh 2vh;
     border-radius: 8px;
     border: 0px solid #222;
@@ -256,7 +256,7 @@ body[lang='sc'] .traditional {
     position: relative;
     width: 19vh;
     height: 19vh;
-    color: khaki;
+    color: #F8FF8F;
     margin-left: 1.4vh;
     -webkit-transform: translate3d(6vh,0,0);
     font-size: 2.4vh;
@@ -284,7 +284,7 @@ body[lang='sc'] .traditional {
     height: 100%;
   }
     #section-setofont .group-ganzhiday .wrapper-bg:after {
-      border: 1px solid khaki;
+      border: 1px solid #F8FF8F;
       position: absolute;
       left: 6px;
       top: 6px;
@@ -301,7 +301,7 @@ body[lang='sc'] .traditional {
   }
   #section-setofont .group-ganzhimonth .wrapper-bg {
     background: #222;
-    color: khaki;
+    color: #F8FF8F;
     border-radius: 50%;
   }
   #section-setofont .label-zodiac {
@@ -337,13 +337,13 @@ body[lang='sc'] .traditional {
     box-sizing: border-box;
     border-style: solid;
     border-width: 5vh;
-    color: khaki;
+    color: #F8FF8F;
     -moz-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     -webkit-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     margin: 4.8vh 3.2vh 0 4.2vh;
   }
   #section-setofont .vline {
-    border-left-color: khaki;
+    border-left-color: #F8FF8F;
     margin: 0 1.4vh 0 1.7vh;
   }
 
@@ -647,15 +647,12 @@ body[lang='sc'] .traditional {
     letter-spacing: .8vh;
     line-height: 7.6vh;
   }
+
   #section-hanamin .label-month-date {
     letter-spacing: 1vh;
     position: absolute;
-    bottom: 8vh;
+    bottom: 4vh;
     font-size: 3vh;
-  }
-  #section-hanamin .number-month,
-  #section-hanamin .number-date {
-    font-size: 8vh;
   }
 
 
