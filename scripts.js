@@ -16,8 +16,22 @@ var fontByLang = {
 };
 
 var BG = {
-  'tc': ['#FFF','#C2E6DF','#FFE6C3','#F8FF8F','#EDFFEC','#E5E5E5'],
-  'sc': ['#FFF','#C2E6DF','#FFE6C3','#F8FF8F']
+  'tc':[
+    '#fafafa',
+    '#FFD7CA',
+    '#D6ECE0',
+    '#FFDFB9',
+    '#D0D8CD',
+    '#FFEE80',
+  ],
+  'sc': [
+    '#fafafa',
+    '#FFD7CA',
+    '#D6ECE0',
+    // '#FFDFB9',
+    // '#D0D8CD',
+    '#FFEE80',
+  ]
 };
 
 var designerByFont = {
@@ -275,7 +289,7 @@ $( document ).ready(function() {
   // font loader
   WebFontConfig = {
     custom: {
-      families: ['Noto Serif TC:n7','GenJyuuGothic:n1,n3,n4,n5,n6,n7','Seto Font'],
+      families: ['Noto Serif TC:n7,n9','Noto Serif SC:n7,n9','Noto Sans TC:n5','Noto Sans SC Sliced:n5','GenJyuuGothic:n4','Seto Font','Hana Min'],
       urls: ['styles.css'],
     },
     loading: function() {
