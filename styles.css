@@ -49,7 +49,7 @@
 /* Seto Font */
 @font-face {
   font-family: 'Seto Font';
-  src: url('fonts/Seto/Seto-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
+  src: url('fonts/seto/Seto-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
@@ -57,14 +57,14 @@
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/GenJyuuGothic/GenJyuuGothic-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
+  src: url('fonts/genjyuugothic/GenJyuuGothic-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/HanaMin/HanaMin-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
+  src: url('fonts/hanamin/HanaMin-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }
