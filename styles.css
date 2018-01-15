@@ -4,43 +4,43 @@
 /* Noto Serif TC */
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-ExtraLight.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Light.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Light.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Regular.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Medium.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Medium.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-SemiBold.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-SemiBold.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Bold.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Bold.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Serif TC';
-  src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/NotoSerif/NotoSerifCJKtc-Black.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 800;
   font-style: normal;
 }
@@ -49,7 +49,7 @@
 /* Seto Font */
 @font-face {
   font-family: 'Seto Font';
-  src: url('fonts/seto/Seto-Regular.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/Seto/Seto-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
@@ -57,14 +57,14 @@
 /* GenJyuuGothic */
 @font-face {
   font-family: 'GenJyuuGothic';
-  src: url('fonts/genjyuugothic/GenJyuuGothic-Regular.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/GenJyuuGothic/GenJyuuGothic-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Hana Min';
-  src: url('fonts/HanaMin/HanaMin-Regular.woff2'); /* IE9 Compat Modes */
+  src: url('fonts/HanaMin/HanaMin-Regular.woff2') format('woff2'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }
@@ -148,7 +148,7 @@ body[lang='sc'] .traditional {
     background-image: url(images/shape3.svg);
     background-size: 94%;
     background-repeat: no-repeat;
-    color: #F8FF8F;
+    color: #FFDFB9;
     background-position: 50% 50%;
     margin: 0 2.8vh 0vh 0;
   }
@@ -183,7 +183,7 @@ body[lang='sc'] .traditional {
   #section-setofont .lunar-calendar-cn-1,
   #section-setofont .lunar-calendar-cn-2 {
     margin: 0 auto;
-    border: 2px solid #F8FF8F;
+    border: 2px solid #FFDFB9;
     border-radius: 2vh;
     font-size: 2.4vh;
     padding: .4vh;
@@ -194,7 +194,7 @@ body[lang='sc'] .traditional {
   }
   #section-setofont .label-lunardate {
     background: #222;
-    color: #F8FF8F;
+    color: #FFDFB9;
     outline: 2px solid #222;
     outline-offset: 4px;
     margin: 4vh 0px 0 0;
@@ -212,7 +212,7 @@ body[lang='sc'] .traditional {
   }
 
   #section-setofont .group-ganzhiyear .wrapper-bg {
-    background: #F8FF8F;
+    background: #FFDFB9;
     padding: 3.4vh 2vh 2.4vh 2vh;
     border-radius: 8px;
     border: 0px solid #222;
@@ -236,7 +236,7 @@ body[lang='sc'] .traditional {
     position: relative;
     width: 19vh;
     height: 19vh;
-    color: #F8FF8F;
+    color: #FFDFB9;
     margin-left: 1.4vh;
     -webkit-transform: translate3d(6vh,0,0);
     font-size: 2.4vh;
@@ -264,7 +264,7 @@ body[lang='sc'] .traditional {
     height: 100%;
   }
     #section-setofont .group-ganzhiday .wrapper-bg:after {
-      border: 1px solid #F8FF8F;
+      border: 1px solid #FFDFB9;
       position: absolute;
       left: 6px;
       top: 6px;
@@ -281,7 +281,7 @@ body[lang='sc'] .traditional {
   }
   #section-setofont .group-ganzhimonth .wrapper-bg {
     background: #222;
-    color: #F8FF8F;
+    color: #FFDFB9;
     border-radius: 50%;
   }
   #section-setofont .label-zodiac {
@@ -317,13 +317,13 @@ body[lang='sc'] .traditional {
     box-sizing: border-box;
     border-style: solid;
     border-width: 5vh;
-    color: #F8FF8F;
+    color: #FFDFB9;
     -moz-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     -webkit-border-image: url(images/shape2.svg) 30 30 30 30 stretch;
     margin: 4.8vh 3.2vh 0 4.2vh;
   }
   #section-setofont .vline {
-    border-left-color: #F8FF8F;
+    border-left-color: #FFDFB9;
     margin: 0 1.4vh 0 1.7vh;
   }
 
@@ -777,6 +777,9 @@ body[lang='sc'] .traditional {
 .weight-700 {
   font-weight: 700;
 }
+.weight-800 {
+  font-weight: 800;
+}
 .weight-900 {
   font-weight: 900;
 }
@@ -862,7 +865,7 @@ body.loading #loader {
 
 body.loading .load-font,
 body.loading #pp-nav {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 body.use-font #headerbar .button-close {
@@ -1036,13 +1039,13 @@ body.use-font .section .wrapper-use-font {
 
 .column-1 {
   width: 40vh;
-  margin-right: 2vh;
+  margin-right: 1vh;
 }
 .column-2 {
   width: 26vh;
 }
 .label-earlyaccess {
-  font-size: 20vh;
+  font-size: 19.4vh;
   line-height: 20vh;
   margin-top: 1vh;
 }

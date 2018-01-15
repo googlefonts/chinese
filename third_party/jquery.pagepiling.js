@@ -187,6 +187,7 @@
 
             if (typeof options.sectionsColor[index] !== 'undefined') {
                 $(this).css('background-color', options.sectionsColor[index]);
+                // $(this).css('background-image', options.sectionsColor[index]);
             }
 
             if(options.verticalCentered && !$(this).hasClass('pp-scrollable')){
