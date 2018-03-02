@@ -400,12 +400,12 @@ body[lang='sc'] .traditional {
     margin: 0 1vh 0 2vh;
   }
     #section-genjyuugothic .label-lunardate.length-4 {
-      letter-spacing: 9.35vh;
-      text-indent: 9.35vh;
+      letter-spacing: 7.2vh;
+      text-indent: 7.2vh;
     }
     #section-genjyuugothic .label-lunardate.length-5 {
-      letter-spacing: 6.9vh;
-      text-indent: 6.9vh;
+      letter-spacing: 5.1vh;
+      text-indent: 5.1vh;
     }
   #section-genjyuugothic .wrapper-zodiac {
     font-size: 8vh;
