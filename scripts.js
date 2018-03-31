@@ -265,19 +265,19 @@ function createPages() {
       'tooltips': Object.values( fontByLang[CONFIG.lang] )
     },
     onLeave: function(index, nextIndex, direction){
-      console.log('onLeave');
+      // console.log('onLeave');
     },
 		afterLoad: function(anchorLink, index){
       page_idx = index;
-      console.log('afterLoad page_idx', page_idx);
+      // console.log('afterLoad page_idx', page_idx);
       updateDesignerInfoAndHash(index);
     },
 		afterRender: function(){
-      console.log( 'afterRender');
+      // console.log( 'afterRender');
       var idx = fontListByLang[CONFIG.lang].indexOf( CONFIG.font )+1;
       $.fn.pagepiling.moveTo(idx);
       page_idx = idx;
-      console.log('afterRender page_idx', page_idx);
+      // console.log('afterRender page_idx', page_idx);
       updateDesignerInfoAndHash( idx );
     },
   });
@@ -303,10 +303,10 @@ $( document ).ready(function() {
     //   console.log('inactive');
     // },
     fontloading: function(familyName, fvd) {
-      console.log('fontloading',familyName, fvd);
+      // console.log('fontloading',familyName, fvd);
     },
     fontactive: function(familyName, fvd) {
-      console.log('fontactive',familyName, fvd);
+      // console.log('fontactive',familyName, fvd);
     },
     // fontinactive: function(familyName, fvd) {
     //   console.log('fontinactive');
