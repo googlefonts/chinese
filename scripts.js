@@ -293,10 +293,10 @@ $( document ).ready(function() {
       urls: ['styles.css'],
     },
     loading: function() {
-      console.log('loading');
+      // console.log('loading');
     },
     active: function() {
-      console.log('active');
+      // console.log('active');
       $('body').removeClass('loading');
     },
     // inactive: function() {

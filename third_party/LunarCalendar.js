@@ -75,14 +75,6 @@
 		monthCn: ['正', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
 		dateCn: ['初一', '初二', '初三', '初四', '初五', '初六', '初七', '初八', '初九', '初十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '廿一', '廿二', '廿三', '廿四', '廿五', '廿六', '廿七', '廿八', '廿九', '三十', '卅一']
 	};
-	var DATA_TRADITIONAL = {
-		heavenlyStems: ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'], //天干
-		earthlyBranches: ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'], //地支
-		zodiac: ['鼠','牛','虎','兔','龍','蛇','馬','羊','猴','雞','狗','豬'], //對應地支十二生肖
-		solarTerm: ['小寒', '大寒', '立春', '雨水', '驚蟄', '春分', '清明', '穀雨', '立夏', '小滿', '芒種', '夏至', '小暑', '大暑', '立秋', '處暑', '白露', '秋分', '寒露', '霜降', '立冬', '小雪', '大雪','冬至'], //二十四節氣
-		monthCn: ['正', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
-		dateCn: ['初一', '初二', '初三', '初四', '初五', '初六', '初七', '初八', '初九', '初十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '廿一', '廿二', '廿三', '廿四', '廿五', '廿六', '廿七', '廿八', '廿九', '三十', '卅一']
-	};
 
 	//中国节日放假安排，外部设置，0无特殊安排，1工作，2放假
 	var worktime = {};
@@ -90,6 +82,8 @@
 	worktime.y2013 = {"d0101":2,"d0102":2,"d0103":2,"d0105":1,"d0106":1,"d0209":2,"d0210":2,"d0211":2,"d0212":2,"d0213":2,"d0214":2,"d0215":2,"d0216":1,"d0217":1,"d0404":2,"d0405":2,"d0406":2,"d0407":1,"d0427":1,"d0428":1,"d0429":2,"d0430":2,"d0501":2,"d0608":1,"d0609":1,"d0610":2,"d0611":2,"d0612":2,"d0919":2,"d0920":2,"d0921":2,"d0922":1,"d0929":1,"d1001":2,"d1002":2,"d1003":2,"d1004":2,"d1005":2,"d1006":2,"d1007":2,"d1012":1};
 	worktime.y2014 = {"d0101":2,"d0126":1,"d0131":2,"d0201":2,"d0202":2,"d0203":2,"d0204":2,"d0205":2,"d0206":2,"d0208":1,"d0405":2,"d0407":2,"d0501":2,"d0502":2,"d0503":2,"d0504":1,"d0602":2,"d0908":2,"d0928":1,"d1001":2,"d1002":2,"d1003":2,"d1004":2,"d1005":2,"d1006":2,"d1007":2,"d1011":1};
 	worktime.y2015 = {"d0101":2,"d0102":2,"d0103":2,"d0104":1,"d0215":1,"d0218":2,"d0219":2,"d0220":2,"d0221":2,"d0222":2,"d0223":2,"d0228":1,"d0405":2,"d0406":2,"d0501":2,"d0502":2,"d0503":2,"d0620":2,"d0622":2,"d0903":2,"d0904":2,"d0905":2,"d0906":1,"d0927":2,"d1001":2,"d1002":2,"d1003":2,"d1004":2,"d1005":2,"d1006":2,"d1007":2,"d1010":1};
+	worktime.y2016 = {"d0101":2,"d0102":2,"d0103":2,"d0206":1,"d0207":2,"d0208":2,"d0209":2,"d0210":2,"d0211":2,"d0212":2,"d0213":2,"d0214":1,"d0402":2,"d0403":2,"d0404":2,"d0430":2,"d0501":2,"d0502":2,"d0609":2,"d0610":2,"d0611":2,"d0612":1,"d0915":2,"d0916":2,"d0917":2,"d0918":1,"d1001":2,"d1002":2,"d1003":2,"d1004":2,"d1005":2,"d1006":2,"d1007":2,"d1008":1,"d1009":1,"d1231":2};
+	worktime.y2017 = {"d0101":2,"d0102":2,"d0127":1,"d0128":2,"d0129":2,"d0130":2,"d0132":2,"d0201":2,"d0202":2,"d0204":1,"d0401":1,"d0402":2,"d0403":2,"d0404":2,"d0429":2,"d0430":2,"d0501":2,"d0527":1,"d0528":2,"d0529":2,"d0530":2,"d0930":1,"d1001":2,"d1002":2,"d1003":2,"d1004":2,"d1005":2,"d1006":2,"d1007":2,"d1008":2};
 	//公历节日
 	var solarFestival = {
 		'd0101':'元旦节',
@@ -191,90 +185,6 @@
 		'd1226':'毛泽东诞辰纪念'
 	};
 
-	//公曆節日
-	var solarFestivalTraditional = {
-		'd0101':'元旦節',
-		'd0202':'世界濕地日',
-		'd0210':'國際氣象節',
-		'd0214':'情人節',
-		'd0228':'228和平紀念日',
-		'd0301':'國際海豹日',
-		'd0308':'婦女節',
-		'd0312':'植樹節孫中山逝世紀念日',
-		'd0314':'國際警察日',
-		'd0315':'消費者權益日',
-		'd0321':'世界森林日 消除種族歧視國際日 世界兒歌日',
-		'd0322':'世界水日',
-		'd0323':'世界氣象日',
-		'd0324':'世界防治結核病日',
-		'd0329':'青年節',
-		'd0330':'巴勒斯坦國土日',
-		'd0401':'愚人節',
-		'd0404':'兒童節',
-		'd0407':'世界衛生日',
-		'd0422':'世界地球日',
-		'd0423':'世界圖書和版權日',
-		'd0424':'亞非新聞工作者日',
-		'd0501':'勞動節',
-		'd0504':'青年節',
-		'd0508':'世界紅十字日',
-		'd0512':'國際護士節',
-		'd0515':'國際家庭日',
-		'd0517':'世界電信日',
-		'd0518':'國際博物館日',
-		'd0520':'全國學生營養日',
-		'd0522':'國際生物多樣性日',
-		'd0523':'國際牛奶日',
-		'd0531':'世界無菸日',
-		'd0601':'國際兒童節',
-		'd0605':'世界環境日',
-		'd0625':'全國土地日',
-		'd0626':'國際禁毒日',
-		'd0702':'國際體育記者日',
-		'd0707':'抗日戰爭紀念日',
-		'd0711':'世界人口日',
-		'd0730':'非洲婦女日',
-		'd0808':'父親節',
-		'd0909':'軍人節',
-		'd0908':'國際掃盲日國際新聞工作者日',
-		'd0914':'世界清潔地球日',
-		'd0916':'國際臭氧層保護日',
-		'd0920':'國際愛牙日',
-		'd0927':'世界旅遊日',
-		'd0928':'教師節 孔子誕辰',
-		'd1001':'國慶節世界音樂日國際老人節',
-		'd1002':'國際和平與民主自由鬥爭日',
-		'd1004':'世界動物日',
-		'd1008':'全國高血壓日世界視覺日',
-		'd1009':'世界郵政日萬國郵聯日',
-		'd1010':'國慶日 世界精神衛生日',
-		'd1013':'世界保健日國際教師節',
-		'd1014':'世界標準日',
-		'd1015':'國際盲人節(白手杖節)',
-		'd1016':'世界糧食日',
-		'd1017':'世界消除貧困日',
-		'd1022':'世界傳統醫藥日',
-		'd1024':'聯合國日世界發展信息日',
-		'd1025':'光復節',
-		'd1031':'萬聖節',
-		'd1110':'世界青年節',
-		'd1111':'國際科學與和平周(本日所屬的一週)',
-		'd1112':'孫中山誕辰紀念日',
-		'd1114':'世界糖尿病日',
-		'd1117':'國際大學生節世界學生節',
-		'd1121':'世界問候日世界電視日',
-		'd1129':'國際聲援巴勒斯坦人民國際日',
-		'd1201':'世界愛滋病日',
-		'd1203':'世界殘疾人日',
-		'd1205':'國際經濟和社會發展志願人員日',
-		'd1208':'國際兒童電視日',
-		'd1209':'世界足球日',
-		'd1210':'世界人權日',
-		'd1221':'國際籃球日',
-		'd1224':'平安夜',
-		'd1225':'行憲紀念日 聖誕節'
-	};
-
 	//农历节日
 	var lunarFestival = {
 		'd0101':'春节',
@@ -290,22 +200,7 @@
 		'd1208':'腊八节',
 		'd1223':'小年',
 		'd0100':'除夕'
-	};
-
-	var lunarFestivalTraditional = {
-		'd0101':'春節',
-		'd0115':'元宵節',
-		'd0323':'媽祖生辰',
-		'd0505':'端午節',
-		'd0707':'七夕情人節',
-		'd0715':'中元節',
-		'd0815':'中秋節',
-		'd0909':'重陽節',
-		'd1015':'下元節',
-		'd1208':'臘八節',
-		'd1223':'小年',
-		'd0100':'除夕'
-	};
+	}
 
 	/**
 	 * 1890 - 2100 年的农历数据
@@ -447,14 +342,13 @@
 	 * 获取公历年一年的二十四节气
 	 * 返回key:日期，value:节气中文名
 	 */
-	function getYearTerm(year,_lang){
-		var _DATA = _lang=='tc' ? DATA_TRADITIONAL : DATA;
+	function getYearTerm(year){
 		var res = {};
 		var month = 0;
 		for(var i=0;i<24;i++){
 			var day = getTerm(year,i);
 			if(i%2==0)month++
-			res[formateDayD4(month-1,day)] = _DATA.solarTerm[i];
+			res[formateDayD4(month-1,day)] = DATA.solarTerm[i];
 		}
 		return res;
 	};
@@ -463,19 +357,17 @@
 	 * 获取生肖
 	 * @param {Number} year 干支所在年（默认以立春前的公历年作为基数）
 	 */
-	function getYearZodiac(year,_lang){
-		var _DATA = _lang=='tc' ? DATA_TRADITIONAL : DATA;
-		var num = year-1890+25; //参考干支纪年的计算，生肖对应地支
-		return _DATA.zodiac[num%12];
+	function getYearZodiac(year){
+		 var num = year-1890+25; //参考干支纪年的计算，生肖对应地支
+		 return DATA.zodiac[num%12];
 	};
 
 	/**
 	 * 计算天干地支
 	 * @param {Number} num 60进制中的位置(把60个天干地支，当成一个60进制的数)
 	 */
-	function cyclical(num,lang) {
-		var _DATA = lang=='tc' ? DATA_TRADITIONAL : DATA;
-		return(_DATA.heavenlyStems[num%10]+_DATA.earthlyBranches[num%12]);
+	function cyclical(num) {
+		return(DATA.heavenlyStems[num%10]+DATA.earthlyBranches[num%12]);
 	}
 
 	/**
@@ -483,10 +375,10 @@
 	 * @param {Number} year 干支所在年
 	 * @param {Number} offset 偏移量，默认为0，便于查询一个年跨两个干支纪年（以立春为分界线）
 	 */
-	function getLunarYearName(year,offset,lang){
+	function getLunarYearName(year,offset){
 		offset = offset || 0;
 		//1890年1月小寒（小寒一般是1月5或6日）以前为己丑年，在60进制中排25
-		return cyclical(year-1890+25+offset,lang);
+		return cyclical(year-1890+25+offset);
 	};
 
 	/**
@@ -494,21 +386,21 @@
 	 * @param {Number} year,month 公历年，干支所在月
 	 * @param {Number} offset 偏移量，默认为0，便于查询一个月跨两个干支纪月（有立春的2月）
 	 */
-	function getLunarMonthName(year,month,offset,lang){
+	function getLunarMonthName(year,month,offset){
 		offset = offset || 0;
 		//1890年1月小寒以前为丙子月，在60进制中排12
-		return cyclical((year-1890)*12+month+12+offset,lang);
+		return cyclical((year-1890)*12+month+12+offset);
 	};
 
 	/**
 	 * 获取干支纪日
 	 * @param {Number} year,month,day 公历年，月，日
 	 */
-	function getLunarDayName(year,month,day,lang){
+	function getLunarDayName(year,month,day){
 		//当日与1890/1/1 相差天数
 		//1890/1/1与 1970/1/1 相差29219日, 1890/1/1 日柱为壬午日(60进制18)
 		var dayCyclical = Date.UTC(year,month,day)/86400000+29219+18;
-		return cyclical(dayCyclical,lang);
+		return cyclical(dayCyclical);
 	};
 
 	/**
@@ -575,11 +467,7 @@
 	 * 将公历转换为农历
 	 * @param {Number} year,month,day 公历年，月，日
 	 */
-	function solarToLunar(_year,_month,_day,_lang){
-		var _DATA = _lang=='tc' ? DATA_TRADITIONAL : DATA;
-		var _solarFestival = _lang=='tc' ? solarFestivalTraditional : solarFestival;
-		var _lunarFestival = _lang=='tc' ? lunarFestivalTraditional : lunarFestival;
-
+	function solarToLunar(_year,_month,_day){
 		var inputDate = formateDate(_year,_month,_day,minYear);
 		if(inputDate.error)return inputDate;
 		var year = inputDate.year;
@@ -590,7 +478,7 @@
 		//立春日期
 		var term2 = cacheUtil.get('term2') ? cacheUtil.get('term2') : cacheUtil.set('term2',getTerm(year,2));
 		//二十四节气
-		var termList = cacheUtil.get('termList') ? cacheUtil.get('termList') : cacheUtil.set('termList',getYearTerm(year,_lang));
+		var termList = cacheUtil.get('termList') ? cacheUtil.get('termList') : cacheUtil.set('termList',getYearTerm(year));
 
 		var firstTerm = getTerm(year,month*2); //某月第一个节气开始日期
 		var GanZhiYear = (month>1 || month==1 && day>=term2) ? year+1 : year;//干支所在年份
@@ -600,15 +488,11 @@
 		var lunarLeapMonth = getLunarLeapYear(lunarDate[0]);
 		var lunarMonthName = '';
 		if(lunarLeapMonth>0 && lunarLeapMonth==lunarDate[1]){
-			if(_lang=='tw') {
-				lunarMonthName = '閏'+_DATA.monthCn[lunarDate[1]-1]+'月';
-			} else {
-				lunarMonthName = '闰'+_DATA.monthCn[lunarDate[1]-1]+'月';
-			}
+			lunarMonthName = '闰'+DATA.monthCn[lunarDate[1]-1]+'月';
 		}else if(lunarLeapMonth>0 && lunarDate[1]>lunarLeapMonth){
-			lunarMonthName = _DATA.monthCn[lunarDate[1]-1]+'月';
+			lunarMonthName = DATA.monthCn[lunarDate[1]-1]+'月';
 		}else{
-			lunarMonthName = _DATA.monthCn[lunarDate[1]]+'月';
+			lunarMonthName = DATA.monthCn[lunarDate[1]]+'月';
 		}
 
 		//农历节日判断
@@ -616,31 +500,34 @@
 		var lunarMonthDays = getLunarYearDays(lunarDate[0]).monthDays;
 		//除夕
 		if(lunarDate[1] == lunarMonthDays.length-1 && lunarDate[2]==lunarMonthDays[lunarMonthDays.length-1]){
-			lunarFtv = _lunarFestival['d0100'];
+			lunarFtv = lunarFestival['d0100'];
 		}else if(lunarLeapMonth>0 && lunarDate[1]>lunarLeapMonth){
-			lunarFtv = _lunarFestival[formateDayD4(lunarDate[1]-1,lunarDate[2])];
+			lunarFtv = lunarFestival[formateDayD4(lunarDate[1]-1,lunarDate[2])];
 		}else{
-			lunarFtv = _lunarFestival[formateDayD4(lunarDate[1],lunarDate[2])];
+			lunarFtv = lunarFestival[formateDayD4(lunarDate[1],lunarDate[2])];
 		}
 
 		var res = {
-			zodiac : getYearZodiac(GanZhiYear,_lang),
-			GanZhiYear : getLunarYearName(GanZhiYear,'',_lang),
-			GanZhiMonth : getLunarMonthName(year,GanZhiMonth,'',_lang),
-			GanZhiDay : getLunarDayName(year,month,day,_lang),
+			zodiac : getYearZodiac(GanZhiYear),
+			GanZhiYear : getLunarYearName(GanZhiYear),
+			GanZhiMonth : getLunarMonthName(year,GanZhiMonth),
+			GanZhiDay : getLunarDayName(year,month,day),
 			//放假安排：0无特殊安排，1工作，2放假
 			worktime : worktime['y'+year] && worktime['y'+year][formateDayD4(month,day)] ? worktime['y'+year][formateDayD4(month,day)] : 0,
 			term : termList[formateDayD4(month,day)],
 
 			lunarYear : lunarDate[0],
 			lunarMonth : lunarDate[1]+1,
-			lunarDay : lunarDate[2],
+			lunarDay : Math.round( lunarDate[2] ),
 			lunarMonthName : lunarMonthName,
-			lunarDayName : _DATA.dateCn[lunarDate[2]-1],
+			lunarDayName : DATA.dateCn[ Math.round( lunarDate[2]-1 ) ],
 			lunarLeapMonth : lunarLeapMonth,
 
-			solarFestival : _solarFestival[formateDayD4(month,day)],
-			lunarFestival : lunarFtv
+			solarFestival : solarFestival[formateDayD4(month,day)],
+			lunarFestival : lunarFtv,
+
+			// 是否是大月
+			isBigMonth : lunarMonthDays[lunarDate[1]] == 30
 		};
 
 		return res;
