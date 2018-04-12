@@ -5,13 +5,13 @@ var fontByLang = {
     'NotoSerif': '<div class="cn">思源宋體</div><div class="hover">Noto Serif</div>',
     'SetoFont': '<div class="cn">瀨戶字體</div><div class="hover">Seto Font</div>',
     'GenJyuuGothic': '<div class="cn">思源柔黑體</div><div class="hover">Gen Jyuu Gothic</div>',
-    'HanaMin': '<div class="cn">花園明朝</div><div class="hover">Hana Min</div>',
+    // 'HanaMin': '<div class="cn">花園明朝</div><div class="hover">Hana Min</div>',
   },
   'sc': {
     'About': '<div class="cn">网站介绍</div><div class="hover">About</div>',
     'NotoSans': '<div class="cn">思源黑体</div><div class="hover">Noto Sans</div>',
     'NotoSerif': '<div class="cn">思源宋体</div><div class="hover">Noto Serif</div>',
-    'HanaMin': '<div class="cn">花园明朝</div><div class="hover">Hana Min</div>',
+    // 'HanaMin': '<div class="cn">花园明朝</div><div class="hover">Hana Min</div>',
   },
 };
 
